@@ -1,0 +1,5831 @@
+ # webanno.custom.INSTRUMENTO | Feature_Instrumento
+#id=1
+#text=NSA espiou tese de mestrado de José Sócrates [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+1-1	NSA	_	
+1-2	espiou	_	
+1-3	tese	_	
+1-4	de	_	
+1-5	mestrado	_	
+1-6	de	_	
+1-7	José	_	
+1-8	Sócrates	_	
+1-9	[	_	
+1-10	[	_	
+1-11	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+1-12	]	_	
+1-13	]	_	
+
+#id=2
+#text=Lojas de luxo da Avenida da Liberdade entram em pânico com o fim das boas relações entre Portugal e Angola [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+2-1	Lojas	_	
+2-2	de	_	
+2-3	luxo	_	
+2-4	da	_	
+2-5	Avenida	_	
+2-6	da	_	
+2-7	Liberdade	_	
+2-8	entram	_	
+2-9	em	_	
+2-10	pânico	_	
+2-11	com	_	
+2-12	o	_	
+2-13	fim	_	
+2-14	das	_	
+2-15	boas	_	
+2-16	relações	_	
+2-17	entre	_	
+2-18	Portugal	_	
+2-19	e	_	
+2-20	Angola	_	
+2-21	[	_	
+2-22	[	_	
+2-23	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+2-24	]	_	
+2-25	]	_	
+
+#id=3
+#text=Mário Soares diz que o cão do ‘Family Guy’ morreu porque o Governo está a destruir o SNS [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+3-1	Mário	_	
+3-2	Soares	_	
+3-3	diz	_	
+3-4	que	_	
+3-5	o	_	
+3-6	cão	_	
+3-7	do	_	
+3-8	‘Family	_	
+3-9	Guy’	_	
+3-10	morreu	_	
+3-11	porque	_	
+3-12	o	_	
+3-13	Governo	_	
+3-14	está	_	
+3-15	a	_	
+3-16	destruir	_	
+3-17	o	_	
+3-18	SNS	_	
+3-19	[	_	
+3-20	[	_	
+3-21	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Metáfora	
+3-22	]	_	
+3-23	]	_	
+
+#id=4
+#text=Troika pode ter entrado em Portugal com passaportes falsos da Guiné-Bissau [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+4-1	Troika	_	
+4-2	pode	_	
+4-3	ter	_	
+4-4	entrado	_	
+4-5	em	_	
+4-6	Portugal	_	
+4-7	com	_	
+4-8	passaportes	_	
+4-9	falsos	_	
+4-10	da	_	
+4-11	Guiné-Bissau	_	
+4-12	[	_	
+4-13	[	_	
+4-14	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+4-15	]	_	
+4-16	]	_	
+
+#id=5
+#text=Nova 'ASAE das gasolinas ' vai limitar-se a inspeccionar depósitos de combustível dos ciganos nas feiras [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+5-1	Nova	_	
+5-2	'ASAE	_	
+5-3	das	_	
+5-4	gasolinas	_	
+5-5	'	_	
+5-6	vai	_	
+5-7	limitar-se	_	
+5-8	a	_	
+5-9	inspeccionar	_	
+5-10	depósitos	_	
+5-11	de	_	
+5-12	combustível	_	
+5-13	dos	_	
+5-14	ciganos	_	
+5-15	nas	_	
+5-16	feiras	_	
+5-17	[	_	
+5-18	[	_	
+5-19	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Hipérbole	
+5-20	]	_	
+5-21	]	_	
+
+#id=6
+#text=Marcelo Rebelo de Sousa só avança para a Presidência da República quando Jesus descer do Benfica [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+6-1	Marcelo	_	
+6-2	Rebelo	_	
+6-3	de	_	
+6-4	Sousa	_	
+6-5	só	_	
+6-6	avança	_	
+6-7	para	_	
+6-8	a	_	
+6-9	Presidência	_	
+6-10	da	_	
+6-11	República	_	
+6-12	quando	_	
+6-13	Jesus	_	
+6-14	descer	_	
+6-15	do	_	
+6-16	Benfica	_	
+6-17	[	_	
+6-18	[	_	
+6-19	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+6-20	]	_	
+6-21	]	_	
+
+#id=7
+#text=Suecos queixam-se que publicidade televisiva a ‘Bem-vindos a Beirais’ tapava a baliza de Patrício [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+7-1	Suecos	_	
+7-2	queixam-se	_	
+7-3	que	_	
+7-4	publicidade	_	
+7-5	televisiva	_	
+7-6	a	_	
+7-7	‘Bem-vindos	_	
+7-8	a	_	
+7-9	Beirais’	_	
+7-10	tapava	_	
+7-11	a	_	
+7-12	baliza	_	
+7-13	de	_	
+7-14	Patrício	_	
+7-15	[	_	
+7-16	[	_	
+7-17	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Imparidade	
+7-18	]	_	
+7-19	]	_	
+
+#id=8
+#text=Pedro Passos Coelho vai decretar que o Natal apenas volta em 2015 [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+8-1	Pedro	_	
+8-2	Passos	_	
+8-3	Coelho	_	
+8-4	vai	_	
+8-5	decretar	_	
+8-6	que	_	
+8-7	o	_	
+8-8	Natal	_	
+8-9	apenas	_	
+8-10	volta	_	
+8-11	em	_	
+8-12	2015	_	
+8-13	[	_	
+8-14	[	_	
+8-15	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+8-16	]	_	
+8-17	]	_	
+
+#id=9
+#text=Governo anuncia que os 85 novos milionários portugueses estavam todos desempregados em 2010 [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+9-1	Governo	_	
+9-2	anuncia	_	
+9-3	que	_	
+9-4	os	_	
+9-5	85	_	
+9-6	novos	_	
+9-7	milionários	_	
+9-8	portugueses	_	
+9-9	estavam	_	
+9-10	todos	_	
+9-11	desempregados	_	
+9-12	em	_	
+9-13	2010	_	
+9-14	[	_	
+9-15	[	_	
+9-16	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+9-17	]	_	
+9-18	]	_	
+
+#id=10
+#text=Israel constrói colonato no Estádio de Alvalade [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+10-1	Israel	_	
+10-2	constrói	_	
+10-3	colonato	_	
+10-4	no	_	
+10-5	Estádio	_	
+10-6	de	_	
+10-7	Alvalade	_	
+10-8	[	_	
+10-9	[	_	
+10-10	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+10-11	]	_	
+10-12	]	_	
+
+#id=11
+#text=Última hora : Portugal oferece ajuda externa aos EUA [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+11-1	Última	_	
+11-2	hora	_	
+11-3	:	_	
+11-4	Portugal	_	
+11-5	oferece	_	
+11-6	ajuda	_	
+11-7	externa	_	
+11-8	aos	_	
+11-9	EUA	_	
+11-10	[	_	
+11-11	[	_	
+11-12	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Paradoxo	
+11-13	]	_	
+11-14	]	_	
+
+#id=12
+#text=Cidade construída para os funcionários do ‘Facebook ‘vai eleger um autarca presidiário [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+12-1	Cidade	_	
+12-2	construída	_	
+12-3	para	_	
+12-4	os	_	
+12-5	funcionários	_	
+12-6	do	_	
+12-7	‘Facebook	_	
+12-8	‘vai	_	
+12-9	eleger	_	
+12-10	um	_	
+12-11	autarca	_	
+12-12	presidiário	_	
+12-13	[	_	
+12-14	[	_	
+12-15	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+12-16	]	_	
+12-17	]	_	
+
+#id=13
+#text=Natalidade em Portugal desce para os níveis de 1900 , economia para os níveis de 200 a.C. [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+13-1	Natalidade	_	
+13-2	em	_	
+13-3	Portugal	_	
+13-4	desce	_	
+13-5	para	_	
+13-6	os	_	
+13-7	níveis	_	
+13-8	de	_	
+13-9	1900	_	
+13-10	,	_	
+13-11	economia	_	
+13-12	para	_	
+13-13	os	_	
+13-14	níveis	_	
+13-15	de	_	
+13-16	200	_	
+13-17	a.C.	_	
+13-18	[	_	
+13-19	[	_	
+13-20	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+13-21	]	_	
+13-22	]	_	
+
+#id=14
+#text=Pinto da Costa tenta desviar estátua do benfiquista Cosme Damião para o Porto [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+14-1	Pinto	_	
+14-2	da	_	
+14-3	Costa	_	
+14-4	tenta	_	
+14-5	desviar	_	
+14-6	estátua	_	
+14-7	do	_	
+14-8	benfiquista	_	
+14-9	Cosme	_	
+14-10	Damião	_	
+14-11	para	_	
+14-12	o	_	
+14-13	Porto	_	
+14-14	[	_	
+14-15	[	_	
+14-16	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+14-17	]	_	
+14-18	]	_	
+
+#id=15
+#text=Passos fez as contas e diz que programa cautelar vai durar um ano e acabar em 2022 [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+15-1	Passos	_	
+15-2	fez	_	
+15-3	as	_	
+15-4	contas	_	
+15-5	e	_	
+15-6	diz	_	
+15-7	que	_	
+15-8	programa	_	
+15-9	cautelar	_	
+15-10	vai	_	
+15-11	durar	_	
+15-12	um	_	
+15-13	ano	_	
+15-14	e	_	
+15-15	acabar	_	
+15-16	em	_	
+15-17	2022	_	
+15-18	[	_	
+15-19	[	_	
+15-20	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+15-21	]	_	
+15-22	]	_	
+
+#id=16
+#text=Cristiano Ronaldo exige ficar na suite do Hotel Copacabana onde Miguel Relvas passou o reveillon [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+16-1	Cristiano	_	
+16-2	Ronaldo	_	
+16-3	exige	_	
+16-4	ficar	_	
+16-5	na	_	
+16-6	suite	_	
+16-7	do	_	
+16-8	Hotel	_	
+16-9	Copacabana	_	
+16-10	onde	_	
+16-11	Miguel	_	
+16-12	Relvas	_	
+16-13	passou	_	
+16-14	o	_	
+16-15	reveillon	_	
+16-16	[	_	
+16-17	[	_	
+16-18	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Hipérbole	
+16-19	]	_	
+16-20	]	_	
+
+#id=17
+#text=Última hora : Machete demite-se e vai estudar a separação de poderes para Paris [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+17-1	Última	_	
+17-2	hora	_	
+17-3	:	_	
+17-4	Machete	_	
+17-5	demite-se	_	
+17-6	e	_	
+17-7	vai	_	
+17-8	estudar	_	
+17-9	a	_	
+17-10	separação	_	
+17-11	de	_	
+17-12	poderes	_	
+17-13	para	_	
+17-14	Paris	_	
+17-15	[	_	
+17-16	[	_	
+17-17	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+17-18	]	_	
+17-19	]	_	
+
+#id=18
+#text=Artista britânico Banksy cria camião com contribuintes portugueses a caminho do matadouro [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+18-1	Artista	_	
+18-2	britânico	_	
+18-3	Banksy	_	
+18-4	cria	_	
+18-5	camião	_	
+18-6	com	_	
+18-7	contribuintes	_	
+18-8	portugueses	_	
+18-9	a	_	
+18-10	caminho	_	
+18-11	do	_	
+18-12	matadouro	_	
+18-13	[	_	
+18-14	[	_	
+18-15	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+18-16	]	_	
+18-17	]	_	
+
+#id=19
+#text=Troika admite programa cautelar mesmo que o PS , o PSD e o CDS-PP não o subscrevam [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+19-1	Troika	_	
+19-2	admite	_	
+19-3	programa	_	
+19-4	cautelar	_	
+19-5	mesmo	_	
+19-6	que	_	
+19-7	o	_	
+19-8	PS	_	
+19-9	,	_	
+19-10	o	_	
+19-11	PSD	_	
+19-12	e	_	
+19-13	o	_	
+19-14	CDS-PP	_	
+19-15	não	_	
+19-16	o	_	
+19-17	subscrevam	_	
+19-18	[	_	
+19-19	[	_	
+19-20	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+19-21	]	_	
+19-22	]	_	
+
+#id=20
+#text=Cidadãos angolanos investigados pelo Ministério Público apresentam pareceres do pai do Código Penal , do pai da Constituição e do pai do défice [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+20-1	Cidadãos	_	
+20-2	angolanos	_	
+20-3	investigados	_	
+20-4	pelo	_	
+20-5	Ministério	_	
+20-6	Público	_	
+20-7	apresentam	_	
+20-8	pareceres	_	
+20-9	do	_	
+20-10	pai	_	
+20-11	do	_	
+20-12	Código	_	
+20-13	Penal	_	
+20-14	,	_	
+20-15	do	_	
+20-16	pai	_	
+20-17	da	_	
+20-18	Constituição	_	
+20-19	e	_	
+20-20	do	_	
+20-21	pai	_	
+20-22	do	_	
+20-23	défice	_	
+20-24	[	_	
+20-25	[	_	
+20-26	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+20-27	]	_	
+20-28	]	_	
+
+#id=21
+#text=Guerra de poder no BES : família Stark alia-se aos Espírito Santo contra os Lannister [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+21-1	Guerra	_	
+21-2	de	_	
+21-3	poder	_	
+21-4	no	_	
+21-5	BES	_	
+21-6	:	_	
+21-7	família	_	
+21-8	Stark	_	
+21-9	alia-se	_	
+21-10	aos	_	
+21-11	Espírito	_	
+21-12	Santo	_	
+21-13	contra	_	
+21-14	os	_	
+21-15	Lannister	_	
+21-16	[	_	
+21-17	[	_	
+21-18	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+21-19	]	_	
+21-20	]	_	
+
+#id=22
+#text=Ryanair já voa de Lisboa para o país em que vivem Passos Coelho e Paulo Portas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+22-1	Ryanair	_	
+22-2	já	_	
+22-3	voa	_	
+22-4	de	_	
+22-5	Lisboa	_	
+22-6	para	_	
+22-7	o	_	
+22-8	país	_	
+22-9	em	_	
+22-10	que	_	
+22-11	vivem	_	
+22-12	Passos	_	
+22-13	Coelho	_	
+22-14	e	_	
+22-15	Paulo	_	
+22-16	Portas	_	
+22-17	[	_	
+22-18	[	_	
+22-19	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+22-20	]	_	
+22-21	]	_	
+
+#id=23
+#text=Israel desconfia que Pepe é da Al Qaeda [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+23-1	Israel	_	
+23-2	desconfia	_	
+23-3	que	_	
+23-4	Pepe	_	
+23-5	é	_	
+23-6	da	_	
+23-7	Al	_	
+23-8	Qaeda	_	
+23-9	[	_	
+23-10	[	_	
+23-11	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Hipérbole	
+23-12	]	_	
+23-13	]	_	
+
+#id=24
+#text=UGT deu aos portugueses tabaco e agora cigarros de barba de milho não criam excitação [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+24-1	UGT	_	
+24-2	deu	_	
+24-3	aos	_	
+24-4	portugueses	_	
+24-5	tabaco	_	
+24-6	e	_	
+24-7	agora	_	
+24-8	cigarros	_	
+24-9	de	_	
+24-10	barba	_	
+24-11	de	_	
+24-12	milho	_	
+24-13	não	_	
+24-14	criam	_	
+24-15	excitação	_	
+24-16	[	_	
+24-17	[	_	
+24-18	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+24-19	]	_	
+24-20	]	_	
+
+#id=25
+#text=Troika tira-nos 40 % dos presentes de Natal : Lagarde fica com os perfumes , Draghi com as peúgas e Barroso com os carros telecomandados [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+25-1	Troika	_	
+25-2	tira-nos	_	
+25-3	40	_	
+25-4	%	_	
+25-5	dos	_	
+25-6	presentes	_	
+25-7	de	_	
+25-8	Natal	_	
+25-9	:	_	
+25-10	Lagarde	_	
+25-11	fica	_	
+25-12	com	_	
+25-13	os	_	
+25-14	perfumes	_	
+25-15	,	_	
+25-16	Draghi	_	
+25-17	com	_	
+25-18	as	_	
+25-19	peúgas	_	
+25-20	e	_	
+25-21	Barroso	_	
+25-22	com	_	
+25-23	os	_	
+25-24	carros	_	
+25-25	telecomandados	_	
+25-26	[	_	
+25-27	[	_	
+25-28	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Vulgarismo	
+25-29	]	_	
+25-30	]	_	
+
+#id=26
+#text=Passos avisa oposição interna que Paulo Portas também tentou derrubá-lo e só conseguiu provocar-lhe calvície precoce [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+26-1	Passos	_	
+26-2	avisa	_	
+26-3	oposição	_	
+26-4	interna	_	
+26-5	que	_	
+26-6	Paulo	_	
+26-7	Portas	_	
+26-8	também	_	
+26-9	tentou	_	
+26-10	derrubá-lo	_	
+26-11	e	_	
+26-12	só	_	
+26-13	conseguiu	_	
+26-14	provocar-lhe	_	
+26-15	calvície	_	
+26-16	precoce	_	
+26-17	[	_	
+26-18	[	_	
+26-19	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+26-20	]	_	
+26-21	]	_	
+
+#id=27
+#text=105 anos de Manoel de Oliveira levam Passos a considerar acrescento de mais 40 anos à idade de reforma [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+27-1	105	_	
+27-2	anos	_	
+27-3	de	_	
+27-4	Manoel	_	
+27-5	de	_	
+27-6	Oliveira	_	
+27-7	levam	_	
+27-8	Passos	_	
+27-9	a	_	
+27-10	considerar	_	
+27-11	acrescento	_	
+27-12	de	_	
+27-13	mais	_	
+27-14	40	_	
+27-15	anos	_	
+27-16	à	_	
+27-17	idade	_	
+27-18	de	_	
+27-19	reforma	_	
+27-20	[	_	
+27-21	[	_	
+27-22	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Hipérbole	
+27-23	]	_	
+27-24	]	_	
+
+#id=28
+#text=Pepsi acusada de atropelar cão de Family Guy [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+28-1	Pepsi	_	
+28-2	acusada	_	
+28-3	de	_	
+28-4	atropelar	_	
+28-5	cão	_	
+28-6	de	_	
+28-7	Family	_	
+28-8	Guy	_	
+28-9	[	_	
+28-10	[	_	
+28-11	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Hipérbole	
+28-12	]	_	
+28-13	]	_	
+
+#id=29
+#text=Machete pede desculpa a Oliveira Costa por esclarecer o Parlamento sobre a SLN [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+29-1	Machete	_	
+29-2	pede	_	
+29-3	desculpa	_	
+29-4	a	_	
+29-5	Oliveira	_	
+29-6	Costa	_	
+29-7	por	_	
+29-8	esclarecer	_	
+29-9	o	_	
+29-10	Parlamento	_	
+29-11	sobre	_	
+29-12	a	_	
+29-13	SLN	_	
+29-14	[	_	
+29-15	[	_	
+29-16	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+29-17	]	_	
+29-18	]	_	
+
+#id=30
+#text=FC Porto contrata treinador de 20 meses de idade [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+30-1	FC	_	
+30-2	Porto	_	
+30-3	contrata	_	
+30-4	treinador	_	
+30-5	de	_	
+30-6	20	_	
+30-7	meses	_	
+30-8	de	_	
+30-9	idade	_	
+30-10	[	_	
+30-11	[	_	
+30-12	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+30-13	]	_	
+30-14	]	_	
+
+#id=31
+#text=Governo vai fazer requisição civil a árbitros de futebol se houver mais greves de juízes [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+31-1	Governo	_	
+31-2	vai	_	
+31-3	fazer	_	
+31-4	requisição	_	
+31-5	civil	_	
+31-6	a	_	
+31-7	árbitros	_	
+31-8	de	_	
+31-9	futebol	_	
+31-10	se	_	
+31-11	houver	_	
+31-12	mais	_	
+31-13	greves	_	
+31-14	de	_	
+31-15	juízes	_	
+31-16	[	_	
+31-17	[	_	
+31-18	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Metáfora	
+31-19	]	_	
+31-20	]	_	
+
+#id=32
+#text=Cavaco visita Porto jovem e empreendedor para desaconselhar bater punho porque provoca cabelos nas mãos e cegueira [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+32-1	Cavaco	_	
+32-2	visita	_	
+32-3	Porto	_	
+32-4	jovem	_	
+32-5	e	_	
+32-6	empreendedor	_	
+32-7	para	_	
+32-8	desaconselhar	_	
+32-9	bater	_	
+32-10	punho	_	
+32-11	porque	_	
+32-12	provoca	_	
+32-13	cabelos	_	
+32-14	nas	_	
+32-15	mãos	_	
+32-16	e	_	
+32-17	cegueira	_	
+32-18	[	_	
+32-19	[	_	
+32-20	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo	
+32-21	]	_	
+32-22	]	_	
+
+#id=33
+#text=Passos Coelho cria WC 's para funcionários públicos e WC 's para trabalhadores do privado [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+33-1	Passos	_	
+33-2	Coelho	_	
+33-3	cria	_	
+33-4	WC	_	
+33-5	's	_	
+33-6	para	_	
+33-7	funcionários	_	
+33-8	públicos	_	
+33-9	e	_	
+33-10	WC	_	
+33-11	's	_	
+33-12	para	_	
+33-13	trabalhadores	_	
+33-14	do	_	
+33-15	privado	_	
+33-16	[	_	
+33-17	[	_	
+33-18	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+33-19	]	_	
+33-20	]	_	
+
+#id=34
+#text=Portugal entra em campo com nomes como Ronaldosson , Coentraoberg ou Moutinhosson para confundir os suecos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+34-1	Portugal	_	
+34-2	entra	_	
+34-3	em	_	
+34-4	campo	_	
+34-5	com	_	
+34-6	nomes	_	
+34-7	como	_	
+34-8	Ronaldosson	_	
+34-9	,	_	
+34-10	Coentraoberg	_	
+34-11	ou	_	
+34-12	Moutinhosson	_	
+34-13	para	_	
+34-14	confundir	_	
+34-15	os	_	
+34-16	suecos	_	
+34-17	[	_	
+34-18	[	_	
+34-19	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+34-20	]	_	
+34-21	]	_	
+
+#id=35
+#text=Editorial do Jornal de Angola contra as ‘elites portuguesas corruptas e ignorantes’ gemina-se com ataques de Jardim aos ‘cubanos broncos do continente’ [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+35-1	Editorial	_	
+35-2	do	_	
+35-3	Jornal	_	
+35-4	de	_	
+35-5	Angola	_	
+35-6	contra	_	
+35-7	as	_	
+35-8	‘elites	_	
+35-9	portuguesas	_	
+35-10	corruptas	_	
+35-11	e	_	
+35-12	ignorantes’	_	
+35-13	gemina-se	_	
+35-14	com	_	
+35-15	ataques	_	
+35-16	de	_	
+35-17	Jardim	_	
+35-18	aos	_	
+35-19	‘cubanos	_	
+35-20	broncos	_	
+35-21	do	_	
+35-22	continente’	_	
+35-23	[	_	
+35-24	[	_	
+35-25	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo|Metáfora	
+35-26	]	_	
+35-27	]	_	
+
+#id=36
+#text=Guião da reforma do Estado foi escrita pelo celta Paulo Portas em Gaélico [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+36-1	Guião	_	
+36-2	da	_	
+36-3	reforma	_	
+36-4	do	_	
+36-5	Estado	_	
+36-6	foi	_	
+36-7	escrita	_	
+36-8	pelo	_	
+36-9	celta	_	
+36-10	Paulo	_	
+36-11	Portas	_	
+36-12	em	_	
+36-13	Gaélico	_	
+36-14	[	_	
+36-15	[	_	
+36-16	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+36-17	]	_	
+36-18	]	_	
+
+#id=37
+#text=Portas esperava ganhar o Nobel da Economia e culpa Constitucional pela derrota [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+37-1	Portas	_	
+37-2	esperava	_	
+37-3	ganhar	_	
+37-4	o	_	
+37-5	Nobel	_	
+37-6	da	_	
+37-7	Economia	_	
+37-8	e	_	
+37-9	culpa	_	
+37-10	Constitucional	_	
+37-11	pela	_	
+37-12	derrota	_	
+37-13	[	_	
+37-14	[	_	
+37-15	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+37-16	]	_	
+37-17	]	_	
+
+#id=38
+#text=Governo renomeia ponte sobre o Tejo de ‘Ponte Salazar’ para impedir quer a CGTP se manifeste nela [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+38-1	Governo	_	
+38-2	renomeia	_	
+38-3	ponte	_	
+38-4	sobre	_	
+38-5	o	_	
+38-6	Tejo	_	
+38-7	de	_	
+38-8	‘Ponte	_	
+38-9	Salazar’	_	
+38-10	para	_	
+38-11	impedir	_	
+38-12	quer	_	
+38-13	a	_	
+38-14	CGTP	_	
+38-15	se	_	
+38-16	manifeste	_	
+38-17	nela	_	
+38-18	[	_	
+38-19	[	_	
+38-20	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+38-21	]	_	
+38-22	]	_	
+
+#id=39
+#text=Etiqueta com instruções de lavagem de dinheiro não avisa que notas de 500 euros encolhem e passam a valer 20 escudos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+39-1	Etiqueta	_	
+39-2	com	_	
+39-3	instruções	_	
+39-4	de	_	
+39-5	lavagem	_	
+39-6	de	_	
+39-7	dinheiro	_	
+39-8	não	_	
+39-9	avisa	_	
+39-10	que	_	
+39-11	notas	_	
+39-12	de	_	
+39-13	500	_	
+39-14	euros	_	
+39-15	encolhem	_	
+39-16	e	_	
+39-17	passam	_	
+39-18	a	_	
+39-19	valer	_	
+39-20	20	_	
+39-21	escudos	_	
+39-22	[	_	
+39-23	[	_	
+39-24	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Comparação	
+39-25	]	_	
+39-26	]	_	
+
+#id=40
+#text=Passos telefonou a Obama para pedir que os EUA escutassem o seu telemóvel [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+40-1	Passos	_	
+40-2	telefonou	_	
+40-3	a	_	
+40-4	Obama	_	
+40-5	para	_	
+40-6	pedir	_	
+40-7	que	_	
+40-8	os	_	
+40-9	EUA	_	
+40-10	escutassem	_	
+40-11	o	_	
+40-12	seu	_	
+40-13	telemóvel	_	
+40-14	[	_	
+40-15	[	_	
+40-16	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Paradoxo	
+40-17	]	_	
+40-18	]	_	
+
+#id=41
+#text=Paulo Portas garante que os mais pobres se pudessem fariam enormes manifestações de apoio ao Governo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+41-1	Paulo	_	
+41-2	Portas	_	
+41-3	garante	_	
+41-4	que	_	
+41-5	os	_	
+41-6	mais	_	
+41-7	pobres	_	
+41-8	se	_	
+41-9	pudessem	_	
+41-10	fariam	_	
+41-11	enormes	_	
+41-12	manifestações	_	
+41-13	de	_	
+41-14	apoio	_	
+41-15	ao	_	
+41-16	Governo	_	
+41-17	[	_	
+41-18	[	_	
+41-19	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+41-20	]	_	
+41-21	]	_	
+
+#id=42
+#text=Paulo Bento diz que pode acabar a receber o Rendimento Nacional de Inserção [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+42-1	Paulo	_	
+42-2	Bento	_	
+42-3	diz	_	
+42-4	que	_	
+42-5	pode	_	
+42-6	acabar	_	
+42-7	a	_	
+42-8	receber	_	
+42-9	o	_	
+42-10	Rendimento	_	
+42-11	Nacional	_	
+42-12	de	_	
+42-13	Inserção	_	
+42-14	[	_	
+42-15	[	_	
+42-16	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+42-17	]	_	
+42-18	]	_	
+
+#id=43
+#text=Crise leva Assunção Cristas a não ter oito filhos como desejava [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+43-1	Crise	_	
+43-2	leva	_	
+43-3	Assunção	_	
+43-4	Cristas	_	
+43-5	a	_	
+43-6	não	_	
+43-7	ter	_	
+43-8	oito	_	
+43-9	filhos	_	
+43-10	como	_	
+43-11	desejava	_	
+43-12	[	_	
+43-13	[	_	
+43-14	ANOTACAO_RECURSO_ESTILISTICO	Outro	
+43-15	]	_	
+43-16	]	_	
+
+#id=44
+#text=Merkel perguntou a Passos pelo Tribunal Constitucional , pelo júri de Factor X e pelo painel de ex-árbitros de ‘O Jogo’ [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+44-1	Merkel	_	
+44-2	perguntou	_	
+44-3	a	_	
+44-4	Passos	_	
+44-5	pelo	_	
+44-6	Tribunal	_	
+44-7	Constitucional	_	
+44-8	,	_	
+44-9	pelo	_	
+44-10	júri	_	
+44-11	de	_	
+44-12	Factor	_	
+44-13	X	_	
+44-14	e	_	
+44-15	pelo	_	
+44-16	painel	_	
+44-17	de	_	
+44-18	ex-árbitros	_	
+44-19	de	_	
+44-20	‘O	_	
+44-21	Jogo’	_	
+44-22	[	_	
+44-23	[	_	
+44-24	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Imparidade	
+44-25	]	_	
+44-26	]	_	
+
+#id=45
+#text=António Guterres e Angelina Jolie visitam gestores de conta refugiados que fugiram da guerra do BES [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+45-1	António	_	
+45-2	Guterres	_	
+45-3	e	_	
+45-4	Angelina	_	
+45-5	Jolie	_	
+45-6	visitam	_	
+45-7	gestores	_	
+45-8	de	_	
+45-9	conta	_	
+45-10	refugiados	_	
+45-11	que	_	
+45-12	fugiram	_	
+45-13	da	_	
+45-14	guerra	_	
+45-15	do	_	
+45-16	BES	_	
+45-17	[	_	
+45-18	[	_	
+45-19	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+45-20	]	_	
+45-21	]	_	
+
+#id=46
+#text=Novo director da PSP tomou posse mas depois subiu a escadaria do Parlamento e foi obrigado a demitir-se [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+46-1	Novo	_	
+46-2	director	_	
+46-3	da	_	
+46-4	PSP	_	
+46-5	tomou	_	
+46-6	posse	_	
+46-7	mas	_	
+46-8	depois	_	
+46-9	subiu	_	
+46-10	a	_	
+46-11	escadaria	_	
+46-12	do	_	
+46-13	Parlamento	_	
+46-14	e	_	
+46-15	foi	_	
+46-16	obrigado	_	
+46-17	a	_	
+46-18	demitir-se	_	
+46-19	[	_	
+46-20	[	_	
+46-21	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+46-22	]	_	
+46-23	]	_	
+
+#id=47
+#text=Acordo entre Bernardino Soares e o PSD foi feito em Ialta [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+47-1	Acordo	_	
+47-2	entre	_	
+47-3	Bernardino	_	
+47-4	Soares	_	
+47-5	e	_	
+47-6	o	_	
+47-7	PSD	_	
+47-8	foi	_	
+47-9	feito	_	
+47-10	em	_	
+47-11	Ialta	_	
+47-12	[	_	
+47-13	[	_	
+47-14	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+47-15	]	_	
+47-16	]	_	
+
+#id=48
+#text=Cães de Cristas comeram o guião da reforma do Estado de Portas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+48-1	Cães	_	
+48-2	de	_	
+48-3	Cristas	_	
+48-4	comeram	_	
+48-5	o	_	
+48-6	guião	_	
+48-7	da	_	
+48-8	reforma	_	
+48-9	do	_	
+48-10	Estado	_	
+48-11	de	_	
+48-12	Portas	_	
+48-13	[	_	
+48-14	[	_	
+48-15	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+48-16	]	_	
+48-17	]	_	
+
+#id=49
+#text='Drone ' da PSP vai sobrevoar sozinho as escadarias do Parlamento [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+49-1	'Drone	_	
+49-2	'	_	
+49-3	da	_	
+49-4	PSP	_	
+49-5	vai	_	
+49-6	sobrevoar	_	
+49-7	sozinho	_	
+49-8	as	_	
+49-9	escadarias	_	
+49-10	do	_	
+49-11	Parlamento	_	
+49-12	[	_	
+49-13	[	_	
+49-14	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+49-15	]	_	
+49-16	]	_	
+
+#id=50
+#text=Autoridades chinesas banem sopa de barbatana de tubarão dos banquetes oficiais porque o Paulo Portas vai vender-lhes barbatanas de cação [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+50-1	Autoridades	_	
+50-2	chinesas	_	
+50-3	banem	_	
+50-4	sopa	_	
+50-5	de	_	
+50-6	barbatana	_	
+50-7	de	_	
+50-8	tubarão	_	
+50-9	dos	_	
+50-10	banquetes	_	
+50-11	oficiais	_	
+50-12	porque	_	
+50-13	o	_	
+50-14	Paulo	_	
+50-15	Portas	_	
+50-16	vai	_	
+50-17	vender-lhes	_	
+50-18	barbatanas	_	
+50-19	de	_	
+50-20	cação	_	
+50-21	[	_	
+50-22	[	_	
+50-23	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo|Hipérbole	
+50-24	]	_	
+50-25	]	_	
+
+#id=51
+#text=Última hora : Dias Loureiro apalavrado para o lugar de Machete [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+51-1	Última	_	
+51-2	hora	_	
+51-3	:	_	
+51-4	Dias	_	
+51-5	Loureiro	_	
+51-6	apalavrado	_	
+51-7	para	_	
+51-8	o	_	
+51-9	lugar	_	
+51-10	de	_	
+51-11	Machete	_	
+51-12	[	_	
+51-13	[	_	
+51-14	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Metáfora	
+51-15	]	_	
+51-16	]	_	
+
+#id=52
+#text=Nova bastonária da Ordem dos Advogados diz que o Brasil só exporta prostitutos masculinos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+52-1	Nova	_	
+52-2	bastonária	_	
+52-3	da	_	
+52-4	Ordem	_	
+52-5	dos	_	
+52-6	Advogados	_	
+52-7	diz	_	
+52-8	que	_	
+52-9	o	_	
+52-10	Brasil	_	
+52-11	só	_	
+52-12	exporta	_	
+52-13	prostitutos	_	
+52-14	masculinos	_	
+52-15	[	_	
+52-16	[	_	
+52-17	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo|Outro	
+52-18	]	_	
+52-19	]	_	
+
+#id=53
+#text=Resultado catastrófico nas autárquicas deixou militantes do Bloco de Esquerda sem vontade de festejarem falência dos EUA [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+53-1	Resultado	_	
+53-2	catastrófico	_	
+53-3	nas	_	
+53-4	autárquicas	_	
+53-5	deixou	_	
+53-6	militantes	_	
+53-7	do	_	
+53-8	Bloco	_	
+53-9	de	_	
+53-10	Esquerda	_	
+53-11	sem	_	
+53-12	vontade	_	
+53-13	de	_	
+53-14	festejarem	_	
+53-15	falência	_	
+53-16	dos	_	
+53-17	EUA	_	
+53-18	[	_	
+53-19	[	_	
+53-20	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Hipérbole	
+53-21	]	_	
+53-22	]	_	
+
+#id=54
+#text=Portugal e Grécia vão disputar ‘play-off’ de acesso à Zona Euro [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+54-1	Portugal	_	
+54-2	e	_	
+54-3	Grécia	_	
+54-4	vão	_	
+54-5	disputar	_	
+54-6	‘play-off’	_	
+54-7	de	_	
+54-8	acesso	_	
+54-9	à	_	
+54-10	Zona	_	
+54-11	Euro	_	
+54-12	[	_	
+54-13	[	_	
+54-14	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+54-15	]	_	
+54-16	]	_	
+
+#id=55
+#text=Troika chega para a décima avaliação e quer saber quando é que Leonardo Jardim começa a dirigir o país [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+55-1	Troika	_	
+55-2	chega	_	
+55-3	para	_	
+55-4	a	_	
+55-5	décima	_	
+55-6	avaliação	_	
+55-7	e	_	
+55-8	quer	_	
+55-9	saber	_	
+55-10	quando	_	
+55-11	é	_	
+55-12	que	_	
+55-13	Leonardo	_	
+55-14	Jardim	_	
+55-15	começa	_	
+55-16	a	_	
+55-17	dirigir	_	
+55-18	o	_	
+55-19	país	_	
+55-20	[	_	
+55-21	[	_	
+55-22	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+55-23	]	_	
+55-24	]	_	
+
+#id=56
+#text=Jorge Jesus vai sair do Benfica a dançar [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+56-1	Jorge	_	
+56-2	Jesus	_	
+56-3	vai	_	
+56-4	sair	_	
+56-5	do	_	
+56-6	Benfica	_	
+56-7	a	_	
+56-8	dançar	_	
+56-9	[	_	
+56-10	[	_	
+56-11	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+56-12	]	_	
+56-13	]	_	
+
+#id=57
+#text=Jogadores da selecção A recusam desembarcar em Coimbra B [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+57-1	Jogadores	_	
+57-2	da	_	
+57-3	selecção	_	
+57-4	A	_	
+57-5	recusam	_	
+57-6	desembarcar	_	
+57-7	em	_	
+57-8	Coimbra	_	
+57-9	B	_	
+57-10	[	_	
+57-11	[	_	
+57-12	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+57-13	]	_	
+57-14	]	_	
+
+#id=58
+#text=Dois dias depois da invasão , Pires de Lima encontrou sindicalista muito bem escondido no gabinete [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+58-1	Dois	_	
+58-2	dias	_	
+58-3	depois	_	
+58-4	da	_	
+58-5	invasão	_	
+58-6	,	_	
+58-7	Pires	_	
+58-8	de	_	
+58-9	Lima	_	
+58-10	encontrou	_	
+58-11	sindicalista	_	
+58-12	muito	_	
+58-13	bem	_	
+58-14	escondido	_	
+58-15	no	_	
+58-16	gabinete	_	
+58-17	[	_	
+58-18	[	_	
+58-19	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Paradoxo	
+58-20	]	_	
+58-21	]	_	
+
+#id=59
+#text=Idosa caiu e aleijou-se mas ninguém ficou preocupado porque ela não era surfista [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+59-1	Idosa	_	
+59-2	caiu	_	
+59-3	e	_	
+59-4	aleijou-se	_	
+59-5	mas	_	
+59-6	ninguém	_	
+59-7	ficou	_	
+59-8	preocupado	_	
+59-9	porque	_	
+59-10	ela	_	
+59-11	não	_	
+59-12	era	_	
+59-13	surfista	_	
+59-14	[	_	
+59-15	[	_	
+59-16	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Outro	
+59-17	]	_	
+59-18	]	_	
+
+#id=60
+#text=BCE , FMI e Comissão obrigam piloto português da Red Bull a cortar no combustível e trocas de pneus [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+60-1	BCE	_	
+60-2	,	_	
+60-3	FMI	_	
+60-4	e	_	
+60-5	Comissão	_	
+60-6	obrigam	_	
+60-7	piloto	_	
+60-8	português	_	
+60-9	da	_	
+60-10	Red	_	
+60-11	Bull	_	
+60-12	a	_	
+60-13	cortar	_	
+60-14	no	_	
+60-15	combustível	_	
+60-16	e	_	
+60-17	trocas	_	
+60-18	de	_	
+60-19	pneus	_	
+60-20	[	_	
+60-21	[	_	
+60-22	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+60-23	]	_	
+60-24	]	_	
+
+#id=61
+#text=Cavaco Silva decreta 3 dias de luto nacional pela lesão muscular na coxa esquerda do Cristiano Ronaldo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+61-1	Cavaco	_	
+61-2	Silva	_	
+61-3	decreta	_	
+61-4	3	_	
+61-5	dias	_	
+61-6	de	_	
+61-7	luto	_	
+61-8	nacional	_	
+61-9	pela	_	
+61-10	lesão	_	
+61-11	muscular	_	
+61-12	na	_	
+61-13	coxa	_	
+61-14	esquerda	_	
+61-15	do	_	
+61-16	Cristiano	_	
+61-17	Ronaldo	_	
+61-18	[	_	
+61-19	[	_	
+61-20	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+61-21	]	_	
+61-22	]	_	
+
+#id=62
+#text=Tensão na Carregueira : Isaltino pega fogo a rotunda com repuxo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+62-1	Tensão	_	
+62-2	na	_	
+62-3	Carregueira	_	
+62-4	:	_	
+62-5	Isaltino	_	
+62-6	pega	_	
+62-7	fogo	_	
+62-8	a	_	
+62-9	rotunda	_	
+62-10	com	_	
+62-11	repuxo	_	
+62-12	[	_	
+62-13	[	_	
+62-14	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+62-15	]	_	
+62-16	]	_	
+
+#id=63
+#text=Polícia Judiciária sem verba para munições vai armar agentes com fisgas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+63-1	Polícia	_	
+63-2	Judiciária	_	
+63-3	sem	_	
+63-4	verba	_	
+63-5	para	_	
+63-6	munições	_	
+63-7	vai	_	
+63-8	armar	_	
+63-9	agentes	_	
+63-10	com	_	
+63-11	fisgas	_	
+63-12	[	_	
+63-13	[	_	
+63-14	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+63-15	]	_	
+63-16	]	_	
+
+#id=64
+#text=Nuno Melo diz que Sócrates foi pior que Salazar , taxistas garantem que Portugal precisa de dois Sócrates [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+64-1	Nuno	_	
+64-2	Melo	_	
+64-3	diz	_	
+64-4	que	_	
+64-5	Sócrates	_	
+64-6	foi	_	
+64-7	pior	_	
+64-8	que	_	
+64-9	Salazar	_	
+64-10	,	_	
+64-11	taxistas	_	
+64-12	garantem	_	
+64-13	que	_	
+64-14	Portugal	_	
+64-15	precisa	_	
+64-16	de	_	
+64-17	dois	_	
+64-18	Sócrates	_	
+64-19	[	_	
+64-20	[	_	
+64-21	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+64-22	]	_	
+64-23	]	_	
+
+#id=65
+#text=Fim da parceria com Angola significa que Isabel dos Santos só vai comprar mais três bancos em Portugal [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+65-1	Fim	_	
+65-2	da	_	
+65-3	parceria	_	
+65-4	com	_	
+65-5	Angola	_	
+65-6	significa	_	
+65-7	que	_	
+65-8	Isabel	_	
+65-9	dos	_	
+65-10	Santos	_	
+65-11	só	_	
+65-12	vai	_	
+65-13	comprar	_	
+65-14	mais	_	
+65-15	três	_	
+65-16	bancos	_	
+65-17	em	_	
+65-18	Portugal	_	
+65-19	[	_	
+65-20	[	_	
+65-21	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+65-22	]	_	
+65-23	]	_	
+
+#id=66
+#text=Viúvas com pensões de sobrevivência superior a 2000 euros por mês vão receber carta de Paulo Portas a dizer-lhes que é bem feito o marido ter morrido [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+66-1	Viúvas	_	
+66-2	com	_	
+66-3	pensões	_	
+66-4	de	_	
+66-5	sobrevivência	_	
+66-6	superior	_	
+66-7	a	_	
+66-8	2000	_	
+66-9	euros	_	
+66-10	por	_	
+66-11	mês	_	
+66-12	vão	_	
+66-13	receber	_	
+66-14	carta	_	
+66-15	de	_	
+66-16	Paulo	_	
+66-17	Portas	_	
+66-18	a	_	
+66-19	dizer-lhes	_	
+66-20	que	_	
+66-21	é	_	
+66-22	bem	_	
+66-23	feito	_	
+66-24	o	_	
+66-25	marido	_	
+66-26	ter	_	
+66-27	morrido	_	
+66-28	[	_	
+66-29	[	_	
+66-30	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Outro	
+66-31	]	_	
+66-32	]	_	
+
+#id=67
+#text=Portas diz a Machete que Portugal tem data para sair do programa , que é dia de S. Nunca à Tarde [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+67-1	Portas	_	
+67-2	diz	_	
+67-3	a	_	
+67-4	Machete	_	
+67-5	que	_	
+67-6	Portugal	_	
+67-7	tem	_	
+67-8	data	_	
+67-9	para	_	
+67-10	sair	_	
+67-11	do	_	
+67-12	programa	_	
+67-13	,	_	
+67-14	que	_	
+67-15	é	_	
+67-16	dia	_	
+67-17	de	_	
+67-18	S.	_	
+67-19	Nunca	_	
+67-20	à	_	
+67-21	Tarde	_	
+67-22	[	_	
+67-23	[	_	
+67-24	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo|Paradoxo	
+67-25	]	_	
+67-26	]	_	
+
+#id=68
+#text=Corrida já é considerada uma rede social [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+68-1	Corrida	_	
+68-2	já	_	
+68-3	é	_	
+68-4	considerada	_	
+68-5	uma	_	
+68-6	rede	_	
+68-7	social	_	
+68-8	[	_	
+68-9	[	_	
+68-10	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Comparação	
+68-11	]	_	
+68-12	]	_	
+
+#id=69
+#text=Mário Soares diz que Portugal caminha para uma ditadura e que está na altura de jovens como Manuel Alegre ou Almeida Santos fazerem algo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+69-1	Mário	_	
+69-2	Soares	_	
+69-3	diz	_	
+69-4	que	_	
+69-5	Portugal	_	
+69-6	caminha	_	
+69-7	para	_	
+69-8	uma	_	
+69-9	ditadura	_	
+69-10	e	_	
+69-11	que	_	
+69-12	está	_	
+69-13	na	_	
+69-14	altura	_	
+69-15	de	_	
+69-16	jovens	_	
+69-17	como	_	
+69-18	Manuel	_	
+69-19	Alegre	_	
+69-20	ou	_	
+69-21	Almeida	_	
+69-22	Santos	_	
+69-23	fazerem	_	
+69-24	algo	_	
+69-25	[	_	
+69-26	[	_	
+69-27	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+69-28	]	_	
+69-29	]	_	
+
+#id=70
+#text=Pingo Doce coloca livro de Sócrates à venda na peixaria [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+70-1	Pingo	_	
+70-2	Doce	_	
+70-3	coloca	_	
+70-4	livro	_	
+70-5	de	_	
+70-6	Sócrates	_	
+70-7	à	_	
+70-8	venda	_	
+70-9	na	_	
+70-10	peixaria	_	
+70-11	[	_	
+70-12	[	_	
+70-13	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+70-14	]	_	
+70-15	]	_	
+
+#id=71
+#text=Rui Moreira anuncia que o Norte vai voltar a chamar-se Condado Portucalense [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+71-1	Rui	_	
+71-2	Moreira	_	
+71-3	anuncia	_	
+71-4	que	_	
+71-5	o	_	
+71-6	Norte	_	
+71-7	vai	_	
+71-8	voltar	_	
+71-9	a	_	
+71-10	chamar-se	_	
+71-11	Condado	_	
+71-12	Portucalense	_	
+71-13	[	_	
+71-14	[	_	
+71-15	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+71-16	]	_	
+71-17	]	_	
+
+#id=72
+#text=Guerra entre Ricardo Salgado e José Maria Ricciardi estende-se à 'Juve Leo ' e aos 'Casuals ' do Sporting [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+72-1	Guerra	_	
+72-2	entre	_	
+72-3	Ricardo	_	
+72-4	Salgado	_	
+72-5	e	_	
+72-6	José	_	
+72-7	Maria	_	
+72-8	Ricciardi	_	
+72-9	estende-se	_	
+72-10	à	_	
+72-11	'Juve	_	
+72-12	Leo	_	
+72-13	'	_	
+72-14	e	_	
+72-15	aos	_	
+72-16	'Casuals	_	
+72-17	'	_	
+72-18	do	_	
+72-19	Sporting	_	
+72-20	[	_	
+72-21	[	_	
+72-22	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Imparidade	
+72-23	]	_	
+72-24	]	_	
+
+#id=73
+#text=Benfica x Sporting : Ruben Semedo vai conduzir o autocarro dos leões até à Luz [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+73-1	Benfica	_	
+73-2	x	_	
+73-3	Sporting	_	
+73-4	:	_	
+73-5	Ruben	_	
+73-6	Semedo	_	
+73-7	vai	_	
+73-8	conduzir	_	
+73-9	o	_	
+73-10	autocarro	_	
+73-11	dos	_	
+73-12	leões	_	
+73-13	até	_	
+73-14	à	_	
+73-15	Luz	_	
+73-16	[	_	
+73-17	[	_	
+73-18	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+73-19	]	_	
+73-20	]	_	
+
+#id=74
+#text=Fraca adesão às rescisões amigáveis no Estado pelo que o governo vai passar ao carjacking [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+74-1	Fraca	_	
+74-2	adesão	_	
+74-3	às	_	
+74-4	rescisões	_	
+74-5	amigáveis	_	
+74-6	no	_	
+74-7	Estado	_	
+74-8	pelo	_	
+74-9	que	_	
+74-10	o	_	
+74-11	governo	_	
+74-12	vai	_	
+74-13	passar	_	
+74-14	ao	_	
+74-15	carjacking	_	
+74-16	[	_	
+74-17	[	_	
+74-18	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+74-19	]	_	
+74-20	]	_	
+
+#id=75
+#text=Rui Santos pergunta ‘ai , ai , ai , ai , ai , ai , mas que raio de democracia é esta ? ’ a Passos Coelho [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+75-1	Rui	_	
+75-2	Santos	_	
+75-3	pergunta	_	
+75-4	‘ai	_	
+75-5	,	_	
+75-6	ai	_	
+75-7	,	_	
+75-8	ai	_	
+75-9	,	_	
+75-10	ai	_	
+75-11	,	_	
+75-12	ai	_	
+75-13	,	_	
+75-14	ai	_	
+75-15	,	_	
+75-16	mas	_	
+75-17	que	_	
+75-18	raio	_	
+75-19	de	_	
+75-20	democracia	_	
+75-21	é	_	
+75-22	esta	_	
+75-23	?	_	
+75-24	’	_	
+75-25	a	_	
+75-26	Passos	_	
+75-27	Coelho	_	
+75-28	[	_	
+75-29	[	_	
+75-30	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo	
+75-31	]	_	
+75-32	]	_	
+
+#id=76
+#text=Depois da agenda para Portugal , Pacheco Pereira e Rui Rio lançam o calendário de talho com gatinhos para Portugal e o filofax para Portugal [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+76-1	Depois	_	
+76-2	da	_	
+76-3	agenda	_	
+76-4	para	_	
+76-5	Portugal	_	
+76-6	,	_	
+76-7	Pacheco	_	
+76-8	Pereira	_	
+76-9	e	_	
+76-10	Rui	_	
+76-11	Rio	_	
+76-12	lançam	_	
+76-13	o	_	
+76-14	calendário	_	
+76-15	de	_	
+76-16	talho	_	
+76-17	com	_	
+76-18	gatinhos	_	
+76-19	para	_	
+76-20	Portugal	_	
+76-21	e	_	
+76-22	o	_	
+76-23	filofax	_	
+76-24	para	_	
+76-25	Portugal	_	
+76-26	[	_	
+76-27	[	_	
+76-28	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+76-29	]	_	
+76-30	]	_	
+
+#id=77
+#text=Eclipse solar tornou António José Seguro ainda mais cego à realidade [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+77-1	Eclipse	_	
+77-2	solar	_	
+77-3	tornou	_	
+77-4	António	_	
+77-5	José	_	
+77-6	Seguro	_	
+77-7	ainda	_	
+77-8	mais	_	
+77-9	cego	_	
+77-10	à	_	
+77-11	realidade	_	
+77-12	[	_	
+77-13	[	_	
+77-14	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Paradoxo	
+77-15	]	_	
+77-16	]	_	
+
+#id=78
+#text=Atenta à nova moda , Evax lança penso com vodka e tampão com gin [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+78-1	Atenta	_	
+78-2	à	_	
+78-3	nova	_	
+78-4	moda	_	
+78-5	,	_	
+78-6	Evax	_	
+78-7	lança	_	
+78-8	penso	_	
+78-9	com	_	
+78-10	vodka	_	
+78-11	e	_	
+78-12	tampão	_	
+78-13	com	_	
+78-14	gin	_	
+78-15	[	_	
+78-16	[	_	
+78-17	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo|Imparidade	
+78-18	]	_	
+78-19	]	_	
+
+#id=79
+#text=João Rendeiro ataca sem misericórdia o Banco de Portugal comparando-o ao BPP [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+79-1	João	_	
+79-2	Rendeiro	_	
+79-3	ataca	_	
+79-4	sem	_	
+79-5	misericórdia	_	
+79-6	o	_	
+79-7	Banco	_	
+79-8	de	_	
+79-9	Portugal	_	
+79-10	comparando-o	_	
+79-11	ao	_	
+79-12	BPP	_	
+79-13	[	_	
+79-14	[	_	
+79-15	ANOTACAO_RECURSO_ESTILISTICO	Comparação	
+79-16	]	_	
+79-17	]	_	
+
+#id=80
+#text=António Barreto quer fazer à Constituição o que fez à Reforma Agrária [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+80-1	António	_	
+80-2	Barreto	_	
+80-3	quer	_	
+80-4	fazer	_	
+80-5	à	_	
+80-6	Constituição	_	
+80-7	o	_	
+80-8	que	_	
+80-9	fez	_	
+80-10	à	_	
+80-11	Reforma	_	
+80-12	Agrária	_	
+80-13	[	_	
+80-14	[	_	
+80-15	ANOTACAO_RECURSO_ESTILISTICO	Comparação|Metáfora	
+80-16	]	_	
+80-17	]	_	
+
+#id=81
+#text=Novo Banco de Fomento nasce hoje e vai ser resgatado pelos contribuintes amanhã [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+81-1	Novo	_	
+81-2	Banco	_	
+81-3	de	_	
+81-4	Fomento	_	
+81-5	nasce	_	
+81-6	hoje	_	
+81-7	e	_	
+81-8	vai	_	
+81-9	ser	_	
+81-10	resgatado	_	
+81-11	pelos	_	
+81-12	contribuintes	_	
+81-13	amanhã	_	
+81-14	[	_	
+81-15	[	_	
+81-16	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+81-17	]	_	
+81-18	]	_	
+
+#id=82
+#text=António José Seguro processa Santa Casa por estar viciado em Eurobonds [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+82-1	António	_	
+82-2	José	_	
+82-3	Seguro	_	
+82-4	processa	_	
+82-5	Santa	_	
+82-6	Casa	_	
+82-7	por	_	
+82-8	estar	_	
+82-9	viciado	_	
+82-10	em	_	
+82-11	Eurobonds	_	
+82-12	[	_	
+82-13	[	_	
+82-14	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+82-15	]	_	
+82-16	]	_	
+
+#id=83
+#text=Amnistia fiscal : Oliveira Costa pede perdão de 8 mil milhões de dívidas do BPN [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+83-1	Amnistia	_	
+83-2	fiscal	_	
+83-3	:	_	
+83-4	Oliveira	_	
+83-5	Costa	_	
+83-6	pede	_	
+83-7	perdão	_	
+83-8	de	_	
+83-9	8	_	
+83-10	mil	_	
+83-11	milhões	_	
+83-12	de	_	
+83-13	dívidas	_	
+83-14	do	_	
+83-15	BPN	_	
+83-16	[	_	
+83-17	[	_	
+83-18	ANOTACAO_RECURSO_ESTILISTICO	Outro|Metáfora	
+83-19	]	_	
+83-20	]	_	
+
+#id=84
+#text=Paulo Portas promete uma batalha de Aljubarrota financeira [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+84-1	Paulo	_	
+84-2	Portas	_	
+84-3	promete	_	
+84-4	uma	_	
+84-5	batalha	_	
+84-6	de	_	
+84-7	Aljubarrota	_	
+84-8	financeira	_	
+84-9	[	_	
+84-10	[	_	
+84-11	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+84-12	]	_	
+84-13	]	_	
+
+#id=85
+#text=Troika corta no dia de todos os santos , que passa a designar-se ‘dia de apenas alguns santos’ [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+85-1	Troika	_	
+85-2	corta	_	
+85-3	no	_	
+85-4	dia	_	
+85-5	de	_	
+85-6	todos	_	
+85-7	os	_	
+85-8	santos	_	
+85-9	,	_	
+85-10	que	_	
+85-11	passa	_	
+85-12	a	_	
+85-13	designar-se	_	
+85-14	‘dia	_	
+85-15	de	_	
+85-16	apenas	_	
+85-17	alguns	_	
+85-18	santos’	_	
+85-19	[	_	
+85-20	[	_	
+85-21	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+85-22	]	_	
+85-23	]	_	
+
+#id=86
+#text=Guião da reforma do Estado foi escrito para Schwarzenegger mas ele não aceitou e agora Portas está a tentar Stallone [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+86-1	Guião	_	
+86-2	da	_	
+86-3	reforma	_	
+86-4	do	_	
+86-5	Estado	_	
+86-6	foi	_	
+86-7	escrito	_	
+86-8	para	_	
+86-9	Schwarzenegger	_	
+86-10	mas	_	
+86-11	ele	_	
+86-12	não	_	
+86-13	aceitou	_	
+86-14	e	_	
+86-15	agora	_	
+86-16	Portas	_	
+86-17	está	_	
+86-18	a	_	
+86-19	tentar	_	
+86-20	Stallone	_	
+86-21	[	_	
+86-22	[	_	
+86-23	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Metáfora	
+86-24	]	_	
+86-25	]	_	
+
+#id=87
+#text=Novo presidente enviou orçamento da câmara de Oeiras a Isaltino escondido dentro de um bolo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+87-1	Novo	_	
+87-2	presidente	_	
+87-3	enviou	_	
+87-4	orçamento	_	
+87-5	da	_	
+87-6	câmara	_	
+87-7	de	_	
+87-8	Oeiras	_	
+87-9	a	_	
+87-10	Isaltino	_	
+87-11	escondido	_	
+87-12	dentro	_	
+87-13	de	_	
+87-14	um	_	
+87-15	bolo	_	
+87-16	[	_	
+87-17	[	_	
+87-18	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+87-19	]	_	
+87-20	]	_	
+
+#id=88
+#text=Governo cria prémio de 10 milhões para quem pedir facturas e títulos do tesouro em raspadinhas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+88-1	Governo	_	
+88-2	cria	_	
+88-3	prémio	_	
+88-4	de	_	
+88-5	10	_	
+88-6	milhões	_	
+88-7	para	_	
+88-8	quem	_	
+88-9	pedir	_	
+88-10	facturas	_	
+88-11	e	_	
+88-12	títulos	_	
+88-13	do	_	
+88-14	tesouro	_	
+88-15	em	_	
+88-16	raspadinhas	_	
+88-17	[	_	
+88-18	[	_	
+88-19	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+88-20	]	_	
+88-21	]	_	
+
+#id=89
+#text=Inspectores-estagiários da PJ acham esquisito não encontrar Dexter ou o pessoal do CSI nos locais dos crimes [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+89-1	Inspectores-estagiários	_	
+89-2	da	_	
+89-3	PJ	_	
+89-4	acham	_	
+89-5	esquisito	_	
+89-6	não	_	
+89-7	encontrar	_	
+89-8	Dexter	_	
+89-9	ou	_	
+89-10	o	_	
+89-11	pessoal	_	
+89-12	do	_	
+89-13	CSI	_	
+89-14	nos	_	
+89-15	locais	_	
+89-16	dos	_	
+89-17	crimes	_	
+89-18	[	_	
+89-19	[	_	
+89-20	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+89-21	]	_	
+89-22	]	_	
+
+#id=90
+#text=Pinto da Costa acha que o facto de o dragão ser o mau de ‘O Hobbit’ é manobra da Benfica TV [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+90-1	Pinto	_	
+90-2	da	_	
+90-3	Costa	_	
+90-4	acha	_	
+90-5	que	_	
+90-6	o	_	
+90-7	facto	_	
+90-8	de	_	
+90-9	o	_	
+90-10	dragão	_	
+90-11	ser	_	
+90-12	o	_	
+90-13	mau	_	
+90-14	de	_	
+90-15	‘O	_	
+90-16	Hobbit’	_	
+90-17	é	_	
+90-18	manobra	_	
+90-19	da	_	
+90-20	Benfica	_	
+90-21	TV	_	
+90-22	[	_	
+90-23	[	_	
+90-24	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+90-25	]	_	
+90-26	]	_	
+
+#id=91
+#text=Orçamento de estado será entregue por Oliveira Costa [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+91-1	Orçamento	_	
+91-2	de	_	
+91-3	estado	_	
+91-4	será	_	
+91-5	entregue	_	
+91-6	por	_	
+91-7	Oliveira	_	
+91-8	Costa	_	
+91-9	[	_	
+91-10	[	_	
+91-11	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+91-12	]	_	
+91-13	]	_	
+
+#id=92
+#text=Pingo Doce vai vender livros marca branca de José Sócrates [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+92-1	Pingo	_	
+92-2	Doce	_	
+92-3	vai	_	
+92-4	vender	_	
+92-5	livros	_	
+92-6	marca	_	
+92-7	branca	_	
+92-8	de	_	
+92-9	José	_	
+92-10	Sócrates	_	
+92-11	[	_	
+92-12	[	_	
+92-13	ANOTACAO_RECURSO_ESTILISTICO	Outro|Imparidade	
+92-14	]	_	
+92-15	]	_	
+
+#id=93
+#text=Rui Tavares vai criar um novo partido de Esquerda e um novo mini-partido ecologista com o qual se coligar [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+93-1	Rui	_	
+93-2	Tavares	_	
+93-3	vai	_	
+93-4	criar	_	
+93-5	um	_	
+93-6	novo	_	
+93-7	partido	_	
+93-8	de	_	
+93-9	Esquerda	_	
+93-10	e	_	
+93-11	um	_	
+93-12	novo	_	
+93-13	mini-partido	_	
+93-14	ecologista	_	
+93-15	com	_	
+93-16	o	_	
+93-17	qual	_	
+93-18	se	_	
+93-19	coligar	_	
+93-20	[	_	
+93-21	[	_	
+93-22	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+93-23	]	_	
+93-24	]	_	
+
+#id=94
+#text=Maria Luís Albuquerque já não se lembra de ter ontem apresentado um Orçamento de Estado para 2014 [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+94-1	Maria	_	
+94-2	Luís	_	
+94-3	Albuquerque	_	
+94-4	já	_	
+94-5	não	_	
+94-6	se	_	
+94-7	lembra	_	
+94-8	de	_	
+94-9	ter	_	
+94-10	ontem	_	
+94-11	apresentado	_	
+94-12	um	_	
+94-13	Orçamento	_	
+94-14	de	_	
+94-15	Estado	_	
+94-16	para	_	
+94-17	2014	_	
+94-18	[	_	
+94-19	[	_	
+94-20	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+94-21	]	_	
+94-22	]	_	
+
+#id=95
+#text=Miguel Relvas teve um padrinho de casamento português , um angolano , um brasileiro e um colombiano [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+95-1	Miguel	_	
+95-2	Relvas	_	
+95-3	teve	_	
+95-4	um	_	
+95-5	padrinho	_	
+95-6	de	_	
+95-7	casamento	_	
+95-8	português	_	
+95-9	,	_	
+95-10	um	_	
+95-11	angolano	_	
+95-12	,	_	
+95-13	um	_	
+95-14	brasileiro	_	
+95-15	e	_	
+95-16	um	_	
+95-17	colombiano	_	
+95-18	[	_	
+95-19	[	_	
+95-20	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+95-21	]	_	
+95-22	]	_	
+
+#id=96
+#text=Elefantes compreendem humanos de forma instintiva , excepto Paulo Portas , que é um bocado errático [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+96-1	Elefantes	_	
+96-2	compreendem	_	
+96-3	humanos	_	
+96-4	de	_	
+96-5	forma	_	
+96-6	instintiva	_	
+96-7	,	_	
+96-8	excepto	_	
+96-9	Paulo	_	
+96-10	Portas	_	
+96-11	,	_	
+96-12	que	_	
+96-13	é	_	
+96-14	um	_	
+96-15	bocado	_	
+96-16	errático	_	
+96-17	[	_	
+96-18	[	_	
+96-19	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+96-20	]	_	
+96-21	]	_	
+
+#id=97
+#text=Governo vende os Painéis de São Vicente ao Museu do Prado [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+97-1	Governo	_	
+97-2	vende	_	
+97-3	os	_	
+97-4	Painéis	_	
+97-5	de	_	
+97-6	São	_	
+97-7	Vicente	_	
+97-8	ao	_	
+97-9	Museu	_	
+97-10	do	_	
+97-11	Prado	_	
+97-12	[	_	
+97-13	[	_	
+97-14	ANOTACAO_RECURSO_ESTILISTICO	Outro	
+97-15	]	_	
+97-16	]	_	
+
+#id=98
+#text=Passos diz que agora só falta as Doce venderem mais discos do que os ABBA [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+98-1	Passos	_	
+98-2	diz	_	
+98-3	que	_	
+98-4	agora	_	
+98-5	só	_	
+98-6	falta	_	
+98-7	as	_	
+98-8	Doce	_	
+98-9	venderem	_	
+98-10	mais	_	
+98-11	discos	_	
+98-12	do	_	
+98-13	que	_	
+98-14	os	_	
+98-15	ABBA	_	
+98-16	[	_	
+98-17	[	_	
+98-18	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+98-19	]	_	
+98-20	]	_	
+
+#id=99
+#text=Única relação de Cavaco Silva com o BPN foi ter transferido para o banco todo o dinheiro que tinha numa conta do BPP [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+99-1	Única	_	
+99-2	relação	_	
+99-3	de	_	
+99-4	Cavaco	_	
+99-5	Silva	_	
+99-6	com	_	
+99-7	o	_	
+99-8	BPN	_	
+99-9	foi	_	
+99-10	ter	_	
+99-11	transferido	_	
+99-12	para	_	
+99-13	o	_	
+99-14	banco	_	
+99-15	todo	_	
+99-16	o	_	
+99-17	dinheiro	_	
+99-18	que	_	
+99-19	tinha	_	
+99-20	numa	_	
+99-21	conta	_	
+99-22	do	_	
+99-23	BPP	_	
+99-24	[	_	
+99-25	[	_	
+99-26	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+99-27	]	_	
+99-28	]	_	
+
+#id=100
+#text=Passos Coelho telefonou a Paulo Bento para o informar que vai pagar mais IRS [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+100-1	Passos	_	
+100-2	Coelho	_	
+100-3	telefonou	_	
+100-4	a	_	
+100-5	Paulo	_	
+100-6	Bento	_	
+100-7	para	_	
+100-8	o	_	
+100-9	informar	_	
+100-10	que	_	
+100-11	vai	_	
+100-12	pagar	_	
+100-13	mais	_	
+100-14	IRS	_	
+100-15	[	_	
+100-16	[	_	
+100-17	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+100-18	]	_	
+100-19	]	_	
+
+#id=101
+#text=Braga quer exportar bonecos ‘action man’ do cónego Melo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+101-1	Braga	_	
+101-2	quer	_	
+101-3	exportar	_	
+101-4	bonecos	_	
+101-5	‘action	_	
+101-6	man’	_	
+101-7	do	_	
+101-8	cónego	_	
+101-9	Melo	_	
+101-10	[	_	
+101-11	[	_	
+101-12	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+101-13	]	_	
+101-14	]	_	
+
+#id=102
+#text=Donos de empresas que contratem novos empregados ganham condecoração no 10 de Junho [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+102-1	Donos	_	
+102-2	de	_	
+102-3	empresas	_	
+102-4	que	_	
+102-5	contratem	_	
+102-6	novos	_	
+102-7	empregados	_	
+102-8	ganham	_	
+102-9	condecoração	_	
+102-10	no	_	
+102-11	10	_	
+102-12	de	_	
+102-13	Junho	_	
+102-14	[	_	
+102-15	[	_	
+102-16	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+102-17	]	_	
+102-18	]	_	
+
+#id=103
+#text=Sócrates confessa a RTP , Expresso , Herman , i e TSF que está muito contente com a sua vida e que não quer voltar à vida pública [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+103-1	Sócrates	_	
+103-2	confessa	_	
+103-3	a	_	
+103-4	RTP	_	
+103-5	,	_	
+103-6	Expresso	_	
+103-7	,	_	
+103-8	Herman	_	
+103-9	,	_	
+103-10	i	_	
+103-11	e	_	
+103-12	TSF	_	
+103-13	que	_	
+103-14	está	_	
+103-15	muito	_	
+103-16	contente	_	
+103-17	com	_	
+103-18	a	_	
+103-19	sua	_	
+103-20	vida	_	
+103-21	e	_	
+103-22	que	_	
+103-23	não	_	
+103-24	quer	_	
+103-25	voltar	_	
+103-26	à	_	
+103-27	vida	_	
+103-28	pública	_	
+103-29	[	_	
+103-30	[	_	
+103-31	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+103-32	]	_	
+103-33	]	_	
+
+#id=104
+#text=Governo vai ter de perguntar aos contribuintes se têm consciência do que lhes vai ser feito em 2014 [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+104-1	Governo	_	
+104-2	vai	_	
+104-3	ter	_	
+104-4	de	_	
+104-5	perguntar	_	
+104-6	aos	_	
+104-7	contribuintes	_	
+104-8	se	_	
+104-9	têm	_	
+104-10	consciência	_	
+104-11	do	_	
+104-12	que	_	
+104-13	lhes	_	
+104-14	vai	_	
+104-15	ser	_	
+104-16	feito	_	
+104-17	em	_	
+104-18	2014	_	
+104-19	[	_	
+104-20	[	_	
+104-21	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+104-22	]	_	
+104-23	]	_	
+
+#id=105
+#text=Blatter acha que Messi é muito melhor do que Portas a reformar o Estado [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+105-1	Blatter	_	
+105-2	acha	_	
+105-3	que	_	
+105-4	Messi	_	
+105-5	é	_	
+105-6	muito	_	
+105-7	melhor	_	
+105-8	do	_	
+105-9	que	_	
+105-10	Portas	_	
+105-11	a	_	
+105-12	reformar	_	
+105-13	o	_	
+105-14	Estado	_	
+105-15	[	_	
+105-16	[	_	
+105-17	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+105-18	]	_	
+105-19	]	_	
+
+#id=106
+#text=‘Herald Tribune’ compara portugueses aos burros de carga gregos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+106-1	‘Herald	_	
+106-2	Tribune’	_	
+106-3	compara	_	
+106-4	portugueses	_	
+106-5	aos	_	
+106-6	burros	_	
+106-7	de	_	
+106-8	carga	_	
+106-9	gregos	_	
+106-10	[	_	
+106-11	[	_	
+106-12	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+106-13	]	_	
+106-14	]	_	
+
+#id=107
+#text=Recibos verdes no Estado são tingidos com a bílis que Passos Coelho produz contra o Tribunal Constitucional [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+107-1	Recibos	_	
+107-2	verdes	_	
+107-3	no	_	
+107-4	Estado	_	
+107-5	são	_	
+107-6	tingidos	_	
+107-7	com	_	
+107-8	a	_	
+107-9	bílis	_	
+107-10	que	_	
+107-11	Passos	_	
+107-12	Coelho	_	
+107-13	produz	_	
+107-14	contra	_	
+107-15	o	_	
+107-16	Tribunal	_	
+107-17	Constitucional	_	
+107-18	[	_	
+107-19	[	_	
+107-20	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Metáfora	
+107-21	]	_	
+107-22	]	_	
+
+#id=108
+#text=Portugal inteiro espera que Ronaldo cilindre a Suécia , domine o défice , acabe com a dívida , corra com a Troika e entre para a Casa dos Segredos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+108-1	Portugal	_	
+108-2	inteiro	_	
+108-3	espera	_	
+108-4	que	_	
+108-5	Ronaldo	_	
+108-6	cilindre	_	
+108-7	a	_	
+108-8	Suécia	_	
+108-9	,	_	
+108-10	domine	_	
+108-11	o	_	
+108-12	défice	_	
+108-13	,	_	
+108-14	acabe	_	
+108-15	com	_	
+108-16	a	_	
+108-17	dívida	_	
+108-18	,	_	
+108-19	corra	_	
+108-20	com	_	
+108-21	a	_	
+108-22	Troika	_	
+108-23	e	_	
+108-24	entre	_	
+108-25	para	_	
+108-26	a	_	
+108-27	Casa	_	
+108-28	dos	_	
+108-29	Segredos	_	
+108-30	[	_	
+108-31	[	_	
+108-32	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Imparidade|Hipérbole	
+108-33	]	_	
+108-34	]	_	
+
+#id=109
+#text=Feira Popular de Lisboa deslocalizada para a Polónia [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+109-1	Feira	_	
+109-2	Popular	_	
+109-3	de	_	
+109-4	Lisboa	_	
+109-5	deslocalizada	_	
+109-6	para	_	
+109-7	a	_	
+109-8	Polónia	_	
+109-9	[	_	
+109-10	[	_	
+109-11	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo|Metáfora	
+109-12	]	_	
+109-13	]	_	
+
+#id=110
+#text=PSD contrata ninjas de Gaia para perseguir militantes que concorreram contra o partido nas eleições [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+110-1	PSD	_	
+110-2	contrata	_	
+110-3	ninjas	_	
+110-4	de	_	
+110-5	Gaia	_	
+110-6	para	_	
+110-7	perseguir	_	
+110-8	militantes	_	
+110-9	que	_	
+110-10	concorreram	_	
+110-11	contra	_	
+110-12	o	_	
+110-13	partido	_	
+110-14	nas	_	
+110-15	eleições	_	
+110-16	[	_	
+110-17	[	_	
+110-18	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+110-19	]	_	
+110-20	]	_	
+
+#id=111
+#text=Pires de Lima garante que o capital estrangeiro sai de Portugal apenas para atestar o depósito em Espanha [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+111-1	Pires	_	
+111-2	de	_	
+111-3	Lima	_	
+111-4	garante	_	
+111-5	que	_	
+111-6	o	_	
+111-7	capital	_	
+111-8	estrangeiro	_	
+111-9	sai	_	
+111-10	de	_	
+111-11	Portugal	_	
+111-12	apenas	_	
+111-13	para	_	
+111-14	atestar	_	
+111-15	o	_	
+111-16	depósito	_	
+111-17	em	_	
+111-18	Espanha	_	
+111-19	[	_	
+111-20	[	_	
+111-21	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+111-22	]	_	
+111-23	]	_	
+
+#id=112
+#text=Luiz Felipe Scolari tem a certeza que o burro mirandês não é ele [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+112-1	Luiz	_	
+112-2	Felipe	_	
+112-3	Scolari	_	
+112-4	tem	_	
+112-5	a	_	
+112-6	certeza	_	
+112-7	que	_	
+112-8	o	_	
+112-9	burro	_	
+112-10	mirandês	_	
+112-11	não	_	
+112-12	é	_	
+112-13	ele	_	
+112-14	[	_	
+112-15	[	_	
+112-16	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+112-17	]	_	
+112-18	]	_	
+
+#id=113
+#text=Revista 'Time ' coloca Cavaco Silva como a segunda pessoa mais influente do ano pela sua defesa das cagarras no ecossistema das Selvagens [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+113-1	Revista	_	
+113-2	'Time	_	
+113-3	'	_	
+113-4	coloca	_	
+113-5	Cavaco	_	
+113-6	Silva	_	
+113-7	como	_	
+113-8	a	_	
+113-9	segunda	_	
+113-10	pessoa	_	
+113-11	mais	_	
+113-12	influente	_	
+113-13	do	_	
+113-14	ano	_	
+113-15	pela	_	
+113-16	sua	_	
+113-17	defesa	_	
+113-18	das	_	
+113-19	cagarras	_	
+113-20	no	_	
+113-21	ecossistema	_	
+113-22	das	_	
+113-23	Selvagens	_	
+113-24	[	_	
+113-25	[	_	
+113-26	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+113-27	]	_	
+113-28	]	_	
+
+#id=114
+#text=Ministros vão gastar 35 milhões de euros em viagens , infelizmente todas elas de ida-e-volta [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+114-1	Ministros	_	
+114-2	vão	_	
+114-3	gastar	_	
+114-4	35	_	
+114-5	milhões	_	
+114-6	de	_	
+114-7	euros	_	
+114-8	em	_	
+114-9	viagens	_	
+114-10	,	_	
+114-11	infelizmente	_	
+114-12	todas	_	
+114-13	elas	_	
+114-14	de	_	
+114-15	ida-e-volta	_	
+114-16	[	_	
+114-17	[	_	
+114-18	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+114-19	]	_	
+114-20	]	_	
+
+#id=115
+#text=NSA escutou conclave que elegeu o Papa no Vaticano e o conclave que não elegeu o António Costa no Largo do Rato [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+115-1	NSA	_	
+115-2	escutou	_	
+115-3	conclave	_	
+115-4	que	_	
+115-5	elegeu	_	
+115-6	o	_	
+115-7	Papa	_	
+115-8	no	_	
+115-9	Vaticano	_	
+115-10	e	_	
+115-11	o	_	
+115-12	conclave	_	
+115-13	que	_	
+115-14	não	_	
+115-15	elegeu	_	
+115-16	o	_	
+115-17	António	_	
+115-18	Costa	_	
+115-19	no	_	
+115-20	Largo	_	
+115-21	do	_	
+115-22	Rato	_	
+115-23	[	_	
+115-24	[	_	
+115-25	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Comparação	
+115-26	]	_	
+115-27	]	_	
+
+#id=116
+#text=Estudo revela que lisboetas ficam com as carteiras que encontram no chão e em seu lugar deixam um monte de cuspe [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+116-1	Estudo	_	
+116-2	revela	_	
+116-3	que	_	
+116-4	lisboetas	_	
+116-5	ficam	_	
+116-6	com	_	
+116-7	as	_	
+116-8	carteiras	_	
+116-9	que	_	
+116-10	encontram	_	
+116-11	no	_	
+116-12	chão	_	
+116-13	e	_	
+116-14	em	_	
+116-15	seu	_	
+116-16	lugar	_	
+116-17	deixam	_	
+116-18	um	_	
+116-19	monte	_	
+116-20	de	_	
+116-21	cuspe	_	
+116-22	[	_	
+116-23	[	_	
+116-24	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo	
+116-25	]	_	
+116-26	]	_	
+
+#id=117
+#text=Livro de receitas de Cristina Ferreira tem um prato que é só pão e água para rivalizar com o livro sobre tortura de José Sócrates [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+117-1	Livro	_	
+117-2	de	_	
+117-3	receitas	_	
+117-4	de	_	
+117-5	Cristina	_	
+117-6	Ferreira	_	
+117-7	tem	_	
+117-8	um	_	
+117-9	prato	_	
+117-10	que	_	
+117-11	é	_	
+117-12	só	_	
+117-13	pão	_	
+117-14	e	_	
+117-15	água	_	
+117-16	para	_	
+117-17	rivalizar	_	
+117-18	com	_	
+117-19	o	_	
+117-20	livro	_	
+117-21	sobre	_	
+117-22	tortura	_	
+117-23	de	_	
+117-24	José	_	
+117-25	Sócrates	_	
+117-26	[	_	
+117-27	[	_	
+117-28	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+117-29	]	_	
+117-30	]	_	
+
+#id=118
+#text=Passos vai taxar felicidade dos sportinguistas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+118-1	Passos	_	
+118-2	vai	_	
+118-3	taxar	_	
+118-4	felicidade	_	
+118-5	dos	_	
+118-6	sportinguistas	_	
+118-7	[	_	
+118-8	[	_	
+118-9	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Imparidade	
+118-10	]	_	
+118-11	]	_	
+
+#id=119
+#text=Durão Barroso ameaça regressar a Portugal mas portugueses respondem ‘Vá-se embora. Não está cá ninguém.’ [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+119-1	Durão	_	
+119-2	Barroso	_	
+119-3	ameaça	_	
+119-4	regressar	_	
+119-5	a	_	
+119-6	Portugal	_	
+119-7	mas	_	
+119-8	portugueses	_	
+119-9	respondem	_	
+119-10	‘Vá-se	_	
+119-11	embora.	_	
+119-12	Não	_	
+119-13	está	_	
+119-14	cá	_	
+119-15	ninguém.’	_	
+119-16	[	_	
+119-17	[	_	
+119-18	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+119-19	]	_	
+119-20	]	_	
+
+#id=120
+#text=Espiões dos EUA que escutaram Cavaco tornaram-se nos maiores especialistas mundiais em cagarras [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+120-1	Espiões	_	
+120-2	dos	_	
+120-3	EUA	_	
+120-4	que	_	
+120-5	escutaram	_	
+120-6	Cavaco	_	
+120-7	tornaram-se	_	
+120-8	nos	_	
+120-9	maiores	_	
+120-10	especialistas	_	
+120-11	mundiais	_	
+120-12	em	_	
+120-13	cagarras	_	
+120-14	[	_	
+120-15	[	_	
+120-16	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+120-17	]	_	
+120-18	]	_	
+
+#id=121
+#text=Portugal sai da recessão mas FMI avisa que tem de voltar antes da meia-noite [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+121-1	Portugal	_	
+121-2	sai	_	
+121-3	da	_	
+121-4	recessão	_	
+121-5	mas	_	
+121-6	FMI	_	
+121-7	avisa	_	
+121-8	que	_	
+121-9	tem	_	
+121-10	de	_	
+121-11	voltar	_	
+121-12	antes	_	
+121-13	da	_	
+121-14	meia-noite	_	
+121-15	[	_	
+121-16	[	_	
+121-17	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+121-18	]	_	
+121-19	]	_	
+
+#id=122
+#text=Pedido de desculpas de Rui Machete causa guerra civil em Moçambique [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+122-1	Pedido	_	
+122-2	de	_	
+122-3	desculpas	_	
+122-4	de	_	
+122-5	Rui	_	
+122-6	Machete	_	
+122-7	causa	_	
+122-8	guerra	_	
+122-9	civil	_	
+122-10	em	_	
+122-11	Moçambique	_	
+122-12	[	_	
+122-13	[	_	
+122-14	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+122-15	]	_	
+122-16	]	_	
+
+#id=123
+#text=Presidência explica desaparecimento de Cavaco da cena política com eclipse de ontem [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+123-1	Presidência	_	
+123-2	explica	_	
+123-3	desaparecimento	_	
+123-4	de	_	
+123-5	Cavaco	_	
+123-6	da	_	
+123-7	cena	_	
+123-8	política	_	
+123-9	com	_	
+123-10	eclipse	_	
+123-11	de	_	
+123-12	ontem	_	
+123-13	[	_	
+123-14	[	_	
+123-15	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+123-16	]	_	
+123-17	]	_	
+
+#id=124
+#text=Bloco de Esquerda processa Professor Bambo porque prometeu-lhe 900 presidências de câmara e não cumpriu [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+124-1	Bloco	_	
+124-2	de	_	
+124-3	Esquerda	_	
+124-4	processa	_	
+124-5	Professor	_	
+124-6	Bambo	_	
+124-7	porque	_	
+124-8	prometeu-lhe	_	
+124-9	900	_	
+124-10	presidências	_	
+124-11	de	_	
+124-12	câmara	_	
+124-13	e	_	
+124-14	não	_	
+124-15	cumpriu	_	
+124-16	[	_	
+124-17	[	_	
+124-18	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+124-19	]	_	
+124-20	]	_	
+
+#id=125
+#text=Rui Rio vai implodir o Bairro Alto quando chegar a primeiro-ministro [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+125-1	Rui	_	
+125-2	Rio	_	
+125-3	vai	_	
+125-4	implodir	_	
+125-5	o	_	
+125-6	Bairro	_	
+125-7	Alto	_	
+125-8	quando	_	
+125-9	chegar	_	
+125-10	a	_	
+125-11	primeiro-ministro	_	
+125-12	[	_	
+125-13	[	_	
+125-14	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+125-15	]	_	
+125-16	]	_	
+
+#id=126
+#text=Governo quer apenas dois cães por apartamento e um cagalhoto de cão por passeio [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+126-1	Governo	_	
+126-2	quer	_	
+126-3	apenas	_	
+126-4	dois	_	
+126-5	cães	_	
+126-6	por	_	
+126-7	apartamento	_	
+126-8	e	_	
+126-9	um	_	
+126-10	cagalhoto	_	
+126-11	de	_	
+126-12	cão	_	
+126-13	por	_	
+126-14	passeio	_	
+126-15	[	_	
+126-16	[	_	
+126-17	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Hipérbole	
+126-18	]	_	
+126-19	]	_	
+
+#id=127
+#text=Portugal x Suécia no play-off : Paulo Bento já está a ver vídeos dos ABBA [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+127-1	Portugal	_	
+127-2	x	_	
+127-3	Suécia	_	
+127-4	no	_	
+127-5	play-off	_	
+127-6	:	_	
+127-7	Paulo	_	
+127-8	Bento	_	
+127-9	já	_	
+127-10	está	_	
+127-11	a	_	
+127-12	ver	_	
+127-13	vídeos	_	
+127-14	dos	_	
+127-15	ABBA	_	
+127-16	[	_	
+127-17	[	_	
+127-18	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+127-19	]	_	
+127-20	]	_	
+
+#id=128
+#text=Seguro garante que , se ele fosse PM , Ronaldo tinha marcado sete golos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+128-1	Seguro	_	
+128-2	garante	_	
+128-3	que	_	
+128-4	,	_	
+128-5	se	_	
+128-6	ele	_	
+128-7	fosse	_	
+128-8	PM	_	
+128-9	,	_	
+128-10	Ronaldo	_	
+128-11	tinha	_	
+128-12	marcado	_	
+128-13	sete	_	
+128-14	golos	_	
+128-15	[	_	
+128-16	[	_	
+128-17	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Hipérbole	
+128-18	]	_	
+128-19	]	_	
+
+#id=129
+#text=Bill Gates dá 1 milhão de euros a portugueses que tentam descobrir o que Rui Machete ainda está a fazer no Governo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+129-1	Bill	_	
+129-2	Gates	_	
+129-3	dá	_	
+129-4	1	_	
+129-5	milhão	_	
+129-6	de	_	
+129-7	euros	_	
+129-8	a	_	
+129-9	portugueses	_	
+129-10	que	_	
+129-11	tentam	_	
+129-12	descobrir	_	
+129-13	o	_	
+129-14	que	_	
+129-15	Rui	_	
+129-16	Machete	_	
+129-17	ainda	_	
+129-18	está	_	
+129-19	a	_	
+129-20	fazer	_	
+129-21	no	_	
+129-22	Governo	_	
+129-23	[	_	
+129-24	[	_	
+129-25	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+129-26	]	_	
+129-27	]	_	
+
+#id=130
+#text=João Almeida quer enforcar o último rei com as tripas do último padre [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+130-1	João	_	
+130-2	Almeida	_	
+130-3	quer	_	
+130-4	enforcar	_	
+130-5	o	_	
+130-6	último	_	
+130-7	rei	_	
+130-8	com	_	
+130-9	as	_	
+130-10	tripas	_	
+130-11	do	_	
+130-12	último	_	
+130-13	padre	_	
+130-14	[	_	
+130-15	[	_	
+130-16	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Outro	
+130-17	]	_	
+130-18	]	_	
+
+#id=131
+#text=FC Porto contrata Quaresma , que já escolheu casa , carro e joalharia na Invicta [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+131-1	FC	_	
+131-2	Porto	_	
+131-3	contrata	_	
+131-4	Quaresma	_	
+131-5	,	_	
+131-6	que	_	
+131-7	já	_	
+131-8	escolheu	_	
+131-9	casa	_	
+131-10	,	_	
+131-11	carro	_	
+131-12	e	_	
+131-13	joalharia	_	
+131-14	na	_	
+131-15	Invicta	_	
+131-16	[	_	
+131-17	[	_	
+131-18	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+131-19	]	_	
+131-20	]	_	
+
+#id=132
+#text=Joseph Blatter diz que a vitória de Portugal se deve à sazonalidade [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+132-1	Joseph	_	
+132-2	Blatter	_	
+132-3	diz	_	
+132-4	que	_	
+132-5	a	_	
+132-6	vitória	_	
+132-7	de	_	
+132-8	Portugal	_	
+132-9	se	_	
+132-10	deve	_	
+132-11	à	_	
+132-12	sazonalidade	_	
+132-13	[	_	
+132-14	[	_	
+132-15	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+132-16	]	_	
+132-17	]	_	
+
+#id=133
+#text=Passos Coelho anuncia que o mundo vai aquecer 3,6 graus se os governos não fizerem reformas estruturais [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+133-1	Passos	_	
+133-2	Coelho	_	
+133-3	anuncia	_	
+133-4	que	_	
+133-5	o	_	
+133-6	mundo	_	
+133-7	vai	_	
+133-8	aquecer	_	
+133-9	3,6	_	
+133-10	graus	_	
+133-11	se	_	
+133-12	os	_	
+133-13	governos	_	
+133-14	não	_	
+133-15	fizerem	_	
+133-16	reformas	_	
+133-17	estruturais	_	
+133-18	[	_	
+133-19	[	_	
+133-20	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+133-21	]	_	
+133-22	]	_	
+
+#id=134
+#text=Sindicalistas portistas da CGTP invadem balneário de Paulo Fonseca [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+134-1	Sindicalistas	_	
+134-2	portistas	_	
+134-3	da	_	
+134-4	CGTP	_	
+134-5	invadem	_	
+134-6	balneário	_	
+134-7	de	_	
+134-8	Paulo	_	
+134-9	Fonseca	_	
+134-10	[	_	
+134-11	[	_	
+134-12	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+134-13	]	_	
+134-14	]	_	
+
+#id=135
+#text=Manuel Maria Carrilho vai escrever um livro sobre tortura doméstica [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+135-1	Manuel	_	
+135-2	Maria	_	
+135-3	Carrilho	_	
+135-4	vai	_	
+135-5	escrever	_	
+135-6	um	_	
+135-7	livro	_	
+135-8	sobre	_	
+135-9	tortura	_	
+135-10	doméstica	_	
+135-11	[	_	
+135-12	[	_	
+135-13	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+135-14	]	_	
+135-15	]	_	
+
+#id=136
+#text=Portas entrega desmantelamento do Estado aos alemães dos submarinos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+136-1	Portas	_	
+136-2	entrega	_	
+136-3	desmantelamento	_	
+136-4	do	_	
+136-5	Estado	_	
+136-6	aos	_	
+136-7	alemães	_	
+136-8	dos	_	
+136-9	submarinos	_	
+136-10	[	_	
+136-11	[	_	
+136-12	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Outro	
+136-13	]	_	
+136-14	]	_	
+
+#id=137
+#text=Funcionários públicos vão trabalhar mais , receber menos e doar um rim ao Estado [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+137-1	Funcionários	_	
+137-2	públicos	_	
+137-3	vão	_	
+137-4	trabalhar	_	
+137-5	mais	_	
+137-6	,	_	
+137-7	receber	_	
+137-8	menos	_	
+137-9	e	_	
+137-10	doar	_	
+137-11	um	_	
+137-12	rim	_	
+137-13	ao	_	
+137-14	Estado	_	
+137-15	[	_	
+137-16	[	_	
+137-17	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Hipérbole	
+137-18	]	_	
+137-19	]	_	
+
+#id=138
+#text=Ucranianos pró-Europa substituem estátua do Lenine por estátua do Eusébio [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+138-1	Ucranianos	_	
+138-2	pró-Europa	_	
+138-3	substituem	_	
+138-4	estátua	_	
+138-5	do	_	
+138-6	Lenine	_	
+138-7	por	_	
+138-8	estátua	_	
+138-9	do	_	
+138-10	Eusébio	_	
+138-11	[	_	
+138-12	[	_	
+138-13	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Hipérbole	
+138-14	]	_	
+138-15	]	_	
+
+#id=139
+#text=Basílio Horta faz coligação em Sintra com PSD , CDU , maoistas , liberais , monárquicos , anarcas , bieberianos , vegetarianos e toureiros [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+139-1	Basílio	_	
+139-2	Horta	_	
+139-3	faz	_	
+139-4	coligação	_	
+139-5	em	_	
+139-6	Sintra	_	
+139-7	com	_	
+139-8	PSD	_	
+139-9	,	_	
+139-10	CDU	_	
+139-11	,	_	
+139-12	maoistas	_	
+139-13	,	_	
+139-14	liberais	_	
+139-15	,	_	
+139-16	monárquicos	_	
+139-17	,	_	
+139-18	anarcas	_	
+139-19	,	_	
+139-20	bieberianos	_	
+139-21	,	_	
+139-22	vegetarianos	_	
+139-23	e	_	
+139-24	toureiros	_	
+139-25	[	_	
+139-26	[	_	
+139-27	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+139-28	]	_	
+139-29	]	_	
+
+#id=140
+#text=‘Picas’ da CGTP vão andar pelos autocarros da manifestação a controlarem quem não tem cartão de militante da CDU [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+140-1	‘Picas’	_	
+140-2	da	_	
+140-3	CGTP	_	
+140-4	vão	_	
+140-5	andar	_	
+140-6	pelos	_	
+140-7	autocarros	_	
+140-8	da	_	
+140-9	manifestação	_	
+140-10	a	_	
+140-11	controlarem	_	
+140-12	quem	_	
+140-13	não	_	
+140-14	tem	_	
+140-15	cartão	_	
+140-16	de	_	
+140-17	militante	_	
+140-18	da	_	
+140-19	CDU	_	
+140-20	[	_	
+140-21	[	_	
+140-22	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+140-23	]	_	
+140-24	]	_	
+
+#id=141
+#text=Estado apenas vai pagar multas de estacionamento a Mário Soares [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+141-1	Estado	_	
+141-2	apenas	_	
+141-3	vai	_	
+141-4	pagar	_	
+141-5	multas	_	
+141-6	de	_	
+141-7	estacionamento	_	
+141-8	a	_	
+141-9	Mário	_	
+141-10	Soares	_	
+141-11	[	_	
+141-12	[	_	
+141-13	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+141-14	]	_	
+141-15	]	_	
+
+#id=142
+#text=O Governo apenas vai dar tolerância de ponto no Natal aos funcionários públicos que ainda acreditem no Pai Natal [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+142-1	O	_	
+142-2	Governo	_	
+142-3	apenas	_	
+142-4	vai	_	
+142-5	dar	_	
+142-6	tolerância	_	
+142-7	de	_	
+142-8	ponto	_	
+142-9	no	_	
+142-10	Natal	_	
+142-11	aos	_	
+142-12	funcionários	_	
+142-13	públicos	_	
+142-14	que	_	
+142-15	ainda	_	
+142-16	acreditem	_	
+142-17	no	_	
+142-18	Pai	_	
+142-19	Natal	_	
+142-20	[	_	
+142-21	[	_	
+142-22	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+142-23	]	_	
+142-24	]	_	
+
+#id=143
+#text=FMI quer imposto de 10 % sobre os portugueses com riqueza interior [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+143-1	FMI	_	
+143-2	quer	_	
+143-3	imposto	_	
+143-4	de	_	
+143-5	10	_	
+143-6	%	_	
+143-7	sobre	_	
+143-8	os	_	
+143-9	portugueses	_	
+143-10	com	_	
+143-11	riqueza	_	
+143-12	interior	_	
+143-13	[	_	
+143-14	[	_	
+143-15	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo|Hipérbole	
+143-16	]	_	
+143-17	]	_	
+
+#id=144
+#text=Cavaco Silva assinou camisola a Snopp Dogg em nome de Passos Coelho [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+144-1	Cavaco	_	
+144-2	Silva	_	
+144-3	assinou	_	
+144-4	camisola	_	
+144-5	a	_	
+144-6	Snopp	_	
+144-7	Dogg	_	
+144-8	em	_	
+144-9	nome	_	
+144-10	de	_	
+144-11	Passos	_	
+144-12	Coelho	_	
+144-13	[	_	
+144-14	[	_	
+144-15	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+144-16	]	_	
+144-17	]	_	
+
+#id=145
+#text=Eduardo Catroga diz que ‘choque de expectativas’ já lhe arrepiou os pentelhos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+145-1	Eduardo	_	
+145-2	Catroga	_	
+145-3	diz	_	
+145-4	que	_	
+145-5	‘choque	_	
+145-6	de	_	
+145-7	expectativas’	_	
+145-8	já	_	
+145-9	lhe	_	
+145-10	arrepiou	_	
+145-11	os	_	
+145-12	pentelhos	_	
+145-13	[	_	
+145-14	[	_	
+145-15	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo|Metáfora	
+145-16	]	_	
+145-17	]	_	
+
+#id=146
+#text=Nuno Crato garante que a professora que filmava pornografia em escola pública filmaria comédias românticas em escolas privadas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+146-1	Nuno	_	
+146-2	Crato	_	
+146-3	garante	_	
+146-4	que	_	
+146-5	a	_	
+146-6	professora	_	
+146-7	que	_	
+146-8	filmava	_	
+146-9	pornografia	_	
+146-10	em	_	
+146-11	escola	_	
+146-12	pública	_	
+146-13	filmaria	_	
+146-14	comédias	_	
+146-15	românticas	_	
+146-16	em	_	
+146-17	escolas	_	
+146-18	privadas	_	
+146-19	[	_	
+146-20	[	_	
+146-21	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo|Vulgarismo|Imparidade	
+146-22	]	_	
+146-23	]	_	
+
+#id=147
+#text=Obama foi anilhar cagarras para as Selvagens enquanto republicanos e democratas tentam acordo orçamental [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+147-1	Obama	_	
+147-2	foi	_	
+147-3	anilhar	_	
+147-4	cagarras	_	
+147-5	para	_	
+147-6	as	_	
+147-7	Selvagens	_	
+147-8	enquanto	_	
+147-9	republicanos	_	
+147-10	e	_	
+147-11	democratas	_	
+147-12	tentam	_	
+147-13	acordo	_	
+147-14	orçamental	_	
+147-15	[	_	
+147-16	[	_	
+147-17	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Imparidade	
+147-18	]	_	
+147-19	]	_	
+
+#id=148
+#text=Jay-Z admite que em novo vendia crack , acções do BPN e swaps [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+148-1	Jay-Z	_	
+148-2	admite	_	
+148-3	que	_	
+148-4	em	_	
+148-5	novo	_	
+148-6	vendia	_	
+148-7	crack	_	
+148-8	,	_	
+148-9	acções	_	
+148-10	do	_	
+148-11	BPN	_	
+148-12	e	_	
+148-13	swaps	_	
+148-14	[	_	
+148-15	[	_	
+148-16	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+148-17	]	_	
+148-18	]	_	
+
+#id=149
+#text=‘TSU dos pensionistas’ não avança mas no seu lugar chega o novo ‘IVA dos cotas’ [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+149-1	‘TSU	_	
+149-2	dos	_	
+149-3	pensionistas’	_	
+149-4	não	_	
+149-5	avança	_	
+149-6	mas	_	
+149-7	no	_	
+149-8	seu	_	
+149-9	lugar	_	
+149-10	chega	_	
+149-11	o	_	
+149-12	novo	_	
+149-13	‘IVA	_	
+149-14	dos	_	
+149-15	cotas’	_	
+149-16	[	_	
+149-17	[	_	
+149-18	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo	
+149-19	]	_	
+149-20	]	_	
+
+#id=150
+#text=Governo vai abrir concessão a apostas online sobre quando é que o Rui Machete se vai demitir [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+150-1	Governo	_	
+150-2	vai	_	
+150-3	abrir	_	
+150-4	concessão	_	
+150-5	a	_	
+150-6	apostas	_	
+150-7	online	_	
+150-8	sobre	_	
+150-9	quando	_	
+150-10	é	_	
+150-11	que	_	
+150-12	o	_	
+150-13	Rui	_	
+150-14	Machete	_	
+150-15	se	_	
+150-16	vai	_	
+150-17	demitir	_	
+150-18	[	_	
+150-19	[	_	
+150-20	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Imparidade	
+150-21	]	_	
+150-22	]	_	
+
+#id=151
+#text=Pacheco Pereira furou o cordão socialista do congresso das Esquerdas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+151-1	Pacheco	_	
+151-2	Pereira	_	
+151-3	furou	_	
+151-4	o	_	
+151-5	cordão	_	
+151-6	socialista	_	
+151-7	do	_	
+151-8	congresso	_	
+151-9	das	_	
+151-10	Esquerdas	_	
+151-11	[	_	
+151-12	[	_	
+151-13	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+151-14	]	_	
+151-15	]	_	
+
+#id=152
+#text=Miguel Relvas pondera adoptar um bebé tal como adoptou uma licenciatura [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+152-1	Miguel	_	
+152-2	Relvas	_	
+152-3	pondera	_	
+152-4	adoptar	_	
+152-5	um	_	
+152-6	bebé	_	
+152-7	tal	_	
+152-8	como	_	
+152-9	adoptou	_	
+152-10	uma	_	
+152-11	licenciatura	_	
+152-12	[	_	
+152-13	[	_	
+152-14	ANOTACAO_RECURSO_ESTILISTICO	Comparação	
+152-15	]	_	
+152-16	]	_	
+
+#id=153
+#text=Governo quer proibir médicos de usarem coisas supérfluas , gravatas e medicamentos caros [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+153-1	Governo	_	
+153-2	quer	_	
+153-3	proibir	_	
+153-4	médicos	_	
+153-5	de	_	
+153-6	usarem	_	
+153-7	coisas	_	
+153-8	supérfluas	_	
+153-9	,	_	
+153-10	gravatas	_	
+153-11	e	_	
+153-12	medicamentos	_	
+153-13	caros	_	
+153-14	[	_	
+153-15	[	_	
+153-16	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Imparidade	
+153-17	]	_	
+153-18	]	_	
+
+#id=154
+#text=Carro de luxo comprado por Rui Patrício até vem com um Paulo Bento sobresselente na bagageira [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+154-1	Carro	_	
+154-2	de	_	
+154-3	luxo	_	
+154-4	comprado	_	
+154-5	por	_	
+154-6	Rui	_	
+154-7	Patrício	_	
+154-8	até	_	
+154-9	vem	_	
+154-10	com	_	
+154-11	um	_	
+154-12	Paulo	_	
+154-13	Bento	_	
+154-14	sobresselente	_	
+154-15	na	_	
+154-16	bagageira	_	
+154-17	[	_	
+154-18	[	_	
+154-19	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+154-20	]	_	
+154-21	]	_	
+
+#id=155
+#text=Governo vende empresas públicas com saldos na ‘Black Friday’ [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+155-1	Governo	_	
+155-2	vende	_	
+155-3	empresas	_	
+155-4	públicas	_	
+155-5	com	_	
+155-6	saldos	_	
+155-7	na	_	
+155-8	‘Black	_	
+155-9	Friday’	_	
+155-10	[	_	
+155-11	[	_	
+155-12	ANOTACAO_RECURSO_ESTILISTICO	Comparação	
+155-13	]	_	
+155-14	]	_	
+
+#id=156
+#text=Reunião em Bruxelas entre Passos e Durão precisou de tradutor [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+156-1	Reunião	_	
+156-2	em	_	
+156-3	Bruxelas	_	
+156-4	entre	_	
+156-5	Passos	_	
+156-6	e	_	
+156-7	Durão	_	
+156-8	precisou	_	
+156-9	de	_	
+156-10	tradutor	_	
+156-11	[	_	
+156-12	[	_	
+156-13	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+156-14	]	_	
+156-15	]	_	
+
+#id=157
+#text=Paulo Portas anuncia que Portugal vai estabelecer acordos económicos todos os países do sorteio para o Mundial [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+157-1	Paulo	_	
+157-2	Portas	_	
+157-3	anuncia	_	
+157-4	que	_	
+157-5	Portugal	_	
+157-6	vai	_	
+157-7	estabelecer	_	
+157-8	acordos	_	
+157-9	económicos	_	
+157-10	todos	_	
+157-11	os	_	
+157-12	países	_	
+157-13	do	_	
+157-14	sorteio	_	
+157-15	para	_	
+157-16	o	_	
+157-17	Mundial	_	
+157-18	[	_	
+157-19	[	_	
+157-20	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+157-21	]	_	
+157-22	]	_	
+
+#id=158
+#text=Fenómeno : governo não cortou nada entre as 12h45 e as 12h48 de hoje [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+158-1	Fenómeno	_	
+158-2	:	_	
+158-3	governo	_	
+158-4	não	_	
+158-5	cortou	_	
+158-6	nada	_	
+158-7	entre	_	
+158-8	as	_	
+158-9	12h45	_	
+158-10	e	_	
+158-11	as	_	
+158-12	12h48	_	
+158-13	de	_	
+158-14	hoje	_	
+158-15	[	_	
+158-16	[	_	
+158-17	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+158-18	]	_	
+158-19	]	_	
+
+#id=159
+#text=Ministério da defesa vende canhão da Nazaré à Roménia [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+159-1	Ministério	_	
+159-2	da	_	
+159-3	defesa	_	
+159-4	vende	_	
+159-5	canhão	_	
+159-6	da	_	
+159-7	Nazaré	_	
+159-8	à	_	
+159-9	Roménia	_	
+159-10	[	_	
+159-11	[	_	
+159-12	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo|Imparidade	
+159-13	]	_	
+159-14	]	_	
+
+#id=160
+#text=Soares dos Santos culpa José Sócrates pela falha informática no Pingo Doce [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+160-1	Soares	_	
+160-2	dos	_	
+160-3	Santos	_	
+160-4	culpa	_	
+160-5	José	_	
+160-6	Sócrates	_	
+160-7	pela	_	
+160-8	falha	_	
+160-9	informática	_	
+160-10	no	_	
+160-11	Pingo	_	
+160-12	Doce	_	
+160-13	[	_	
+160-14	[	_	
+160-15	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+160-16	]	_	
+160-17	]	_	
+
+#id=161
+#text=Alunos de cursos profissionais têm mais empregabilidade como se vê pelo exemplo do Eduardo Catroga [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+161-1	Alunos	_	
+161-2	de	_	
+161-3	cursos	_	
+161-4	profissionais	_	
+161-5	têm	_	
+161-6	mais	_	
+161-7	empregabilidade	_	
+161-8	como	_	
+161-9	se	_	
+161-10	vê	_	
+161-11	pelo	_	
+161-12	exemplo	_	
+161-13	do	_	
+161-14	Eduardo	_	
+161-15	Catroga	_	
+161-16	[	_	
+161-17	[	_	
+161-18	ANOTACAO_RECURSO_ESTILISTICO	Comparação	
+161-19	]	_	
+161-20	]	_	
+
+#id=162
+#text=Barack Obama mandou ‘drone’ matar o peru ‘Pipocas’ [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+162-1	Barack	_	
+162-2	Obama	_	
+162-3	mandou	_	
+162-4	‘drone’	_	
+162-5	matar	_	
+162-6	o	_	
+162-7	peru	_	
+162-8	‘Pipocas’	_	
+162-9	[	_	
+162-10	[	_	
+162-11	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+162-12	]	_	
+162-13	]	_	
+
+#id=163
+#text=Medina Carreira certo que Portugal vai calhar no grupo da Alemanha , da Espanha , da Argentina e do Brasil [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+163-1	Medina	_	
+163-2	Carreira	_	
+163-3	certo	_	
+163-4	que	_	
+163-5	Portugal	_	
+163-6	vai	_	
+163-7	calhar	_	
+163-8	no	_	
+163-9	grupo	_	
+163-10	da	_	
+163-11	Alemanha	_	
+163-12	,	_	
+163-13	da	_	
+163-14	Espanha	_	
+163-15	,	_	
+163-16	da	_	
+163-17	Argentina	_	
+163-18	e	_	
+163-19	do	_	
+163-20	Brasil	_	
+163-21	[	_	
+163-22	[	_	
+163-23	ANOTACAO_RECURSO_ESTILISTICO	Outro|Imparidade	
+163-24	]	_	
+163-25	]	_	
+
+#id=164
+#text=TVI anuncia entrevista com o secretário-geral do PS mas não explica se é com Seguro , Sócrates , Soares ou Costa [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+164-1	TVI	_	
+164-2	anuncia	_	
+164-3	entrevista	_	
+164-4	com	_	
+164-5	o	_	
+164-6	secretário-geral	_	
+164-7	do	_	
+164-8	PS	_	
+164-9	mas	_	
+164-10	não	_	
+164-11	explica	_	
+164-12	se	_	
+164-13	é	_	
+164-14	com	_	
+164-15	Seguro	_	
+164-16	,	_	
+164-17	Sócrates	_	
+164-18	,	_	
+164-19	Soares	_	
+164-20	ou	_	
+164-21	Costa	_	
+164-22	[	_	
+164-23	[	_	
+164-24	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+164-25	]	_	
+164-26	]	_	
+
+#id=165
+#text=Bruno de Carvalho sugere tirar o vermelho do cabelo de Sónia Tavares [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+165-1	Bruno	_	
+165-2	de	_	
+165-3	Carvalho	_	
+165-4	sugere	_	
+165-5	tirar	_	
+165-6	o	_	
+165-7	vermelho	_	
+165-8	do	_	
+165-9	cabelo	_	
+165-10	de	_	
+165-11	Sónia	_	
+165-12	Tavares	_	
+165-13	[	_	
+165-14	[	_	
+165-15	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+165-16	]	_	
+165-17	]	_	
+
+#id=166
+#text=Atum que percorreu 6 mil km estabelece novo paradigma para a colocação de professores [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+166-1	Atum	_	
+166-2	que	_	
+166-3	percorreu	_	
+166-4	6	_	
+166-5	mil	_	
+166-6	km	_	
+166-7	estabelece	_	
+166-8	novo	_	
+166-9	paradigma	_	
+166-10	para	_	
+166-11	a	_	
+166-12	colocação	_	
+166-13	de	_	
+166-14	professores	_	
+166-15	[	_	
+166-16	[	_	
+166-17	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+166-18	]	_	
+166-19	]	_	
+
+#id=167
+#text=Pires de Lima exultante se Portugal marcar 0,2 golos à Suécia [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+167-1	Pires	_	
+167-2	de	_	
+167-3	Lima	_	
+167-4	exultante	_	
+167-5	se	_	
+167-6	Portugal	_	
+167-7	marcar	_	
+167-8	0,2	_	
+167-9	golos	_	
+167-10	à	_	
+167-11	Suécia	_	
+167-12	[	_	
+167-13	[	_	
+167-14	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+167-15	]	_	
+167-16	]	_	
+
+#id=168
+#text=Paulo Bento chama o Aníbal da Casa dos Segredos para insultar os luxemburgueses [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+168-1	Paulo	_	
+168-2	Bento	_	
+168-3	chama	_	
+168-4	o	_	
+168-5	Aníbal	_	
+168-6	da	_	
+168-7	Casa	_	
+168-8	dos	_	
+168-9	Segredos	_	
+168-10	para	_	
+168-11	insultar	_	
+168-12	os	_	
+168-13	luxemburgueses	_	
+168-14	[	_	
+168-15	[	_	
+168-16	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+168-17	]	_	
+168-18	]	_	
+
+#id=169
+#text=Confrontos violentos entre claques nas jornadas parlamentares conjuntas do PSD e CDS [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+169-1	Confrontos	_	
+169-2	violentos	_	
+169-3	entre	_	
+169-4	claques	_	
+169-5	nas	_	
+169-6	jornadas	_	
+169-7	parlamentares	_	
+169-8	conjuntas	_	
+169-9	do	_	
+169-10	PSD	_	
+169-11	e	_	
+169-12	CDS	_	
+169-13	[	_	
+169-14	[	_	
+169-15	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+169-16	]	_	
+169-17	]	_	
+
+#id=170
+#text=Concorrente da Bimby é a “Made in China” Yammi que é muito mais barata mas só faz receitas à base de carne de cão e gato [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+170-1	Concorrente	_	
+170-2	da	_	
+170-3	Bimby	_	
+170-4	é	_	
+170-5	a	_	
+170-6	“Made	_	
+170-7	in	_	
+170-8	China”	_	
+170-9	Yammi	_	
+170-10	que	_	
+170-11	é	_	
+170-12	muito	_	
+170-13	mais	_	
+170-14	barata	_	
+170-15	mas	_	
+170-16	só	_	
+170-17	faz	_	
+170-18	receitas	_	
+170-19	à	_	
+170-20	base	_	
+170-21	de	_	
+170-22	carne	_	
+170-23	de	_	
+170-24	cão	_	
+170-25	e	_	
+170-26	gato	_	
+170-27	[	_	
+170-28	[	_	
+170-29	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+170-30	]	_	
+170-31	]	_	
+
+#id=171
+#text=Começa hoje julgamento do presidente da câmara que ofereceu um submarino a cada idoso do concelho [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+171-1	Começa	_	
+171-2	hoje	_	
+171-3	julgamento	_	
+171-4	do	_	
+171-5	presidente	_	
+171-6	da	_	
+171-7	câmara	_	
+171-8	que	_	
+171-9	ofereceu	_	
+171-10	um	_	
+171-11	submarino	_	
+171-12	a	_	
+171-13	cada	_	
+171-14	idoso	_	
+171-15	do	_	
+171-16	concelho	_	
+171-17	[	_	
+171-18	[	_	
+171-19	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+171-20	]	_	
+171-21	]	_	
+
+#id=172
+#text=Albert Camus seria mais optimista do que a maioria dos portugueses se fosse vivo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+172-1	Albert	_	
+172-2	Camus	_	
+172-3	seria	_	
+172-4	mais	_	
+172-5	optimista	_	
+172-6	do	_	
+172-7	que	_	
+172-8	a	_	
+172-9	maioria	_	
+172-10	dos	_	
+172-11	portugueses	_	
+172-12	se	_	
+172-13	fosse	_	
+172-14	vivo	_	
+172-15	[	_	
+172-16	[	_	
+172-17	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+172-18	]	_	
+172-19	]	_	
+
+#id=173
+#text=Subsidio de férias dos funcionários públicos começou a ser repostos em escudos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+173-1	Subsidio	_	
+173-2	de	_	
+173-3	férias	_	
+173-4	dos	_	
+173-5	funcionários	_	
+173-6	públicos	_	
+173-7	começou	_	
+173-8	a	_	
+173-9	ser	_	
+173-10	repostos	_	
+173-11	em	_	
+173-12	escudos	_	
+173-13	[	_	
+173-14	[	_	
+173-15	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+173-16	]	_	
+173-17	]	_	
+
+#id=174
+#text=Passos diz que não há números mágicos nem coelhos na cartola mas admite cortar uma funcionária pública ao meio [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+174-1	Passos	_	
+174-2	diz	_	
+174-3	que	_	
+174-4	não	_	
+174-5	há	_	
+174-6	números	_	
+174-7	mágicos	_	
+174-8	nem	_	
+174-9	coelhos	_	
+174-10	na	_	
+174-11	cartola	_	
+174-12	mas	_	
+174-13	admite	_	
+174-14	cortar	_	
+174-15	uma	_	
+174-16	funcionária	_	
+174-17	pública	_	
+174-18	ao	_	
+174-19	meio	_	
+174-20	[	_	
+174-21	[	_	
+174-22	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+174-23	]	_	
+174-24	]	_	
+
+#id=175
+#text=Mário Crespo arranja emprego ao banqueiro José Maria Ricciardi [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+175-1	Mário	_	
+175-2	Crespo	_	
+175-3	arranja	_	
+175-4	emprego	_	
+175-5	ao	_	
+175-6	banqueiro	_	
+175-7	José	_	
+175-8	Maria	_	
+175-9	Ricciardi	_	
+175-10	[	_	
+175-11	[	_	
+175-12	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+175-13	]	_	
+175-14	]	_	
+
+#id=176
+#text=Plano B do governo para a economia é fazer entrar o sportinguista Slimani antes do final [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+176-1	Plano	_	
+176-2	B	_	
+176-3	do	_	
+176-4	governo	_	
+176-5	para	_	
+176-6	a	_	
+176-7	economia	_	
+176-8	é	_	
+176-9	fazer	_	
+176-10	entrar	_	
+176-11	o	_	
+176-12	sportinguista	_	
+176-13	Slimani	_	
+176-14	antes	_	
+176-15	do	_	
+176-16	final	_	
+176-17	[	_	
+176-18	[	_	
+176-19	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+176-20	]	_	
+176-21	]	_	
+
+#id=177
+#text=Governo admite baixar o IVA na restauração se os portugueses fizerem todas as suas refeições em restaurantes [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+177-1	Governo	_	
+177-2	admite	_	
+177-3	baixar	_	
+177-4	o	_	
+177-5	IVA	_	
+177-6	na	_	
+177-7	restauração	_	
+177-8	se	_	
+177-9	os	_	
+177-10	portugueses	_	
+177-11	fizerem	_	
+177-12	todas	_	
+177-13	as	_	
+177-14	suas	_	
+177-15	refeições	_	
+177-16	em	_	
+177-17	restaurantes	_	
+177-18	[	_	
+177-19	[	_	
+177-20	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+177-21	]	_	
+177-22	]	_	
+
+#id=178
+#text=Metro do Porto descarrilou e Luís Filipe Menezes exigiu de imediato a demissão de Rui Moreira [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+178-1	Metro	_	
+178-2	do	_	
+178-3	Porto	_	
+178-4	descarrilou	_	
+178-5	e	_	
+178-6	Luís	_	
+178-7	Filipe	_	
+178-8	Menezes	_	
+178-9	exigiu	_	
+178-10	de	_	
+178-11	imediato	_	
+178-12	a	_	
+178-13	demissão	_	
+178-14	de	_	
+178-15	Rui	_	
+178-16	Moreira	_	
+178-17	[	_	
+178-18	[	_	
+178-19	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+178-20	]	_	
+178-21	]	_	
+
+#id=179
+#text=Rui Moreira vai jogar contra o Zenit como jogador independente [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+179-1	Rui	_	
+179-2	Moreira	_	
+179-3	vai	_	
+179-4	jogar	_	
+179-5	contra	_	
+179-6	o	_	
+179-7	Zenit	_	
+179-8	como	_	
+179-9	jogador	_	
+179-10	independente	_	
+179-11	[	_	
+179-12	[	_	
+179-13	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+179-14	]	_	
+179-15	]	_	
+
+#id=180
+#text=Portugal saiu da recessão e Portas passou o dia a ver catálogos online de submarinos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+180-1	Portugal	_	
+180-2	saiu	_	
+180-3	da	_	
+180-4	recessão	_	
+180-5	e	_	
+180-6	Portas	_	
+180-7	passou	_	
+180-8	o	_	
+180-9	dia	_	
+180-10	a	_	
+180-11	ver	_	
+180-12	catálogos	_	
+180-13	online	_	
+180-14	de	_	
+180-15	submarinos	_	
+180-16	[	_	
+180-17	[	_	
+180-18	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+180-19	]	_	
+180-20	]	_	
+
+#id=181
+#text=Especialistas consideram que jogos Portugal-Suécia deviam realizar-se no Acelerador de Partículas do CERN devido à possibilidade de o choque entre os egos de Cristiano Ronaldo e Zlatan Ibrahimovic produzirem mini-buracos negros [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+181-1	Especialistas	_	
+181-2	consideram	_	
+181-3	que	_	
+181-4	jogos	_	
+181-5	Portugal-Suécia	_	
+181-6	deviam	_	
+181-7	realizar-se	_	
+181-8	no	_	
+181-9	Acelerador	_	
+181-10	de	_	
+181-11	Partículas	_	
+181-12	do	_	
+181-13	CERN	_	
+181-14	devido	_	
+181-15	à	_	
+181-16	possibilidade	_	
+181-17	de	_	
+181-18	o	_	
+181-19	choque	_	
+181-20	entre	_	
+181-21	os	_	
+181-22	egos	_	
+181-23	de	_	
+181-24	Cristiano	_	
+181-25	Ronaldo	_	
+181-26	e	_	
+181-27	Zlatan	_	
+181-28	Ibrahimovic	_	
+181-29	produzirem	_	
+181-30	mini-buracos	_	
+181-31	negros	_	
+181-32	[	_	
+181-33	[	_	
+181-34	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+181-35	]	_	
+181-36	]	_	
+
+#id=182
+#text=Obama cumprimentou Raul Castro mas adeptos do Benfica já não conseguem fazer a mesma coisa com Jorge Jesus [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+182-1	Obama	_	
+182-2	cumprimentou	_	
+182-3	Raul	_	
+182-4	Castro	_	
+182-5	mas	_	
+182-6	adeptos	_	
+182-7	do	_	
+182-8	Benfica	_	
+182-9	já	_	
+182-10	não	_	
+182-11	conseguem	_	
+182-12	fazer	_	
+182-13	a	_	
+182-14	mesma	_	
+182-15	coisa	_	
+182-16	com	_	
+182-17	Jorge	_	
+182-18	Jesus	_	
+182-19	[	_	
+182-20	[	_	
+182-21	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+182-22	]	_	
+182-23	]	_	
+
+#id=183
+#text=Portugal adia dívida para 2017 e 2018 graças à bem sucedida ‘Operação quem vier a seguir que feche a porta’ [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+183-1	Portugal	_	
+183-2	adia	_	
+183-3	dívida	_	
+183-4	para	_	
+183-5	2017	_	
+183-6	e	_	
+183-7	2018	_	
+183-8	graças	_	
+183-9	à	_	
+183-10	bem	_	
+183-11	sucedida	_	
+183-12	‘Operação	_	
+183-13	quem	_	
+183-14	vier	_	
+183-15	a	_	
+183-16	seguir	_	
+183-17	que	_	
+183-18	feche	_	
+183-19	a	_	
+183-20	porta’	_	
+183-21	[	_	
+183-22	[	_	
+183-23	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+183-24	]	_	
+183-25	]	_	
+
+#id=184
+#text=Troika corta três jogadores de cada lado no Benfica x Olympiacos de hoje [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+184-1	Troika	_	
+184-2	corta	_	
+184-3	três	_	
+184-4	jogadores	_	
+184-5	de	_	
+184-6	cada	_	
+184-7	lado	_	
+184-8	no	_	
+184-9	Benfica	_	
+184-10	x	_	
+184-11	Olympiacos	_	
+184-12	de	_	
+184-13	hoje	_	
+184-14	[	_	
+184-15	[	_	
+184-16	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+184-17	]	_	
+184-18	]	_	
+
+#id=185
+#text=Estudo 'genético ' de 'O Capuchinho Vermelho ' revela que descende de 'O Lobo e os Sete Cabritinhos ' e é pai de 'Um Estado Melhor ' do Paulo Portas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+185-1	Estudo	_	
+185-2	'genético	_	
+185-3	'	_	
+185-4	de	_	
+185-5	'O	_	
+185-6	Capuchinho	_	
+185-7	Vermelho	_	
+185-8	'	_	
+185-9	revela	_	
+185-10	que	_	
+185-11	descende	_	
+185-12	de	_	
+185-13	'O	_	
+185-14	Lobo	_	
+185-15	e	_	
+185-16	os	_	
+185-17	Sete	_	
+185-18	Cabritinhos	_	
+185-19	'	_	
+185-20	e	_	
+185-21	é	_	
+185-22	pai	_	
+185-23	de	_	
+185-24	'Um	_	
+185-25	Estado	_	
+185-26	Melhor	_	
+185-27	'	_	
+185-28	do	_	
+185-29	Paulo	_	
+185-30	Portas	_	
+185-31	[	_	
+185-32	[	_	
+185-33	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Imparidade	
+185-34	]	_	
+185-35	]	_	
+
+#id=186
+#text=Militares querem fazer ataques pela internet como faz a DGCI aos contribuintes a partir do Portal das Finanças [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+186-1	Militares	_	
+186-2	querem	_	
+186-3	fazer	_	
+186-4	ataques	_	
+186-5	pela	_	
+186-6	internet	_	
+186-7	como	_	
+186-8	faz	_	
+186-9	a	_	
+186-10	DGCI	_	
+186-11	aos	_	
+186-12	contribuintes	_	
+186-13	a	_	
+186-14	partir	_	
+186-15	do	_	
+186-16	Portal	_	
+186-17	das	_	
+186-18	Finanças	_	
+186-19	[	_	
+186-20	[	_	
+186-21	ANOTACAO_RECURSO_ESTILISTICO	Comparação	
+186-22	]	_	
+186-23	]	_	
+
+#id=187
+#text=Como o casal de autarcas de Sátão , Cavaco abdica da presidência e dá lugar à mulher , a segunda na lista [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+187-1	Como	_	
+187-2	o	_	
+187-3	casal	_	
+187-4	de	_	
+187-5	autarcas	_	
+187-6	de	_	
+187-7	Sátão	_	
+187-8	,	_	
+187-9	Cavaco	_	
+187-10	abdica	_	
+187-11	da	_	
+187-12	presidência	_	
+187-13	e	_	
+187-14	dá	_	
+187-15	lugar	_	
+187-16	à	_	
+187-17	mulher	_	
+187-18	,	_	
+187-19	a	_	
+187-20	segunda	_	
+187-21	na	_	
+187-22	lista	_	
+187-23	[	_	
+187-24	[	_	
+187-25	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+187-26	]	_	
+187-27	]	_	
+
+#id=188
+#text=Novos assessores de Carlos Moedas com 21 e 22 anos de idade já fizeram pedidos de amizade no 'Facebook ' a todos os ministros [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+188-1	Novos	_	
+188-2	assessores	_	
+188-3	de	_	
+188-4	Carlos	_	
+188-5	Moedas	_	
+188-6	com	_	
+188-7	21	_	
+188-8	e	_	
+188-9	22	_	
+188-10	anos	_	
+188-11	de	_	
+188-12	idade	_	
+188-13	já	_	
+188-14	fizeram	_	
+188-15	pedidos	_	
+188-16	de	_	
+188-17	amizade	_	
+188-18	no	_	
+188-19	'Facebook	_	
+188-20	'	_	
+188-21	a	_	
+188-22	todos	_	
+188-23	os	_	
+188-24	ministros	_	
+188-25	[	_	
+188-26	[	_	
+188-27	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Outro	
+188-28	]	_	
+188-29	]	_	
+
+#id=189
+#text=António José Seguro fotografou-se com o herdeiro ao seu trono [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+189-1	António	_	
+189-2	José	_	
+189-3	Seguro	_	
+189-4	fotografou-se	_	
+189-5	com	_	
+189-6	o	_	
+189-7	herdeiro	_	
+189-8	ao	_	
+189-9	seu	_	
+189-10	trono	_	
+189-11	[	_	
+189-12	[	_	
+189-13	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+189-14	]	_	
+189-15	]	_	
+
+#id=190
+#text=Estudo revela que cérebros do homem Vítor Gaspar e da mulher Maria Luís Albuquerque são exactamente iguais [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+190-1	Estudo	_	
+190-2	revela	_	
+190-3	que	_	
+190-4	cérebros	_	
+190-5	do	_	
+190-6	homem	_	
+190-7	Vítor	_	
+190-8	Gaspar	_	
+190-9	e	_	
+190-10	da	_	
+190-11	mulher	_	
+190-12	Maria	_	
+190-13	Luís	_	
+190-14	Albuquerque	_	
+190-15	são	_	
+190-16	exactamente	_	
+190-17	iguais	_	
+190-18	[	_	
+190-19	[	_	
+190-20	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+190-21	]	_	
+190-22	]	_	
+
+#id=191
+#text=Assessor de Passos Coelho confessa que foi boneco do Multibanco num ATM do BPN [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+191-1	Assessor	_	
+191-2	de	_	
+191-3	Passos	_	
+191-4	Coelho	_	
+191-5	confessa	_	
+191-6	que	_	
+191-7	foi	_	
+191-8	boneco	_	
+191-9	do	_	
+191-10	Multibanco	_	
+191-11	num	_	
+191-12	ATM	_	
+191-13	do	_	
+191-14	BPN	_	
+191-15	[	_	
+191-16	[	_	
+191-17	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Imparidade	
+191-18	]	_	
+191-19	]	_	
+
+#id=192
+#text=Sucessão de Alberto João Jardim : tiranossauro , pterodáctilo e tricerátopo são os favoritos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+192-1	Sucessão	_	
+192-2	de	_	
+192-3	Alberto	_	
+192-4	João	_	
+192-5	Jardim	_	
+192-6	:	_	
+192-7	tiranossauro	_	
+192-8	,	_	
+192-9	pterodáctilo	_	
+192-10	e	_	
+192-11	tricerátopo	_	
+192-12	são	_	
+192-13	os	_	
+192-14	favoritos	_	
+192-15	[	_	
+192-16	[	_	
+192-17	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+192-18	]	_	
+192-19	]	_	
+
+#id=193
+#text=Mota Soares corta pensões de sobrevivência mas chama Bear Grylls para ensinar viúvas a matar um urso com uma pinha e um atacador [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+193-1	Mota	_	
+193-2	Soares	_	
+193-3	corta	_	
+193-4	pensões	_	
+193-5	de	_	
+193-6	sobrevivência	_	
+193-7	mas	_	
+193-8	chama	_	
+193-9	Bear	_	
+193-10	Grylls	_	
+193-11	para	_	
+193-12	ensinar	_	
+193-13	viúvas	_	
+193-14	a	_	
+193-15	matar	_	
+193-16	um	_	
+193-17	urso	_	
+193-18	com	_	
+193-19	uma	_	
+193-20	pinha	_	
+193-21	e	_	
+193-22	um	_	
+193-23	atacador	_	
+193-24	[	_	
+193-25	[	_	
+193-26	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Hipérbole	
+193-27	]	_	
+193-28	]	_	
+
+#id=194
+#text=Cavaco Silva promulgou o 3000º diploma e anilhou a 500ª cagarra desde que é Presidente da República [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+194-1	Cavaco	_	
+194-2	Silva	_	
+194-3	promulgou	_	
+194-4	o	_	
+194-5	3000º	_	
+194-6	diploma	_	
+194-7	e	_	
+194-8	anilhou	_	
+194-9	a	_	
+194-10	500ª	_	
+194-11	cagarra	_	
+194-12	desde	_	
+194-13	que	_	
+194-14	é	_	
+194-15	Presidente	_	
+194-16	da	_	
+194-17	República	_	
+194-18	[	_	
+194-19	[	_	
+194-20	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+194-21	]	_	
+194-22	]	_	
+
+#id=195
+#text=Pires de Lima quer Empreendedorismo como disciplina obrigatória seguida de Bater Punho I e Introdução à Compra e Venda de Submarinos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+195-1	Pires	_	
+195-2	de	_	
+195-3	Lima	_	
+195-4	quer	_	
+195-5	Empreendedorismo	_	
+195-6	como	_	
+195-7	disciplina	_	
+195-8	obrigatória	_	
+195-9	seguida	_	
+195-10	de	_	
+195-11	Bater	_	
+195-12	Punho	_	
+195-13	I	_	
+195-14	e	_	
+195-15	Introdução	_	
+195-16	à	_	
+195-17	Compra	_	
+195-18	e	_	
+195-19	Venda	_	
+195-20	de	_	
+195-21	Submarinos	_	
+195-22	[	_	
+195-23	[	_	
+195-24	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo	
+195-25	]	_	
+195-26	]	_	
+
+#id=196
+#text=Paulo Bento eufórico já telefonou a desmarcar a inscrição no centro de emprego [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+196-1	Paulo	_	
+196-2	Bento	_	
+196-3	eufórico	_	
+196-4	já	_	
+196-5	telefonou	_	
+196-6	a	_	
+196-7	desmarcar	_	
+196-8	a	_	
+196-9	inscrição	_	
+196-10	no	_	
+196-11	centro	_	
+196-12	de	_	
+196-13	emprego	_	
+196-14	[	_	
+196-15	[	_	
+196-16	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+196-17	]	_	
+196-18	]	_	
+
+#id=197
+#text=Jesus exigiu procurador sérvio em interrogatório no DIAP [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+197-1	Jesus	_	
+197-2	exigiu	_	
+197-3	procurador	_	
+197-4	sérvio	_	
+197-5	em	_	
+197-6	interrogatório	_	
+197-7	no	_	
+197-8	DIAP	_	
+197-9	[	_	
+197-10	[	_	
+197-11	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+197-12	]	_	
+197-13	]	_	
+
+#id=198
+#text=José Eduardo dos Santos diz estar há muito tempo no poder e que não quer acabar como Machete [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+198-1	José	_	
+198-2	Eduardo	_	
+198-3	dos	_	
+198-4	Santos	_	
+198-5	diz	_	
+198-6	estar	_	
+198-7	há	_	
+198-8	muito	_	
+198-9	tempo	_	
+198-10	no	_	
+198-11	poder	_	
+198-12	e	_	
+198-13	que	_	
+198-14	não	_	
+198-15	quer	_	
+198-16	acabar	_	
+198-17	como	_	
+198-18	Machete	_	
+198-19	[	_	
+198-20	[	_	
+198-21	ANOTACAO_RECURSO_ESTILISTICO	Comparação|Metáfora	
+198-22	]	_	
+198-23	]	_	
+
+#id=199
+#text=Empreendedor Miguel Gonçalves deixou de ser o embaixador do Impulso Jovem mas vai continuar a sê-lo por própria iniciativa [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+199-1	Empreendedor	_	
+199-2	Miguel	_	
+199-3	Gonçalves	_	
+199-4	deixou	_	
+199-5	de	_	
+199-6	ser	_	
+199-7	o	_	
+199-8	embaixador	_	
+199-9	do	_	
+199-10	Impulso	_	
+199-11	Jovem	_	
+199-12	mas	_	
+199-13	vai	_	
+199-14	continuar	_	
+199-15	a	_	
+199-16	sê-lo	_	
+199-17	por	_	
+199-18	própria	_	
+199-19	iniciativa	_	
+199-20	[	_	
+199-21	[	_	
+199-22	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+199-23	]	_	
+199-24	]	_	
+
+#id=200
+#text=Mercado laboral português tem de ser mais flexível , pois muitas empresas que pagam à hora só precisam de 45 minutos [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+200-1	Mercado	_	
+200-2	laboral	_	
+200-3	português	_	
+200-4	tem	_	
+200-5	de	_	
+200-6	ser	_	
+200-7	mais	_	
+200-8	flexível	_	
+200-9	,	_	
+200-10	pois	_	
+200-11	muitas	_	
+200-12	empresas	_	
+200-13	que	_	
+200-14	pagam	_	
+200-15	à	_	
+200-16	hora	_	
+200-17	só	_	
+200-18	precisam	_	
+200-19	de	_	
+200-20	45	_	
+200-21	minutos	_	
+200-22	[	_	
+200-23	[	_	
+200-24	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+200-25	]	_	
+200-26	]	_	
+
+#id=201
+#text=CGTP troca manifestação na Ponte 25 de Abril por mega-feijoada de protesto na Ponte Vasco da Gama [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+201-1	CGTP	_	
+201-2	troca	_	
+201-3	manifestação	_	
+201-4	na	_	
+201-5	Ponte	_	
+201-6	25	_	
+201-7	de	_	
+201-8	Abril	_	
+201-9	por	_	
+201-10	mega-feijoada	_	
+201-11	de	_	
+201-12	protesto	_	
+201-13	na	_	
+201-14	Ponte	_	
+201-15	Vasco	_	
+201-16	da	_	
+201-17	Gama	_	
+201-18	[	_	
+201-19	[	_	
+201-20	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Hipérbole	
+201-21	]	_	
+201-22	]	_	
+
+#id=202
+#text=Caos na ponte : CGTP faz manifestação com 350 autocarros e apoiantes do governo respondem com contra-manifestação de 35 carros de luxo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+202-1	Caos	_	
+202-2	na	_	
+202-3	ponte	_	
+202-4	:	_	
+202-5	CGTP	_	
+202-6	faz	_	
+202-7	manifestação	_	
+202-8	com	_	
+202-9	350	_	
+202-10	autocarros	_	
+202-11	e	_	
+202-12	apoiantes	_	
+202-13	do	_	
+202-14	governo	_	
+202-15	respondem	_	
+202-16	com	_	
+202-17	contra-manifestação	_	
+202-18	de	_	
+202-19	35	_	
+202-20	carros	_	
+202-21	de	_	
+202-22	luxo	_	
+202-23	[	_	
+202-24	[	_	
+202-25	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+202-26	]	_	
+202-27	]	_	
+
+#id=203
+#text=Rui Machete vai apresentar-se aos credores de Portugal com uma corda ao pescoço como o Egas Moniz [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+203-1	Rui	_	
+203-2	Machete	_	
+203-3	vai	_	
+203-4	apresentar-se	_	
+203-5	aos	_	
+203-6	credores	_	
+203-7	de	_	
+203-8	Portugal	_	
+203-9	com	_	
+203-10	uma	_	
+203-11	corda	_	
+203-12	ao	_	
+203-13	pescoço	_	
+203-14	como	_	
+203-15	o	_	
+203-16	Egas	_	
+203-17	Moniz	_	
+203-18	[	_	
+203-19	[	_	
+203-20	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Comparação|Hipérbole	
+203-21	]	_	
+203-22	]	_	
+
+#id=204
+#text=Passos Coelho pede aos portugueses para não perguntarem o que o país pode fazer por eles mas o que eles podem fazer pelas Finanças [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+204-1	Passos	_	
+204-2	Coelho	_	
+204-3	pede	_	
+204-4	aos	_	
+204-5	portugueses	_	
+204-6	para	_	
+204-7	não	_	
+204-8	perguntarem	_	
+204-9	o	_	
+204-10	que	_	
+204-11	o	_	
+204-12	país	_	
+204-13	pode	_	
+204-14	fazer	_	
+204-15	por	_	
+204-16	eles	_	
+204-17	mas	_	
+204-18	o	_	
+204-19	que	_	
+204-20	eles	_	
+204-21	podem	_	
+204-22	fazer	_	
+204-23	pelas	_	
+204-24	Finanças	_	
+204-25	[	_	
+204-26	[	_	
+204-27	ANOTACAO_RECURSO_ESTILISTICO	Metáfora|Paradoxo	
+204-28	]	_	
+204-29	]	_	
+
+#id=205
+#text='Senhor Testículo ' vem a Portugal sensibilizar PSD e PS a entenderem-se [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+205-1	'Senhor	_	
+205-2	Testículo	_	
+205-3	'	_	
+205-4	vem	_	
+205-5	a	_	
+205-6	Portugal	_	
+205-7	sensibilizar	_	
+205-8	PSD	_	
+205-9	e	_	
+205-10	PS	_	
+205-11	a	_	
+205-12	entenderem-se	_	
+205-13	[	_	
+205-14	[	_	
+205-15	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo	
+205-16	]	_	
+205-17	]	_	
+
+#id=206
+#text=Protecção Civil alerta para trovoada , vento forte e regresso de Sócrates à política [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+206-1	Protecção	_	
+206-2	Civil	_	
+206-3	alerta	_	
+206-4	para	_	
+206-5	trovoada	_	
+206-6	,	_	
+206-7	vento	_	
+206-8	forte	_	
+206-9	e	_	
+206-10	regresso	_	
+206-11	de	_	
+206-12	Sócrates	_	
+206-13	à	_	
+206-14	política	_	
+206-15	[	_	
+206-16	[	_	
+206-17	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+206-18	]	_	
+206-19	]	_	
+
+#id=207
+#text=Maria Luís Albuquerque garante que Portugal não está a negociar 'a coisa ' nem 'a cena' [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+207-1	Maria	_	
+207-2	Luís	_	
+207-3	Albuquerque	_	
+207-4	garante	_	
+207-5	que	_	
+207-6	Portugal	_	
+207-7	não	_	
+207-8	está	_	
+207-9	a	_	
+207-10	negociar	_	
+207-11	'a	_	
+207-12	coisa	_	
+207-13	'	_	
+207-14	nem	_	
+207-15	'a	_	
+207-16	cena'	_	
+207-17	[	_	
+207-18	[	_	
+207-19	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo|Hipérbole	
+207-20	]	_	
+207-21	]	_	
+
+#id=208
+#text=PSP coloca radares junto a Tózé Seguro para ter a certeza que ele ainda mexe [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+208-1	PSP	_	
+208-2	coloca	_	
+208-3	radares	_	
+208-4	junto	_	
+208-5	a	_	
+208-6	Tózé	_	
+208-7	Seguro	_	
+208-8	para	_	
+208-9	ter	_	
+208-10	a	_	
+208-11	certeza	_	
+208-12	que	_	
+208-13	ele	_	
+208-14	ainda	_	
+208-15	mexe	_	
+208-16	[	_	
+208-17	[	_	
+208-18	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+208-19	]	_	
+208-20	]	_	
+
+#id=209
+#text=Segurança Social obriga homem a devolver subsídio que recebeu por gravidez de risco porque a gravidez afinal não foi de risco [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+209-1	Segurança	_	
+209-2	Social	_	
+209-3	obriga	_	
+209-4	homem	_	
+209-5	a	_	
+209-6	devolver	_	
+209-7	subsídio	_	
+209-8	que	_	
+209-9	recebeu	_	
+209-10	por	_	
+209-11	gravidez	_	
+209-12	de	_	
+209-13	risco	_	
+209-14	porque	_	
+209-15	a	_	
+209-16	gravidez	_	
+209-17	afinal	_	
+209-18	não	_	
+209-19	foi	_	
+209-20	de	_	
+209-21	risco	_	
+209-22	[	_	
+209-23	[	_	
+209-24	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+209-25	]	_	
+209-26	]	_	
+
+#id=210
+#text=Troika reuniu com Seguro e agora vai ouvir Sócrates , Costa e Soares para saber a posição oficial do PS sobre o memorando [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+210-1	Troika	_	
+210-2	reuniu	_	
+210-3	com	_	
+210-4	Seguro	_	
+210-5	e	_	
+210-6	agora	_	
+210-7	vai	_	
+210-8	ouvir	_	
+210-9	Sócrates	_	
+210-10	,	_	
+210-11	Costa	_	
+210-12	e	_	
+210-13	Soares	_	
+210-14	para	_	
+210-15	saber	_	
+210-16	a	_	
+210-17	posição	_	
+210-18	oficial	_	
+210-19	do	_	
+210-20	PS	_	
+210-21	sobre	_	
+210-22	o	_	
+210-23	memorando	_	
+210-24	[	_	
+210-25	[	_	
+210-26	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+210-27	]	_	
+210-28	]	_	
+
+#id=211
+#text=Passos Coelho confirma que quer ‘requalificar’ António Capucho [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+211-1	Passos	_	
+211-2	Coelho	_	
+211-3	confirma	_	
+211-4	que	_	
+211-5	quer	_	
+211-6	‘requalificar’	_	
+211-7	António	_	
+211-8	Capucho	_	
+211-9	[	_	
+211-10	[	_	
+211-11	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+211-12	]	_	
+211-13	]	_	
+
+#id=212
+#text=Purtugez eh a sesta limgua más faláda nas caichas de cumemtarios dus jurnais oneláine [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+212-1	Purtugez	_	
+212-2	eh	_	
+212-3	a	_	
+212-4	sesta	_	
+212-5	limgua	_	
+212-6	más	_	
+212-7	faláda	_	
+212-8	nas	_	
+212-9	caichas	_	
+212-10	de	_	
+212-11	cumemtarios	_	
+212-12	dus	_	
+212-13	jurnais	_	
+212-14	oneláine	_	
+212-15	[	_	
+212-16	[	_	
+212-17	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo	
+212-18	]	_	
+212-19	]	_	
+
+#id=213
+#text=Governo convida Maitê Proença a vir a Portugal cuspir no Palácio Ratton [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+213-1	Governo	_	
+213-2	convida	_	
+213-3	Maitê	_	
+213-4	Proença	_	
+213-5	a	_	
+213-6	vir	_	
+213-7	a	_	
+213-8	Portugal	_	
+213-9	cuspir	_	
+213-10	no	_	
+213-11	Palácio	_	
+213-12	Ratton	_	
+213-13	[	_	
+213-14	[	_	
+213-15	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo|Metáfora	
+213-16	]	_	
+213-17	]	_	
+
+#id=214
+#text=Segurança de Passos reforçada com dicionário de sinónimos devido a alegada infiltração de palavras difíceis na entrevista de hoje [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+214-1	Segurança	_	
+214-2	de	_	
+214-3	Passos	_	
+214-4	reforçada	_	
+214-5	com	_	
+214-6	dicionário	_	
+214-7	de	_	
+214-8	sinónimos	_	
+214-9	devido	_	
+214-10	a	_	
+214-11	alegada	_	
+214-12	infiltração	_	
+214-13	de	_	
+214-14	palavras	_	
+214-15	difíceis	_	
+214-16	na	_	
+214-17	entrevista	_	
+214-18	de	_	
+214-19	hoje	_	
+214-20	[	_	
+214-21	[	_	
+214-22	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Outro	
+214-23	]	_	
+214-24	]	_	
+
+#id=215
+#text=Pinto Monteiro mandou arquivar livro de José Sócrates , Noronha Nascimento destruiu-o à tesourada [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+215-1	Pinto	_	
+215-2	Monteiro	_	
+215-3	mandou	_	
+215-4	arquivar	_	
+215-5	livro	_	
+215-6	de	_	
+215-7	José	_	
+215-8	Sócrates	_	
+215-9	,	_	
+215-10	Noronha	_	
+215-11	Nascimento	_	
+215-12	destruiu-o	_	
+215-13	à	_	
+215-14	tesourada	_	
+215-15	[	_	
+215-16	[	_	
+215-17	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+215-18	]	_	
+215-19	]	_	
+
+#id=216
+#text=Primeira página de ‘A Bola’ de hoje também vai ao encontro das esquerdas de Mário Soares [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+216-1	Primeira	_	
+216-2	página	_	
+216-3	de	_	
+216-4	‘A	_	
+216-5	Bola’	_	
+216-6	de	_	
+216-7	hoje	_	
+216-8	também	_	
+216-9	vai	_	
+216-10	ao	_	
+216-11	encontro	_	
+216-12	das	_	
+216-13	esquerdas	_	
+216-14	de	_	
+216-15	Mário	_	
+216-16	Soares	_	
+216-17	[	_	
+216-18	[	_	
+216-19	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Metáfora	
+216-20	]	_	
+216-21	]	_	
+
+#id=217
+#text=Aguiar Branco quer bombardear Mértola devido à gripe das aves [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+217-1	Aguiar	_	
+217-2	Branco	_	
+217-3	quer	_	
+217-4	bombardear	_	
+217-5	Mértola	_	
+217-6	devido	_	
+217-7	à	_	
+217-8	gripe	_	
+217-9	das	_	
+217-10	aves	_	
+217-11	[	_	
+217-12	[	_	
+217-13	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+217-14	]	_	
+217-15	]	_	
+
+#id=218
+#text=Rui Machete vai evitar perguntas de 20 portugueses no programa ‘O País Pergunta’ [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+218-1	Rui	_	
+218-2	Machete	_	
+218-3	vai	_	
+218-4	evitar	_	
+218-5	perguntas	_	
+218-6	de	_	
+218-7	20	_	
+218-8	portugueses	_	
+218-9	no	_	
+218-10	programa	_	
+218-11	‘O	_	
+218-12	País	_	
+218-13	Pergunta’	_	
+218-14	[	_	
+218-15	[	_	
+218-16	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+218-17	]	_	
+218-18	]	_	
+
+#id=219
+#text=Tózé Seguro imita Miley Cyrus e rapa sobrancelhas para dar nas vistas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+219-1	Tózé	_	
+219-2	Seguro	_	
+219-3	imita	_	
+219-4	Miley	_	
+219-5	Cyrus	_	
+219-6	e	_	
+219-7	rapa	_	
+219-8	sobrancelhas	_	
+219-9	para	_	
+219-10	dar	_	
+219-11	nas	_	
+219-12	vistas	_	
+219-13	[	_	
+219-14	[	_	
+219-15	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Comparação	
+219-16	]	_	
+219-17	]	_	
+
+#id=220
+#text=José Sócrates convidou Passos Coelho para ser vice-primeiro-ministro e Paulo Portas para ser secretário-de-Estado plenipotenciário [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+220-1	José	_	
+220-2	Sócrates	_	
+220-3	convidou	_	
+220-4	Passos	_	
+220-5	Coelho	_	
+220-6	para	_	
+220-7	ser	_	
+220-8	vice-primeiro-ministro	_	
+220-9	e	_	
+220-10	Paulo	_	
+220-11	Portas	_	
+220-12	para	_	
+220-13	ser	_	
+220-14	secretário-de-Estado	_	
+220-15	plenipotenciário	_	
+220-16	[	_	
+220-17	[	_	
+220-18	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+220-19	]	_	
+220-20	]	_	
+
+#id=221
+#text=Bandeira esquisita mostrada no México é a nova bandeira oficial do Portugal sem soberania [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+221-1	Bandeira	_	
+221-2	esquisita	_	
+221-3	mostrada	_	
+221-4	no	_	
+221-5	México	_	
+221-6	é	_	
+221-7	a	_	
+221-8	nova	_	
+221-9	bandeira	_	
+221-10	oficial	_	
+221-11	do	_	
+221-12	Portugal	_	
+221-13	sem	_	
+221-14	soberania	_	
+221-15	[	_	
+221-16	[	_	
+221-17	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+221-18	]	_	
+221-19	]	_	
+
+#id=222
+#text=Dia de greve marcada pela CGTP , UGT e ministros do CDS contra a política do governo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+222-1	Dia	_	
+222-2	de	_	
+222-3	greve	_	
+222-4	marcada	_	
+222-5	pela	_	
+222-6	CGTP	_	
+222-7	,	_	
+222-8	UGT	_	
+222-9	e	_	
+222-10	ministros	_	
+222-11	do	_	
+222-12	CDS	_	
+222-13	contra	_	
+222-14	a	_	
+222-15	política	_	
+222-16	do	_	
+222-17	governo	_	
+222-18	[	_	
+222-19	[	_	
+222-20	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+222-21	]	_	
+222-22	]	_	
+
+#id=223
+#text=25 % dos portugueses estão em risco de pobreza mas eufóricos com subida de 8 % na estreia dos CTT na Bolsa [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+223-1	25	_	
+223-2	%	_	
+223-3	dos	_	
+223-4	portugueses	_	
+223-5	estão	_	
+223-6	em	_	
+223-7	risco	_	
+223-8	de	_	
+223-9	pobreza	_	
+223-10	mas	_	
+223-11	eufóricos	_	
+223-12	com	_	
+223-13	subida	_	
+223-14	de	_	
+223-15	8	_	
+223-16	%	_	
+223-17	na	_	
+223-18	estreia	_	
+223-19	dos	_	
+223-20	CTT	_	
+223-21	na	_	
+223-22	Bolsa	_	
+223-23	[	_	
+223-24	[	_	
+223-25	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+223-26	]	_	
+223-27	]	_	
+
+#id=224
+#text=Padre alemão com vida luxuosa já é conhecido como o ‘Bispo SLN’ [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+224-1	Padre	_	
+224-2	alemão	_	
+224-3	com	_	
+224-4	vida	_	
+224-5	luxuosa	_	
+224-6	já	_	
+224-7	é	_	
+224-8	conhecido	_	
+224-9	como	_	
+224-10	o	_	
+224-11	‘Bispo	_	
+224-12	SLN’	_	
+224-13	[	_	
+224-14	[	_	
+224-15	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+224-16	]	_	
+224-17	]	_	
+
+#id=225
+#text=Novos livros : Lula incentiva Sócrates e Astérix a regressarem à política [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+225-1	Novos	_	
+225-2	livros	_	
+225-3	:	_	
+225-4	Lula	_	
+225-5	incentiva	_	
+225-6	Sócrates	_	
+225-7	e	_	
+225-8	Astérix	_	
+225-9	a	_	
+225-10	regressarem	_	
+225-11	à	_	
+225-12	política	_	
+225-13	[	_	
+225-14	[	_	
+225-15	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+225-16	]	_	
+225-17	]	_	
+
+#id=226
+#text=Miguel Relvas casou-se na semana passada mas já tem equivalência às Bodas de Diamante [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+226-1	Miguel	_	
+226-2	Relvas	_	
+226-3	casou-se	_	
+226-4	na	_	
+226-5	semana	_	
+226-6	passada	_	
+226-7	mas	_	
+226-8	já	_	
+226-9	tem	_	
+226-10	equivalência	_	
+226-11	às	_	
+226-12	Bodas	_	
+226-13	de	_	
+226-14	Diamante	_	
+226-15	[	_	
+226-16	[	_	
+226-17	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+226-18	]	_	
+226-19	]	_	
+
+#id=227
+#text=Real Madrid afasta grupo de extrema-direita do Santiago Bernabéu e deixa entrar nova claque do Rui Tavares [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+227-1	Real	_	
+227-2	Madrid	_	
+227-3	afasta	_	
+227-4	grupo	_	
+227-5	de	_	
+227-6	extrema-direita	_	
+227-7	do	_	
+227-8	Santiago	_	
+227-9	Bernabéu	_	
+227-10	e	_	
+227-11	deixa	_	
+227-12	entrar	_	
+227-13	nova	_	
+227-14	claque	_	
+227-15	do	_	
+227-16	Rui	_	
+227-17	Tavares	_	
+227-18	[	_	
+227-19	[	_	
+227-20	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Hipérbole	
+227-21	]	_	
+227-22	]	_	
+
+#id=228
+#text=Guião próprio do PSD sobre a reforma do Estado vai ter 70 volumes e um caractere em cada página [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+228-1	Guião	_	
+228-2	próprio	_	
+228-3	do	_	
+228-4	PSD	_	
+228-5	sobre	_	
+228-6	a	_	
+228-7	reforma	_	
+228-8	do	_	
+228-9	Estado	_	
+228-10	vai	_	
+228-11	ter	_	
+228-12	70	_	
+228-13	volumes	_	
+228-14	e	_	
+228-15	um	_	
+228-16	caractere	_	
+228-17	em	_	
+228-18	cada	_	
+228-19	página	_	
+228-20	[	_	
+228-21	[	_	
+228-22	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+228-23	]	_	
+228-24	]	_	
+
+#id=229
+#text=Lince ibérico vai ser reintroduzido nas repartições públicas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+229-1	Lince	_	
+229-2	ibérico	_	
+229-3	vai	_	
+229-4	ser	_	
+229-5	reintroduzido	_	
+229-6	nas	_	
+229-7	repartições	_	
+229-8	públicas	_	
+229-9	[	_	
+229-10	[	_	
+229-11	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+229-12	]	_	
+229-13	]	_	
+
+#id=230
+#text=Passos Coelho faz seguro às pernas porque tem medo que Mário Soares mande alguém parti-las [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+230-1	Passos	_	
+230-2	Coelho	_	
+230-3	faz	_	
+230-4	seguro	_	
+230-5	às	_	
+230-6	pernas	_	
+230-7	porque	_	
+230-8	tem	_	
+230-9	medo	_	
+230-10	que	_	
+230-11	Mário	_	
+230-12	Soares	_	
+230-13	mande	_	
+230-14	alguém	_	
+230-15	parti-las	_	
+230-16	[	_	
+230-17	[	_	
+230-18	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Metáfora	
+230-19	]	_	
+230-20	]	_	
+
+#id=231
+#text=Apoiantes de Rui Rio destruíram várias estações de serviço da A1 durante a viagem até Lisboa [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+231-1	Apoiantes	_	
+231-2	de	_	
+231-3	Rui	_	
+231-4	Rio	_	
+231-5	destruíram	_	
+231-6	várias	_	
+231-7	estações	_	
+231-8	de	_	
+231-9	serviço	_	
+231-10	da	_	
+231-11	A1	_	
+231-12	durante	_	
+231-13	a	_	
+231-14	viagem	_	
+231-15	até	_	
+231-16	Lisboa	_	
+231-17	[	_	
+231-18	[	_	
+231-19	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+231-20	]	_	
+231-21	]	_	
+
+#id=232
+#text=Passos Coelho deu jeito nas costas a vergar-se perante a Troika e anda dobrado desde manhã [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+232-1	Passos	_	
+232-2	Coelho	_	
+232-3	deu	_	
+232-4	jeito	_	
+232-5	nas	_	
+232-6	costas	_	
+232-7	a	_	
+232-8	vergar-se	_	
+232-9	perante	_	
+232-10	a	_	
+232-11	Troika	_	
+232-12	e	_	
+232-13	anda	_	
+232-14	dobrado	_	
+232-15	desde	_	
+232-16	manhã	_	
+232-17	[	_	
+232-18	[	_	
+232-19	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+232-20	]	_	
+232-21	]	_	
+
+#id=233
+#text=Crato anuncia que professor Fofana , professor Marcelo e professor Neca vão fazer prova de avaliação [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+233-1	Crato	_	
+233-2	anuncia	_	
+233-3	que	_	
+233-4	professor	_	
+233-5	Fofana	_	
+233-6	,	_	
+233-7	professor	_	
+233-8	Marcelo	_	
+233-9	e	_	
+233-10	professor	_	
+233-11	Neca	_	
+233-12	vão	_	
+233-13	fazer	_	
+233-14	prova	_	
+233-15	de	_	
+233-16	avaliação	_	
+233-17	[	_	
+233-18	[	_	
+233-19	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+233-20	]	_	
+233-21	]	_	
+
+#id=234
+#text=Lei das 40 horas passa no Constitucional e agora o governo vai tentar esticar horário dos funcionários públicos para as 80 horas por semana [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+234-1	Lei	_	
+234-2	das	_	
+234-3	40	_	
+234-4	horas	_	
+234-5	passa	_	
+234-6	no	_	
+234-7	Constitucional	_	
+234-8	e	_	
+234-9	agora	_	
+234-10	o	_	
+234-11	governo	_	
+234-12	vai	_	
+234-13	tentar	_	
+234-14	esticar	_	
+234-15	horário	_	
+234-16	dos	_	
+234-17	funcionários	_	
+234-18	públicos	_	
+234-19	para	_	
+234-20	as	_	
+234-21	80	_	
+234-22	horas	_	
+234-23	por	_	
+234-24	semana	_	
+234-25	[	_	
+234-26	[	_	
+234-27	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Outro	
+234-28	]	_	
+234-29	]	_	
+
+#id=235
+#text=Marques Mendes , Marcelo e Durão Barroso ultrapassam número de cães ao mesmo osso que podem existir no PSD [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+235-1	Marques	_	
+235-2	Mendes	_	
+235-3	,	_	
+235-4	Marcelo	_	
+235-5	e	_	
+235-6	Durão	_	
+235-7	Barroso	_	
+235-8	ultrapassam	_	
+235-9	número	_	
+235-10	de	_	
+235-11	cães	_	
+235-12	ao	_	
+235-13	mesmo	_	
+235-14	osso	_	
+235-15	que	_	
+235-16	podem	_	
+235-17	existir	_	
+235-18	no	_	
+235-19	PSD	_	
+235-20	[	_	
+235-21	[	_	
+235-22	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Metáfora	
+235-23	]	_	
+235-24	]	_	
+
+#id=236
+#text=Raptores de médicos em Portugal nunca sabem se eles estão a dar consultas no hospital público ou no consultório privado [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+236-1	Raptores	_	
+236-2	de	_	
+236-3	médicos	_	
+236-4	em	_	
+236-5	Portugal	_	
+236-6	nunca	_	
+236-7	sabem	_	
+236-8	se	_	
+236-9	eles	_	
+236-10	estão	_	
+236-11	a	_	
+236-12	dar	_	
+236-13	consultas	_	
+236-14	no	_	
+236-15	hospital	_	
+236-16	público	_	
+236-17	ou	_	
+236-18	no	_	
+236-19	consultório	_	
+236-20	privado	_	
+236-21	[	_	
+236-22	[	_	
+236-23	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole|Outro	
+236-24	]	_	
+236-25	]	_	
+
+#id=237
+#text=Manifestação de protesto dos políticos que perdem 15 % da pensão vitalícia autorizada a atravessar a ponte 25 de Abril [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+237-1	Manifestação	_	
+237-2	de	_	
+237-3	protesto	_	
+237-4	dos	_	
+237-5	políticos	_	
+237-6	que	_	
+237-7	perdem	_	
+237-8	15	_	
+237-9	%	_	
+237-10	da	_	
+237-11	pensão	_	
+237-12	vitalícia	_	
+237-13	autorizada	_	
+237-14	a	_	
+237-15	atravessar	_	
+237-16	a	_	
+237-17	ponte	_	
+237-18	25	_	
+237-19	de	_	
+237-20	Abril	_	
+237-21	[	_	
+237-22	[	_	
+237-23	ANOTACAO_RECURSO_ESTILISTICO	Paradoxo	
+237-24	]	_	
+237-25	]	_	
+
+#id=238
+#text=Cristas só autoriza que Bárbara tenha dois cães para enfrentar Carrilho [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+238-1	Cristas	_	
+238-2	só	_	
+238-3	autoriza	_	
+238-4	que	_	
+238-5	Bárbara	_	
+238-6	tenha	_	
+238-7	dois	_	
+238-8	cães	_	
+238-9	para	_	
+238-10	enfrentar	_	
+238-11	Carrilho	_	
+238-12	[	_	
+238-13	[	_	
+238-14	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+238-15	]	_	
+238-16	]	_	
+
+#id=239
+#text=PS acusa governo de provocar curto-circuito na economia e Passos culpa puxada clandestina que fez à carteira dos portugueses [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+239-1	PS	_	
+239-2	acusa	_	
+239-3	governo	_	
+239-4	de	_	
+239-5	provocar	_	
+239-6	curto-circuito	_	
+239-7	na	_	
+239-8	economia	_	
+239-9	e	_	
+239-10	Passos	_	
+239-11	culpa	_	
+239-12	puxada	_	
+239-13	clandestina	_	
+239-14	que	_	
+239-15	fez	_	
+239-16	à	_	
+239-17	carteira	_	
+239-18	dos	_	
+239-19	portugueses	_	
+239-20	[	_	
+239-21	[	_	
+239-22	ANOTACAO_RECURSO_ESTILISTICO	Imparidade	
+239-23	]	_	
+239-24	]	_	
+
+#id=240
+#text=Aplicação da Google serve para monitorizar quanto tempo falta para o Rui Rio sair de casa [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+240-1	Aplicação	_	
+240-2	da	_	
+240-3	Google	_	
+240-4	serve	_	
+240-5	para	_	
+240-6	monitorizar	_	
+240-7	quanto	_	
+240-8	tempo	_	
+240-9	falta	_	
+240-10	para	_	
+240-11	o	_	
+240-12	Rui	_	
+240-13	Rio	_	
+240-14	sair	_	
+240-15	de	_	
+240-16	casa	_	
+240-17	[	_	
+240-18	[	_	
+240-19	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+240-20	]	_	
+240-21	]	_	
+
+#id=241
+#text=Documentos sobre os swap afinal estavam na garagem de Paulo Portas [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+241-1	Documentos	_	
+241-2	sobre	_	
+241-3	os	_	
+241-4	swap	_	
+241-5	afinal	_	
+241-6	estavam	_	
+241-7	na	_	
+241-8	garagem	_	
+241-9	de	_	
+241-10	Paulo	_	
+241-11	Portas	_	
+241-12	[	_	
+241-13	[	_	
+241-14	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+241-15	]	_	
+241-16	]	_	
+
+#id=242
+#text=Passos Coelho vai visitar o Tribunal Constitucional a pedir doces em vez de travessuras [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+242-1	Passos	_	
+242-2	Coelho	_	
+242-3	vai	_	
+242-4	visitar	_	
+242-5	o	_	
+242-6	Tribunal	_	
+242-7	Constitucional	_	
+242-8	a	_	
+242-9	pedir	_	
+242-10	doces	_	
+242-11	em	_	
+242-12	vez	_	
+242-13	de	_	
+242-14	travessuras	_	
+242-15	[	_	
+242-16	[	_	
+242-17	ANOTACAO_RECURSO_ESTILISTICO	Outro	
+242-18	]	_	
+242-19	]	_	
+
+#id=243
+#text=Machete favorito para o Nobel da Física graças ao seu acelerador de investigações do Ministério Público [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+243-1	Machete	_	
+243-2	favorito	_	
+243-3	para	_	
+243-4	o	_	
+243-5	Nobel	_	
+243-6	da	_	
+243-7	Física	_	
+243-8	graças	_	
+243-9	ao	_	
+243-10	seu	_	
+243-11	acelerador	_	
+243-12	de	_	
+243-13	investigações	_	
+243-14	do	_	
+243-15	Ministério	_	
+243-16	Público	_	
+243-17	[	_	
+243-18	[	_	
+243-19	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+243-20	]	_	
+243-21	]	_	
+
+#id=244
+#text=CGTP já tem 100 mil motas de água para contornar proibição de manifestação na ponte [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+244-1	CGTP	_	
+244-2	já	_	
+244-3	tem	_	
+244-4	100	_	
+244-5	mil	_	
+244-6	motas	_	
+244-7	de	_	
+244-8	água	_	
+244-9	para	_	
+244-10	contornar	_	
+244-11	proibição	_	
+244-12	de	_	
+244-13	manifestação	_	
+244-14	na	_	
+244-15	ponte	_	
+244-16	[	_	
+244-17	[	_	
+244-18	ANOTACAO_RECURSO_ESTILISTICO	Hipérbole	
+244-19	]	_	
+244-20	]	_	
+
+#id=245
+#text=Jorge Jesus candidato ao Nobel da Paz porque sobreviveu a ataque do Óscar Cardozo [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+245-1	Jorge	_	
+245-2	Jesus	_	
+245-3	candidato	_	
+245-4	ao	_	
+245-5	Nobel	_	
+245-6	da	_	
+245-7	Paz	_	
+245-8	porque	_	
+245-9	sobreviveu	_	
+245-10	a	_	
+245-11	ataque	_	
+245-12	do	_	
+245-13	Óscar	_	
+245-14	Cardozo	_	
+245-15	[	_	
+245-16	[	_	
+245-17	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Hipérbole	
+245-18	]	_	
+245-19	]	_	
+
+#id=246
+#text=Passos Coelho anuncia novo pacote chocante de austeridade hoje às 19h45 [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+246-1	Passos	_	
+246-2	Coelho	_	
+246-3	anuncia	_	
+246-4	novo	_	
+246-5	pacote	_	
+246-6	chocante	_	
+246-7	de	_	
+246-8	austeridade	_	
+246-9	hoje	_	
+246-10	às	_	
+246-11	19h45	_	
+246-12	[	_	
+246-13	[	_	
+246-14	ANOTACAO_RECURSO_ESTILISTICO	Outro	
+246-15	]	_	
+246-16	]	_	
+
+#id=247
+#text=Van Damme grava clip com uma perna no PS e outra no PSD [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+247-1	Van	_	
+247-2	Damme	_	
+247-3	grava	_	
+247-4	clip	_	
+247-5	com	_	
+247-6	uma	_	
+247-7	perna	_	
+247-8	no	_	
+247-9	PS	_	
+247-10	e	_	
+247-11	outra	_	
+247-12	no	_	
+247-13	PSD	_	
+247-14	[	_	
+247-15	[	_	
+247-16	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Hipérbole	
+247-17	]	_	
+247-18	]	_	
+
+#id=248
+#text=Marco António Costa berra ‘És o melhor do mundo , c ... ! ’ a Pedro Passos Coelho [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+248-1	Marco	_	
+248-2	António	_	
+248-3	Costa	_	
+248-4	berra	_	
+248-5	‘És	_	
+248-6	o	_	
+248-7	melhor	_	
+248-8	do	_	
+248-9	mundo	_	
+248-10	,	_	
+248-11	c	_	
+248-12	...	_	
+248-13	!	_	
+248-14	’	_	
+248-15	a	_	
+248-16	Pedro	_	
+248-17	Passos	_	
+248-18	Coelho	_	
+248-19	[	_	
+248-20	[	_	
+248-21	ANOTACAO_RECURSO_ESTILISTICO	Vulgarismo	
+248-22	]	_	
+248-23	]	_	
+
+#id=249
+#text=Passos diz que mérito de a selecção portuguesa ter subido no ranking da FIFA é todo de Maria Luís Albuquerque [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+249-1	Passos	_	
+249-2	diz	_	
+249-3	que	_	
+249-4	mérito	_	
+249-5	de	_	
+249-6	a	_	
+249-7	selecção	_	
+249-8	portuguesa	_	
+249-9	ter	_	
+249-10	subido	_	
+249-11	no	_	
+249-12	ranking	_	
+249-13	da	_	
+249-14	FIFA	_	
+249-15	é	_	
+249-16	todo	_	
+249-17	de	_	
+249-18	Maria	_	
+249-19	Luís	_	
+249-20	Albuquerque	_	
+249-21	[	_	
+249-22	[	_	
+249-23	ANOTACAO_RECURSO_ESTILISTICO	Imparidade|Hipérbole	
+249-24	]	_	
+249-25	]	_	
+
+#id=250
+#text=Novos critérios para despedimento não incluem obviamente ter pertencido ao BPN [ [ ANOTACAO_RECURSO_ESTILISTICO ] ]
+250-1	Novos	_	
+250-2	critérios	_	
+250-3	para	_	
+250-4	despedimento	_	
+250-5	não	_	
+250-6	incluem	_	
+250-7	obviamente	_	
+250-8	ter	_	
+250-9	pertencido	_	
+250-10	ao	_	
+250-11	BPN	_	
+250-12	[	_	
+250-13	[	_	
+250-14	ANOTACAO_RECURSO_ESTILISTICO	Metáfora	
+250-15	]	_	
+250-16	]	_	
+
