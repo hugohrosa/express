@@ -33,7 +33,7 @@ annotators = ['hanna','cristina','cfreitas','ccarvalho','andrea']
 fieldnames = ['texto', 'fonte', 'ironico', 'num_de_anotadores_ironico', 'num_de_anotadores_total', 'Comparação', 'Hipérbole', 'Imparidade', 'Metáfora', 'Paradoxo', 'Vulgarismo', 'Outro', 'Sem Evidência']
 #output = codecs.open('annotated_10_INST.txt','w','utf-8')
 #output = codecs.open('annotation_stats/data.txt','wb','utf-8')
-output = open('annotation_stats/data.csv','wb')
+output = open('data.csv','wb')
 csvw = unicodecsv.DictWriter(output, delimiter = '\t',fieldnames = fieldnames)
 final = dict()
 
@@ -105,6 +105,7 @@ for i in range(0,10,1):
                         if len(line)==4 and line[2] != '_':
                             cat = line[2].split('|')
                             aux_d = final[text]
+                            aux_d['num_de_anotadores_total']+=1
                             for c in cat:
                                 if aux_d.has_key(c):
                                     aux_d[c]+=1
@@ -117,8 +118,10 @@ for i in range(0,10,1):
 
 csvw.writeheader()
 for k,v in final.iteritems():
-    if final[k]['num_de_anotadores_total']>0 and final[k]['num_de_anotadores_ironico'] / float(final[k]['num_de_anotadores_total']) >= 0.5:
+    if final[k]['num_de_anotadores_total']>1 and final[k]['num_de_anotadores_ironico'] / float(final[k]['num_de_anotadores_total']) >= 0.5:
         final[k]['ironico']='Sim'
-    else:
+    elif final[k]['num_de_anotadores_total']>1 and final[k]['num_de_anotadores_ironico'] / float(final[k]['num_de_anotadores_total']) < 0.5:
         final[k]['ironico']='Não'
+    else:
+        final[k]['ironico']='Não Sei'
     csvw.writerow(final[k])
