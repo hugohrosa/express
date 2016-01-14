@@ -10,8 +10,6 @@ import itertools
 import pprint
 import re
 
-
-
 STOP_WORDS_PATH = "DATA/StopWords_Ironia.txt"
 AUX_VERBS_PATH  = "DATA/stop-words-vaux.txt"
 ALLOWED_CHARS=[' ','-','/']
@@ -128,5 +126,5 @@ def pairwise_distances_details(in_file, out_file, features_path, distance="cosin
                         fod.write("%d\t%s-%s\t%.2f\n" %(doc_id,w1,w2,c))
 
 IN_FILES = ["_semtag_dataset_webanno_tfidf_inimigo.txt","_semtag_dataset_webanno_tfidf_publico.txt" ]
-# pairwise_distances(IN_FILES[0], "DATA/inimigo_distances.txt", EMBEDDINGS_PATH)
+pairwise_distances(IN_FILES[0], "DATA/inimigo_distances.txt", EMBEDDINGS_PATH)
 pairwise_distances(IN_FILES[1], "DATA/publico_distances.txt", EMBEDDINGS_PATH)
