@@ -9,12 +9,16 @@ ip = codecs.open('_semtag_dataset_webanno_tfidf_inimigo.txt','r','utf-8')
 pub = codecs.open('_semtag_dataset_webanno_tfidf_publico.txt','r','utf-8')
 
 ip_array = []
+#ip_full = []
 for l in ip.readlines():
+#    ip_full.append(l.replace('\n',''))
     l = ''.join(e for e in l if e.isalnum())
     ip_array.append(l)
 
 pub_array = []
+#pub_full = []
 for l in pub.readlines():
+#    pub_full.append(l.replace('\n',''))
     l = ''.join(e for e in l if e.isalnum())
     pub_array.append(l)
 
@@ -48,7 +52,7 @@ for an in annotators:
                         text = text.replace('#text=','').decode('utf-8')
                         if not final.has_key(text):
                             origin = checkOrigin(text)
-                            final[text] = {'texto':text, 'fonte':origin, 'ironico':'nao sei', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
+                            final[text] = {'texto':text, 'fonte':origin, 'ironico':'--', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
                                            'Comparação':0, 'Hipérbole':0, 'Imparidade':0, 'Metáfora':0, 'Paradoxo':0, 'Vulgarismo':0, 'Outro':0, 'Sem Evidência':0} 
                     if len(line)==4 and line[2] != '_':
                         aux_d = final[text]
@@ -73,7 +77,7 @@ for an in annotators:
                         text = text.replace('#text=','').decode('utf-8')
                         if not final.has_key(text):
                             origin = checkOrigin(text)
-                            final[text] = {'texto':text, 'fonte':origin, 'ironico':'nao sei', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
+                            final[text] = {'texto':text, 'fonte':origin, 'ironico':'--', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
                                            'Comparação':0, 'Hipérbole':0, 'Imparidade':0, 'Metáfora':0, 'Paradoxo':0, 'Vulgarismo':0, 'Outro':0, 'Sem Evidência':0} 
                     if len(line)==4 and line[2] != '_':
                         cat = line[2].split('|')
@@ -100,7 +104,7 @@ for i in range(0,10,1):
                             text = text.replace('#text=','').decode('utf-8')
                             if not final.has_key(text):
                                 origin = checkOrigin(text)
-                                final[text] = {'texto':text, 'fonte':origin, 'ironico':'nao sei', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
+                                final[text] = {'texto':text, 'fonte':origin, 'ironico':'--', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
                                                'Comparação':0, 'Hipérbole':0, 'Imparidade':0, 'Metáfora':0, 'Paradoxo':0, 'Vulgarismo':0, 'Outro':0, 'Sem Evidência':0} 
                         if len(line)==4 and line[2] != '_':
                             cat = line[2].split('|')
@@ -114,7 +118,23 @@ for i in range(0,10,1):
             if ioex.errno==2:
                 continue
             else:
-                break 
+                break
+
+#keys_list = []
+#for k in final.keys():
+#    keys_list.append(e for e in k if e.isalnum())
+#    
+# for p in pub_array:
+#     if p not in keys_list:
+#         text = pub_full[pub_array.index(p)]
+#         final[text] = {'texto': text, 'fonte':'Público', 'ironico':'--', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
+#                                            'Comparação':0, 'Hipérbole':0, 'Imparidade':0, 'Metáfora':0, 'Paradoxo':0, 'Vulgarismo':0, 'Outro':0, 'Sem Evidência':0}
+#         
+# for ip in ip_array:
+#     if ip not in keys_list:
+#         text = ip_full[ip_array.index(ip)]
+#         final[text] = {'texto':text, 'fonte':'Inimigo Público', 'ironico':'--', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
+#                                            'Comparação':0, 'Hipérbole':0, 'Imparidade':0, 'Metáfora':0, 'Paradoxo':0, 'Vulgarismo':0, 'Outro':0, 'Sem Evidência':0}
 
 csvw.writeheader()
 for k,v in final.iteritems():
@@ -122,6 +142,6 @@ for k,v in final.iteritems():
         final[k]['ironico']='Sim'
     elif final[k]['num_de_anotadores_total']>1 and final[k]['num_de_anotadores_ironico'] / float(final[k]['num_de_anotadores_total']) < 0.5:
         final[k]['ironico']='Não'
-    else:
-        final[k]['ironico']='Não Sei'
+    #else:
+    #    final[k]['ironico']='--'
     csvw.writerow(final[k])
