@@ -9,16 +9,16 @@ ip = codecs.open('_semtag_dataset_webanno_tfidf_inimigo.txt','r','utf-8')
 pub = codecs.open('_semtag_dataset_webanno_tfidf_publico.txt','r','utf-8')
 
 ip_array = []
-#ip_full = []
+ip_full = []
 for l in ip.readlines():
-#    ip_full.append(l.replace('\n',''))
+    ip_full.append(l.replace('\n',''))
     l = ''.join(e for e in l if e.isalnum())
     ip_array.append(l)
 
 pub_array = []
-#pub_full = []
+pub_full = []
 for l in pub.readlines():
-#    pub_full.append(l.replace('\n',''))
+    pub_full.append(l.replace('\n',''))
     l = ''.join(e for e in l if e.isalnum())
     pub_array.append(l)
 
@@ -37,7 +37,7 @@ annotators = ['hanna','cristina','cfreitas','ccarvalho','andrea']
 fieldnames = ['texto', 'fonte', 'ironico', 'num_de_anotadores_ironico', 'num_de_anotadores_total', 'Comparação', 'Hipérbole', 'Imparidade', 'Metáfora', 'Paradoxo', 'Vulgarismo', 'Outro', 'Sem Evidência']
 #output = codecs.open('annotated_10_INST.txt','w','utf-8')
 #output = codecs.open('annotation_stats/data.txt','wb','utf-8')
-output = open('data.csv','wb')
+output = open('data_all.csv','wb')
 csvw = unicodecsv.DictWriter(output, delimiter = '\t',fieldnames = fieldnames)
 final = dict()
 
@@ -120,21 +120,21 @@ for i in range(0,10,1):
             else:
                 break
 
-#keys_list = []
-#for k in final.keys():
-#    keys_list.append(e for e in k if e.isalnum())
-#    
-# for p in pub_array:
-#     if p not in keys_list:
-#         text = pub_full[pub_array.index(p)]
-#         final[text] = {'texto': text, 'fonte':'Público', 'ironico':'--', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
-#                                            'Comparação':0, 'Hipérbole':0, 'Imparidade':0, 'Metáfora':0, 'Paradoxo':0, 'Vulgarismo':0, 'Outro':0, 'Sem Evidência':0}
-#         
-# for ip in ip_array:
-#     if ip not in keys_list:
-#         text = ip_full[ip_array.index(ip)]
-#         final[text] = {'texto':text, 'fonte':'Inimigo Público', 'ironico':'--', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
-#                                            'Comparação':0, 'Hipérbole':0, 'Imparidade':0, 'Metáfora':0, 'Paradoxo':0, 'Vulgarismo':0, 'Outro':0, 'Sem Evidência':0}
+keys_list = []
+for k in final.keys():
+    keys_list.append(''.join(e for e in k if e.isalnum()))
+    
+for p in pub_array:
+    if p not in keys_list:
+        text = pub_full[pub_array.index(p)]
+        final[text] = {'texto': text, 'fonte':'Público', 'ironico':'--', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
+                        'Comparação':0, 'Hipérbole':0, 'Imparidade':0, 'Metáfora':0, 'Paradoxo':0, 'Vulgarismo':0, 'Outro':0, 'Sem Evidência':0}
+        
+for ip in ip_array:
+    if ip not in keys_list:
+        text = ip_full[ip_array.index(ip)]
+        final[text] = {'texto':text, 'fonte':'Inimigo Público', 'ironico':'--', 'num_de_anotadores_ironico': 0, 'num_de_anotadores_total':0,
+                        'Comparação':0, 'Hipérbole':0, 'Imparidade':0, 'Metáfora':0, 'Paradoxo':0, 'Vulgarismo':0, 'Outro':0, 'Sem Evidência':0}
 
 csvw.writeheader()
 for k,v in final.iteritems():
