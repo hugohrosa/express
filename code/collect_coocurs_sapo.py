@@ -26,7 +26,7 @@ import string
 # from PyQt4.QtWebKit import *  
 # from lxml import html 
 
-log = codecs.open('log_coocurs_sapo.txt','w','utf-8')
+log = codecs.open('_dispair_log_coocurs_sapo.txt','w','utf-8')
 
 # class Render(QWebPage):  
 #   def __init__(self, url):  
@@ -40,48 +40,56 @@ log = codecs.open('log_coocurs_sapo.txt','w','utf-8')
 #     self.frame = self.mainFrame()  
 #     self.app.quit()
 
-def getSearchNumHits(url):
-    driver = webdriver.PhantomJS()   
-    try:
-        driver.get(url) 
-        page_html = driver.execute_script('return document.documentElement.innerHTML;')
- 
-    except Exception:
-        log.write('Webdriver Error ' + url+'\n')
-        #driver.quit()
-        return 0 
-    #r = Render(url)  
-    #result = r.frame.toHtml()
-    #page_html = str(result.toAscii())
-    soup = BeautifulSoup(page_html, 'html.parser')
-    search_results = soup.find('div', {'id': 'resInfo-0'})
-    if search_results is not None:
-        hits = numbersOnly(search_results.text.partition('(')[0])
-        log.write('\t OK \t ' + url + ' ' + str(hits)+'\n')
-    else:
-        log.write('\t FAILED \t ' + url+'\n')
-        hits = 0
-    driver.quit()
-    return hits
+# def getSearchNumHits(url):
+#     driver = webdriver.PhantomJS()   
+#     try:
+#         driver.get(url) 
+#         page_html = driver.execute_script('return document.documentElement.innerHTML;')
+#  
+#     except Exception:
+#         log.write('Webdriver Error ' + url+'\n')
+#         #driver.quit()
+#         return 0 
+#     #r = Render(url)  
+#     #result = r.frame.toHtml()
+#     #page_html = str(result.toAscii())
+#     soup = BeautifulSoup(page_html, 'html.parser')
+#     search_results = soup.find('div', {'id': 'resInfo-0'})
+#     if search_results is not None:
+#         hits = numbersOnly(search_results.text.partition('(')[0])
+#         log.write('\t OK \t ' + url + ' ' + str(hits)+'\n')
+#     else:
+#         log.write('\t FAILED \t ' + url+'\n')
+#         hits = 0
+#     driver.quit()
+#     return hits
 
 def getSearchNumHitsVoxx(url):
-    try:       
-        response = urllib.urlopen(url)
-        content = response.read()
-        data = json.loads(content)
+    try:
+        log.write('\tgetSearchNumHitsVoxx Vou abrir link')       
+        #response = urllib.urlopen(url)
+        response = requests.get(url)
+        #log.write('\tVou ler conteúdo')
+        #content = response.read()
+        if response.status_code != 200:
+            log.write('\tFAILED ' + str(response.status_code) + '\n')
+            return None
+        log.write('\tVou carregar JSON')
+        #data = json.loads(content)
+        data = json.loads(response.content)
         if len(data.values()[0])==0:
-            log.write('\t FAILED ' + url + '\n')
+            log.write('\tFAILED ' + url + '\n')
             return None
         else:
             hits = data['response']['numFound']
-            log.write('\t OK ' + str(hits) + ' ' + url + '\n')
+            log.write('\tOK ' + str(hits) + ' ' + url + '\n')
             return hits
     except ValueError:  # includes simplejson.decoder.JSONDecodeError
-        log.write('Decoding JSON has failed\n')
+        log.write('\tDecoding JSON has failed\t'+ str(url) +'\n')
         pass
     except:
-        log.write('General error getSearchNumHitsVoxx: ' + str(sys.exc_info()[0]))
-        return None
+        log.write('\tGeneral error getSearchNumHitsVoxx: ' + str(url) + ' ' + str(sys.exc_info()[0])+ ' ' + str(sys.exc_info()[1]) + ' ' + str(sys.exc_info()[2])+'\n')
+        pass
 
 def numbersOnly(text):
     return re.sub('[^0-9]','',text)
@@ -92,9 +100,17 @@ def PoI(entity, poi, err):
         #sys.stdout.flush()
         #log.write("\tlookup: "+ entity +"\n")
         url = 'http://services.sapo.pt/InformationRetrieval/Verbetes/WhoIs?name='+entity.encode('utf-8')
-        response = urllib.urlopen(url)
-        content = response.read()
-        data = json.loads(content)
+        log.write('\tPoI Vou abrir link')
+        #response = urllib.urlopen(url)
+        response = requests.get(url)
+        #log.write('\tVou ler conteúdo')
+        #content = response.read()
+        if response.status_code != 200:
+            log.write('\tFAILED ' + str(response.status_code) + '\n')
+            return None
+        log.write('\tVou carregar JSON')
+        #data = json.loads(content)
+        data = json.loads(response.content)
         if len(data.values()[0])==0:
             return ''
         else:
@@ -103,39 +119,42 @@ def PoI(entity, poi, err):
                     return ''
             return data['verbetes'][0]['officialName']
     except ValueError:  # includes simplejson.decoder.JSONDecodeError
-        log.write('Decoding JSON has failed\n')
-        err+=1
+        log.write('\tDecoding JSON has failed\t'+str(url)+'\n')
         pass
     except:
-        log.write('General error PoI: ' + str(sys.exc_info()[0]))
-        return None
+        log.write('\tGeneral error PoI: ' + str(url) + ' ' + str(sys.exc_info()[0])+ ' ' + str(sys.exc_info()[1]) + ' ' + str(sys.exc_info()[2])+'\n')
+        pass
 
 
 data = open('DATA/data_all.csv', 'rU')
 reader = unicodecsv.DictReader(data, encoding = 'utf-8', delimiter = '\t')#, 
 with open("Models/tagger.pkl") as fid:
     tagger_fast = cPickle.load(fid)
+    
+# with open("DATA/entities_by_sentence_sapo.pkl") as fid:
+#     ent_dict= cPickle.load(fid)
+# with open("DATA/coocurs_sapo.pkl") as fid:
+#     co_occurs = cPickle.load(fid)
 
 noun_list = [u'NOUN',u'N']
 err = 0
 co_occurs = {}
-json_errors = []
 sent_id = 0
 prev_requests = {}
 t0 = time.time()
-skip_next=False
 skipURL=[]
 exclude = set(unicode(string.punctuation))
 exclude.add(u'“')
+ent_dict = dict()
 for row in reader:
-    entities = []
-    if int(row['num_de_anotadores_total'])>=1:           
-        #if sent_id > 3:
-        #    print "\tbailed!"
-        #    break
+    if int(row['num_de_anotadores_total'])>=1: 
+                  
+#         if sent_id < 2540:
+#             print "\tbailed! " + str(sent_id)
+#             sent_id+=1
+#             continue
         sent_id+=1
-        #if sent_id < 928:
-        #    continue
+        entities = []
         
         #remove punctuation and numbers from text string
         #text = re.sub(ur"\p{P}+", '', row['texto'])
@@ -171,6 +190,8 @@ for row in reader:
                         while entity is None:
                             #entity = PoI(token, poi, err)
                             entity = PoI(token_cmp, poi, err)
+                            if entity is None:
+                                print str(token_cmp) + ' is None'
                         if entity != '' and token not in co_occurs:
                             #print entity
                             skip_next=True
@@ -183,7 +204,8 @@ for row in reader:
             if token in prev_requests or token in co_occurs or pos not in [u'NOUN',u'N']: 
                 #print "\tignored: %s" % token
                 continue
-        log.write('\t' + str(entities) + '\n')
+        log.write('\n\t' + str(entities) + '\n')
+        ent_dict[sent_id]={'entities':entities, 'imparity':row['Imparidade']}
         
         #make combinations of entities for Sapo search engine
         entity_pairs = itertools.combinations(entities, 2)      
@@ -193,23 +215,29 @@ for row in reader:
             total_occurences_a=0
             total_occurences_b=0
             #url_sapo_co_ab = 'http://www.sapo.pt/pesquisa?q="'+urllib.quote(e_a)+'" + "'+urllib.quote(e_b)+'"'##gsc.tab=0&gsc.q="'+e_a+'" + "'+e_b+'"&gsc.page=1'
-            url_sapo_co_ab = 'http://services.sapo.pt/InformationRetrieval/News/Search?q=Body:*'+urllib.quote(e_a)+'*'+urllib.quote(e_b)+'*&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json'
+            url_sapo_co_ab = 'http://services.sapo.pt/InformationRetrieval/News/Search?q="'+urllib.quote(e_a)+'" "'+urllib.quote(e_b)+'"&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json'
             #co_hits_ab = getSearchNumHits(url_sapo_co_ab)
             co_hits_ab=None
             while co_hits_ab is None:
                 co_hits_ab = getSearchNumHitsVoxx(url_sapo_co_ab)
+                if co_hits_ab is None:
+                    print str(url_sapo_co_ab) + ' is None'
             if e_a not in skipURL:
                 #url_sapo_a = 'http://www.sapo.pt/pesquisa?q="'+urllib.quote(e_a)+'"'##gsc.tab=0&gsc.q="'+e_a+'"&gsc.page=1'
-                url_sapo_a = 'http://services.sapo.pt/InformationRetrieval/News/Search?q=Body:*'+urllib.quote(e_a)+'*&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json'
+                url_sapo_a = 'http://services.sapo.pt/InformationRetrieval/News/Search?q="'+urllib.quote(e_a)+'"&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json'
                 total_occurences_a = None
                 while total_occurences_a is None:
                     total_occurences_a = getSearchNumHitsVoxx(url_sapo_a)
+                    if total_occurences_a is None:
+                        print str(url_sapo_a) + ' is None'
             if e_b not in skipURL:
                 #url_sapo_b = 'http://www.sapo.pt/pesquisa?q="'+urllib.quote(e_b)+'"'##gsc.tab=0&gsc.q="'+e_b+'"&gsc.page=1'
-                url_sapo_b = 'http://services.sapo.pt/InformationRetrieval/News/Search?q=Body:*'+urllib.quote(e_b)+'*&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json'
+                url_sapo_b = 'http://services.sapo.pt/InformationRetrieval/News/Search?q="'+urllib.quote(e_b)+'"&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json'
                 total_occurences_b = None
                 while total_occurences_b is None:
                     total_occurences_b = getSearchNumHitsVoxx(url_sapo_b)
+                    if total_occurences_b is None:
+                        print str(url_sapo_b) + ' is None'
             
             if co_occurs.has_key(e_a):
                 co_item = co_occurs[e_a]['verbetes']
@@ -232,15 +260,15 @@ for row in reader:
                 co_occurs[e_b] = {"official_name": e_b, "verbetes": co_item_ba, "total_occurences": total_occurences_b}
             skipURL.append(e_a)
             skipURL.append(e_b)
-        #print co_occurs 
-        print "Sentence "+ str(sent_id) + " done %d minutes" % ((time.time()-t0 )/60)
+        #print co_occurs
+        with open("DATA/_dispair_sentences_sapo.pkl","wb") as fid:
+            cPickle.dump(ent_dict, fid)
+        with open("DATA/_dispair_cooccurs_sapo.pkl","wb") as fid:
+            cPickle.dump(co_occurs, fid)
+        print "Sentence "+ str(sent_id) + " done at " + time.strftime('%X %x %Z') + " after %d minutes running" % ((time.time()-t0 )/60)
 
 #print 'terminei queries'
- 
-#with open("DATA/coocurs_all_sapo.pkl","wb") as fid:
-with open("DATA/coocurs_all_sapo.pkl","wb") as fid:
-    cPickle.dump(co_occurs, fid)
- 
+
 print "DONE! :) "
 print "Took %d minutes" % ((time.time()-t0 )/60)
  
