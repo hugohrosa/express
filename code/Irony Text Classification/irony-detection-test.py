@@ -6,7 +6,7 @@ import sklearn
 import gensim
 import random
 import scipy
-import miniball
+#import miniball
 from keras.preprocessing import sequence
 from keras.preprocessing.text import Tokenizer
 from keras.models import Sequential , Graph
@@ -19,6 +19,9 @@ from sklearn.kernel_ridge import KernelRidge
 from gensim.models.word2vec import Word2Vec
 from gensim.models.doc2vec import Doc2Vec , TaggedDocument
 import unicodecsv
+import codecs
+
+log = codecs.open("log_irony_detection_test_50-50.txt","w","utf-8")
 
 def biggest(ns,s,n):
     ''' determinar o maior de 3 valores: ns - num anotadores 'não sei', s - num anotadores 'sim', n - num anotadores 'não'
@@ -36,14 +39,14 @@ def biggest(ns,s,n):
             out = 'Sim'
     return out
 
-print ("")
-print ("Reading pre-trained word embeddings...")
+log.write("\n")
+log.write("Reading pre-trained word embeddings...\n")
 embeddings_dim = 300
 embeddings = dict( )
 #embeddings = Word2Vec.load_word2vec_format( "GoogleNews-vectors-negative300.bin.gz" , binary=True ) 
 embeddings = Word2Vec.load_word2vec_format( "../DATA/publico_800.txt" , binary=False )
 
-print ("Reading affective dictionary and training regression model for predicting valence, arousal and dominance...")
+log.write("Reading affective dictionary and training regression model for predicting valence, arousal and dominance...\n")
 affective = dict( )
 for row in csv.DictReader(open("13428_2011_131_MOESM1_ESM.csv")): affective[ row["EP-Word"].lower() ] = np.array( [ float( row["Val-M"] ) , float( row["Arou-M"] ) , float( row["Dom-M"] ) ] )
 train_matrix = [ ]
@@ -70,26 +73,57 @@ class VADEstimator(BaseEstimator):
 def pearsonr( x , y ): return scipy.stats.pearsonr(x,y)[0]
 model = VADEstimator( )
 scores = sklearn.cross_validation.cross_val_score( model, train_matrix , train_labels[:,0] , cv=10, scoring=sklearn.metrics.make_scorer( pearsonr ) )
-print ("Test with 10 fold CV : correlation for valence: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+log.write("Test with 10 fold CV : correlation for valence: %0.2f (+/- %0.2f)\n" % (scores.mean(), scores.std() * 2))
 scores = sklearn.cross_validation.cross_val_score( model, train_matrix , train_labels[:,1] , cv=10, scoring=sklearn.metrics.make_scorer( pearsonr ) )
-print ("Test with 10 fold CV : correlation for arousal: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2)) 
+log.write("Test with 10 fold CV : correlation for arousal: %0.2f (+/- %0.2f)\n" % (scores.mean(), scores.std() * 2)) 
 scores = sklearn.cross_validation.cross_val_score( model, train_matrix , train_labels[:,2] , cv=10, scoring=sklearn.metrics.make_scorer( pearsonr ) )
-print ("Test with 10 fold CV : correlation for dominance: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2)) 
+log.write("Test with 10 fold CV : correlation for dominance: %0.2f (+/- %0.2f)\n" % (scores.mean(), scores.std() * 2)) 
 model.fit( train_matrix , train_labels , size=3 )
-print ("")
+log.write("\n")
 
-print ("Reading text data for classification and building representations...")
+log.write("Reading text data for classification and building representations...\n")
 max_features = 20000
 maxlen = 50
-#data = [ ( txt, 0 ) for txt in open('twitDB_regular.csv').readlines() ] + [ ( txt, 1 ) for txt in open('twitDB_sarcasm.csv').readlines() ]
-data = [ (row["texto"].encode('utf-8').lower(), biggest(int(row['naosei_ironico']), int(row['sim_ironico']), int(row['nao_ironico'])))  for row in unicodecsv.DictReader(open('../DATA/data_all.csv', 'rU') , encoding = 'utf-8', delimiter = '\t') if int(row["num_de_anotadores_total"]) >= 1 ]
-random.shuffle( data )
-train_size = int(len(data) * 0.8)
-#train_texts = [ txt.lower().replace("#sarcasm","").replace("#irony","").replace("#sarcastic","") for ( txt, label ) in data[0:train_size] ]
-train_texts = [ txt for ( txt, label ) in data[0:train_size] ]
-test_texts = [ txt for ( txt, label ) in data[train_size:-1] ]
-train_labels = [ label for ( txt , label ) in data[0:train_size] ]
-test_labels = [ label for ( txt , label ) in data[train_size:-1] ]
+##data = [ ( txt, 0 ) for txt in open('twitDB_regular.csv').readlines() ] + [ ( txt, 1 ) for txt in open('twitDB_sarcasm.csv').readlines() ]
+#data = [ (row["texto"].encode('utf-8').lower(), 1 if int(row["Imparidade"]) >= 1 else 0) for row in unicodecsv.DictReader(open('../DATA/data_all.csv', 'rU') , encoding = 'utf-8', delimiter = '\t') if int(row["num_de_anotadores_total"]) >= 1 ]
+#random.shuffle( data )
+#train_size = int(len(data) * 0.8)
+##train_texts = [ txt.lower().replace("#sarcasm","").replace("#irony","").replace("#sarcastic","") for ( txt, label ) in data[0:train_size] ]
+#train_texts = [ txt for ( txt, label ) in data[0:train_size] ]
+#test_texts = [ txt for ( txt, label ) in data[train_size:-1] ]
+#train_labels = [ label for ( txt , label ) in data[0:train_size] ]
+#test_labels = [ label for ( txt , label ) in data[train_size:-1] ]
+lbl_y = 'Imparidade'
+lbl_n = 'Não Imparidade'
+imp = 0
+n_imp = 0
+split_trn = 1000
+split_tst = 133
+train_texts = []
+train_labels = []
+test_texts = []
+test_labels = []
+for row in unicodecsv.DictReader(open('../DATA/data_all.csv', 'rU') , encoding = 'utf-8', delimiter = '\t'):
+    if int(row[lbl_y])>=1 and imp < split_trn:
+        #training set for imparity 1000 samples
+        imp+=1
+        train_texts.append(row['texto'].encode('utf-8').lower())
+        train_labels.append(1)
+    elif int(row[lbl_y])==0 and n_imp < split_trn:
+        #training set for not imparity 1000 samples
+        n_imp+=1
+        train_texts.append(row['texto'].encode('utf-8').lower())
+        train_labels.append(0)
+    elif int(row[lbl_y])>=1 and imp >= split_trn  and imp < split_trn + split_tst:
+        #test set for imparity 133 samples
+        imp+=1
+        test_texts.append(row['texto'].encode('utf-8').lower())
+        test_labels.append(1)
+    elif int(row[lbl_y])==0 and n_imp >= split_trn  and n_imp < split_trn + split_tst:
+        #test set for not imparity 133 samples
+        n_imp+=1
+        test_texts.append(row['texto'].encode('utf-8').lower())
+        test_labels.append(0)
 tokenizer = Tokenizer(nb_words=max_features, filters=keras.preprocessing.text.base_filter(), lower=True, split=" ")
 tokenizer.fit_on_texts(train_texts)
 train_sequences = sequence.pad_sequences( tokenizer.texts_to_sequences( train_texts ) , maxlen=maxlen )
@@ -110,23 +144,23 @@ for word,index in tokenizer.word_index.items():
       embedding_weights[index,:] = np.random.rand( 1 , embeddings_dim )
       affective_weights[index,:] = [ 5.0 , 5.0 , 5.0 ]
 
-print ("Computing features based on semantic volume...")
-train_features = np.zeros( ( train_matrix.shape[0] , 1 ) ) 
-test_features = np.zeros( ( test_matrix.shape[0] , 1 ) )
-for i in range( train_features.shape[0] ):
-  aux = [ ]
-  for word in train_texts[i].split(" "):
-    try: aux.append( embeddings[word] )
-    except: continue
-  if len( aux ) > 0 : train_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
-for i in range( test_features.shape[0] ):
-  aux = [ ]  
-  for word in test_texts[i].split(" "): 
-    try: aux.append( embeddings[word] )
-    except: continue 
-  if len( aux ) > 0 : test_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
+# print ("Computing features based on semantic volume...")
+# train_features = np.zeros( ( train_matrix.shape[0] , 1 ) ) 
+# test_features = np.zeros( ( test_matrix.shape[0] , 1 ) )
+# for i in range( train_features.shape[0] ):
+#   aux = [ ]
+#   for word in train_texts[i].split(" "):
+#     try: aux.append( embeddings[word] )
+#     except: continue
+#   if len( aux ) > 0 : train_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
+# for i in range( test_features.shape[0] ):
+#   aux = [ ]  
+#   for word in test_texts[i].split(" "): 
+#     try: aux.append( embeddings[word] )
+#     except: continue 
+#   if len( aux ) > 0 : test_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
 
-print ("Computing features based on affective scores...")
+log.write("Computing features based on affective scores...\n")
 train_features_avg = np.zeros( ( train_matrix.shape[0] , 3 ) ) 
 test_features_avg = np.zeros( ( test_matrix.shape[0] , 3 ) )
 train_features_min = np.zeros( ( train_matrix.shape[0] , 3 ) )
@@ -158,15 +192,15 @@ for i in range( test_matrix.shape[0] ):
 train_features = np.hstack( ( train_features_avg , train_features_min , train_features_max , train_features_dif ) )
 test_features = np.hstack( ( test_features_avg , test_features_min, test_features_max, test_features_dif ) )
 
-print ("")
-print ("Method = SVM with bag-of-words features")
+log.write("\n")
+log.write("Method = SVM with bag-of-words features\n")
 model = LinearSVC( random_state=0 )
 model.fit( train_matrix , train_labels )
 results = model.predict( test_matrix )
-print ("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-print (sklearn.metrics.classification_report( test_labels , results ))
+log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+"\n")
+log.write(sklearn.metrics.classification_report( test_labels , results )+"\n")
 
-print ("Method = SVM with bag-of-words features plus extra features")
+log.write("Method = SVM with bag-of-words features plus extra features\n")
 model = LinearSVC( random_state=0 )
 train_matrix = np.hstack( (train_matrix,train_features) )
 test_matrix = np.hstack( (test_matrix,test_features) )
@@ -174,10 +208,10 @@ model.fit( train_matrix , train_labels )
 results = model.predict( test_matrix )
 train_matrix = train_matrix[0: train_matrix.shape[0], 0: train_matrix.shape[1] - train_features.shape[1] ]
 test_matrix = test_matrix[0: train_matrix.shape[0], 0: test_matrix.shape[1] - test_features.shape[1] ]
-print ("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-print (sklearn.metrics.classification_report( test_labels , results ))
+log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+"\n")
+log.write(sklearn.metrics.classification_report( test_labels , results )+"\n")
 
-print ("Method = MLP with bag-of-words features plus extra features")
+log.write("Method = MLP with bag-of-words features plus extra features\n")
 np.random.seed(0)
 train_matrix = np.hstack( (train_matrix,train_features) )
 test_matrix = np.hstack( (test_matrix,test_features) )
@@ -192,10 +226,10 @@ model.fit( train_matrix , train_labels , nb_epoch=5, batch_size=16, show_accurac
 results = model.predict_classes( test_matrix )
 train_matrix = train_matrix[0: train_matrix.shape[0], 0: train_matrix.shape[1] - train_features.shape[1] ]
 test_matrix = test_matrix[0: train_matrix.shape[0], 0: test_matrix.shape[1] - test_features.shape[1] ]
-print ("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-print (sklearn.metrics.classification_report( test_labels , results ))
+log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+"\n")
+log.write(sklearn.metrics.classification_report( test_labels , results )+"\n")
 
-print ("Method = LSTM")
+log.write("Method = LSTM\n")
 np.random.seed(0)
 model = Sequential()
 model.add(Embedding(max_features, embeddings_dim, input_length=maxlen, mask_zero=True, weights=[embedding_weights] ))
@@ -206,26 +240,26 @@ model.add(Activation('sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='rmsprop')
 model.fit( train_sequences , train_labels , nb_epoch=5, batch_size=16, show_accuracy=False )
 results = model.predict_classes( test_sequences )
-print ("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-print (sklearn.metrics.classification_report( test_labels , results ))
+log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+"\n")
+log.write(sklearn.metrics.classification_report( test_labels , results )+"\n")
 
-print ("Method = Bidirectional LSTM")
-np.random.seed(0)
-model = Graph()
-model.add_input(name='input', input_shape=(maxlen,), dtype=int)
-model.add_node(Embedding( max_features, embeddings_dim, input_length=maxlen, mask_zero=True, weights=[embedding_weights] ), name='embedding', input='input')
-model.add_node(LSTM(embeddings_dim), name='forward', input='embedding')
-model.add_node(LSTM(embeddings_dim, go_backwards=True), name='backward', input='embedding')
-model.add_node(Dropout(0.5), name='dropout', inputs=['forward', 'backward'])
-model.add_node(Dense(1, activation='sigmoid'), name='sigmoid', input='dropout')
-model.add_output(name='output', input='sigmoid')
-model.compile('adam', {'output': 'binary_crossentropy'})
-model.fit( train_sequences , train_labels , nb_epoch=5, batch_size=16, show_accuracy=False )
-results = model.predict_classes( test_sequences )
-print ("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-print (sklearn.metrics.classification_report( test_labels , results ))
+# log.write("Method = Bidirectional LSTM\n")
+# np.random.seed(0)
+# model = Graph()
+# model.add_input(name='input', input_shape=(maxlen,), dtype=int)
+# model.add_node(Embedding( max_features, embeddings_dim, input_length=maxlen, mask_zero=True, weights=[embedding_weights] ), name='embedding', input='input')
+# model.add_node(LSTM(embeddings_dim), name='forward', input='embedding')
+# model.add_node(LSTM(embeddings_dim, go_backwards=True), name='backward', input='embedding')
+# model.add_node(Dropout(0.5), name='dropout', inputs=['forward', 'backward'])
+# model.add_node(Dense(1, activation='sigmoid'), name='sigmoid', input='dropout')
+# model.add_output(name='output', input='sigmoid')
+# model.compile('adam', {'output': 'binary_crossentropy'})
+# model.fit( train_sequences , train_labels , nb_epoch=5, batch_size=16, show_accuracy=False )
+# results = model.predict_classes( test_sequences )
+# log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+"\n")
+# log.write(sklearn.metrics.classification_report( test_labels , results )+"\n")
 
-print ("Method = CNN-LSTM")
+log.write("Method = CNN-LSTM\n")
 np.random.seed(0)
 filter_length = 3
 nb_filter = 64
@@ -241,10 +275,10 @@ model.add(Activation('sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='adam', class_mode='binary')
 model.fit( train_sequences , train_labels , nb_epoch=5, batch_size=16, show_accuracy=False )
 results = model.predict_classes( test_sequences )
-print ("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-print (sklearn.metrics.classification_report( test_labels , results ))
+log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+"\n")
+log.write(sklearn.metrics.classification_report( test_labels , results )+"\n")
 
-print ("Method = SVM with doc2vec features")
+log.write("Method = SVM with doc2vec features\n")
 np.random.seed(0)
 class LabeledLineSentence(object):
   def __init__(self, data ): self.data = data
@@ -266,8 +300,8 @@ test_rep = np.array( [ model.docvecs[i + train_matrix.shape[0]] for i in range( 
 model = LinearSVC( random_state=0 )
 model.fit( train_rep , train_labels )
 results = model.predict( test_rep )
-print ("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-print (sklearn.metrics.classification_report( test_labels , results ))
+log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+"\n")
+log.write(sklearn.metrics.classification_report( test_labels , results )+"\n")
 
 #print ("Method = MLP with doc2vec features plus additional features")
 np.random.seed(0)
@@ -300,30 +334,30 @@ model.add(Dense(1, activation='sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='rmsprop', class_mode='binary')
 model.fit( train_rep , train_labels , nb_epoch=1, batch_size=16, show_accuracy=False)
 results = model.predict_classes( test_rep )
-print ("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-print (sklearn.metrics.classification_report( test_labels , results ))
+log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+"\n")
+log.write(sklearn.metrics.classification_report( test_labels , results )+"\n")
 
-print ("Method = LSTM embeddings plus LSTM affective scores")
-np.random.seed(0)
-model1 = Sequential()
-model1.add(Embedding(max_features, embeddings_dim, input_length=maxlen, mask_zero=True, weights=[embedding_weights] ))
-model1.add(LSTM(output_dim=embeddings_dim, activation='sigmoid', inner_activation='hard_sigmoid'))
-model1.add(Dropout(0.5))
-model1.add(Dense(embeddings_dim))
-model2 = Sequential()
-model2.add(Embedding(max_features, 3, input_length=maxlen, mask_zero=True, weights=[affective_weights] ))
-model2.add(LSTM(output_dim=3, activation='sigmoid', inner_activation='hard_sigmoid'))
-model2.add(Dropout(0.5))
-model1.add(Dense(3))
-model = Sequential()
-model.add( Merge([model1, model2], mode='concat' ))
-model.add(Flatten())
-model.add(Dense( int( embeddings_dim / 2.0 ) , activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(1))
-model.add(Activation('sigmoid'))
-model.compile(loss='binary_crossentropy', optimizer='rmsprop')
-model.fit( train_sequences , train_labels , nb_epoch=5, batch_size=16, show_accuracy=False )
-results = model.predict_classes( test_sequences )
-print ("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-print (sklearn.metrics.classification_report( test_labels , results ))
+# log.write("Method = LSTM embeddings plus LSTM affective scores\n")
+# np.random.seed(0)
+# model1 = Sequential()
+# model1.add(Embedding(max_features, embeddings_dim, input_length=maxlen, mask_zero=True, weights=[embedding_weights] ))
+# model1.add(LSTM(output_dim=embeddings_dim, activation='sigmoid', inner_activation='hard_sigmoid'))
+# model1.add(Dropout(0.5))
+# model1.add(Dense(embeddings_dim))
+# model2 = Sequential()
+# model2.add(Embedding(max_features, 3, input_length=maxlen, mask_zero=True, weights=[affective_weights] ))
+# model2.add(LSTM(output_dim=3, activation='sigmoid', inner_activation='hard_sigmoid'))
+# model2.add(Dropout(0.5))
+# model1.add(Dense(3))
+# model = Sequential()
+# model.add( Merge([model1, model2], mode='concat' ))
+# model.add(Flatten())
+# model.add(Dense( int( embeddings_dim / 2.0 ) , activation='relu'))
+# model.add(Dropout(0.5))
+# model.add(Dense(1))
+# model.add(Activation('sigmoid'))
+# model.compile(loss='binary_crossentropy', optimizer='rmsprop')
+# model.fit( train_sequences , train_labels , nb_epoch=5, batch_size=16, show_accuracy=False )
+# results = model.predict_classes( test_sequences )
+# log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+"\n")
+# log.write(sklearn.metrics.classification_report( test_labels , results )+"\n")
