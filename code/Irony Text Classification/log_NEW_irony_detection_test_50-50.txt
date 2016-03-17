@@ -1,0 +1,14 @@
+
+Reading pre-trained word embeddings...
+Reading affective dictionary and training regression model for predicting valence, arousal and dominance...
+Test with 10 fold CV : correlation for valence: 0.63 (+/- 0.18)Test with 10 fold CV : correlation for arousal: 0.57 (+/- 0.19)Test with 10 fold CV : correlation for dominance: 0.53 (+/- 0.28)
+Reading text data for classification and building representations...
+Computing features based on affective scores...
+
+Method = Linear SVM with bag-of-words features
+Method = NB-SVM with bag-of-words features
+Method = Linear SVM with bag-of-words features plus extra features
+Method = NB-SVM with bag-of-words features plus extra features
+Method = MLP with bag-of-words features plus extra features
+Method = Stack of two LSTMs
+Method = CNN from the paper 'Convolutional Neural Networks for Sentence Classification'

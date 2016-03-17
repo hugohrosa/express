@@ -1,0 +1,72 @@
+
+Reading pre-trained word embeddings...
+Reading affective dictionary and training regression model for predicting valence, arousal and dominance...
+Test with 10 fold CV : correlation for valence: 0.64 (+/- 0.13)
+Test with 10 fold CV : correlation for arousal: 0.55 (+/- 0.15)
+Test with 10 fold CV : correlation for dominance: 0.47 (+/- 0.26)
+
+Reading text data for classification and building representations...
+Computing features based on affective scores...
+
+Method = SVM with bag-of-words features
+Accuracy = 0.57377049180327866
+             precision    recall  f1-score   support
+
+          0       0.63      0.66      0.65       324
+          1       0.48      0.44      0.46       225
+
+avg / total       0.57      0.57      0.57       549
+
+Method = SVM with bag-of-words features plus extra features
+Accuracy = 0.57559198542805101
+             precision    recall  f1-score   support
+
+          0       0.63      0.67      0.65       324
+          1       0.48      0.44      0.46       225
+
+avg / total       0.57      0.58      0.57       549
+
+Method = MLP with bag-of-words features plus extra features
+Accuracy = 0.56284153005464477
+             precision    recall  f1-score   support
+
+          0       0.65      0.56      0.60       324
+          1       0.47      0.57      0.52       225
+
+avg / total       0.58      0.56      0.57       549
+
+Method = LSTM
+Accuracy = 0.5901639344262295
+             precision    recall  f1-score   support
+
+          0       0.59      1.00      0.74       324
+          1       0.00      0.00      0.00       225
+
+avg / total       0.35      0.59      0.44       549
+
+Method = CNN-LSTM
+Accuracy = 0.55919854280510017
+             precision    recall  f1-score   support
+
+          0       0.62      0.66      0.64       324
+          1       0.46      0.41      0.43       225
+
+avg / total       0.55      0.56      0.56       549
+
+Method = SVM with doc2vec features
+Accuracy = 0.5901639344262295
+             precision    recall  f1-score   support
+
+          0       0.62      0.78      0.69       324
+          1       0.50      0.32      0.39       225
+
+avg / total       0.57      0.59      0.57       549
+
+Accuracy = 0.5901639344262295
+             precision    recall  f1-score   support
+
+          0       0.59      1.00      0.74       324
+          1       0.00      0.00      0.00       225
+
+avg / total       0.35      0.59      0.44       549
+
