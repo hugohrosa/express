@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#from ipdb import set_trace
 import numpy as np
 import csv
 import keras
@@ -6,7 +7,9 @@ import sklearn
 import gensim
 import random
 import scipy
-#import miniball
+import sys
+#import cPickle
+import miniball
 from keras.preprocessing import sequence
 from keras.preprocessing.text import Tokenizer
 from keras.models import Sequential , Graph
@@ -21,16 +24,22 @@ from gensim.models.word2vec import Word2Vec
 from gensim.models.doc2vec import Doc2Vec , TaggedDocument
 import codecs
 import unicodecsv
+from sklearn.cross_validation import KFold
 
 log = codecs.open("log_NEW_irony_detection_test_50-50.txt","w","utf-8")
+log = sys.stdout
 
 log.write("\n")
 log.write("Reading pre-trained word embeddings...\n")
-embeddings_dim = 300
+embeddings_dim = 800
 embeddings = dict( )
 #embeddings = Word2Vec.load_word2vec_format( "GoogleNews-vectors-negative300.bin.gz" , binary=True ) 
 embeddings = Word2Vec.load_word2vec_format( "../DATA/publico_800.txt" , binary=False )
 
+# with open("/ffs/tmp/samir/gensim_loaded.pkl","w") as fd:
+#   cPickle.dump(embeddings,fd,-1)
+# with open("/ffs/tmp/samir/gensim_loaded.pkl","r") as fd:
+#   embeddings = cPickle.load(fd)
 log.write("Reading affective dictionary and training regression model for predicting valence, arousal and dominance...\n")
 affective = dict( )
 #for row in csv.DictReader(open("Ratings_Warriner_et_al.csv")): affective[ row["Word"].lower() ] = np.array( [ float( row["V.Mean.Sum"] ) , float( row["A.Mean.Sum"] ) , float( row["D.Mean.Sum"] ) ] )
@@ -46,28 +55,31 @@ for word,scores in affective.items():
   if len( train_matrix ) > 500 : break
 train_matrix = np.array( train_matrix )
 train_labels = np.array( train_labels )
-class VADEstimator(BaseEstimator):
-  def fit( self, x , y , size=1 ):
-    self.model = Sequential()
-    self.model.add(Dense( int( embeddings_dim / 2.0 ) , input_dim=embeddings_dim , init='uniform' , activation='tanh'))
-    self.model.add(Dense( int( embeddings_dim / 4.0 ) , init='uniform' , activation='tanh'))
-    self.model.add(Dense(size , init='uniform' ) )
-    self.model.compile(loss='mse', optimizer='rmsprop')
-    self.model = KernelRidge( kernel='poly' , degree=4 )
-    self.model.fit( x , y )
-  def predict( self, x ): 
-    if isinstance( self.model , Sequential ): return self.model.predict( x , verbose=0 )[ 0 ]
-    return self.model.predict( x )
-def pearsonr( x , y ): return scipy.stats.pearsonr(x,y)[0]
-model = VADEstimator( )
-scores = sklearn.cross_validation.cross_val_score( model, train_matrix , train_labels[:,0] , cv=10, scoring=sklearn.metrics.make_scorer( pearsonr ) )
-log.write("Test with 10 fold CV : correlation for valence: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2)+"\n")
-scores = sklearn.cross_validation.cross_val_score( model, train_matrix , train_labels[:,1] , cv=10, scoring=sklearn.metrics.make_scorer( pearsonr ) )
-log.write("Test with 10 fold CV : correlation for arousal: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2)+"\n") 
-scores = sklearn.cross_validation.cross_val_score( model, train_matrix , train_labels[:,2] , cv=10, scoring=sklearn.metrics.make_scorer( pearsonr ) )
-log.write("Test with 10 fold CV : correlation for dominance: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2)+"\n") 
-model.fit( train_matrix , train_labels , size=3 )
-log.write("\n")
+# class VADEstimator(BaseEstimator):
+#   def fit( self, x , y , size=1 ):
+#     self.model = Sequential()
+#     self.model.add(Dense( int( embeddings_dim / 2.0 ) , input_dim=embeddings_dim , init='uniform' , activation='tanh'))
+#     self.model.add(Dense( int( embeddings_dim / 4.0 ) , init='uniform' , activation='tanh'))
+#     self.model.add(Dense(size , init='uniform' ) )
+#     self.model.compile(loss='mse', optimizer='rmsprop')
+#     self.model = KernelRidge( kernel='poly' , degree=4 )
+#     self.model.fit( x , y )
+#   def predict( self, x ): 
+#     if isinstance( self.model , Sequential ): return self.model.predict( x , verbose=0 )[ 0 ]
+#     return self.model.predict( x )
+# def pearsonr( x , y ): return scipy.stats.pearsonr(x,y)[0]
+# model = VADEstimator( )
+# scores = sklearn.cross_validation.cross_val_score( model, train_matrix , train_labels[:,0] , cv=10, scoring=sklearn.metrics.make_scorer( pearsonr ) )
+# log.write("Test with 10 fold CV : correlation for valence: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2)+"\n")
+# scores = sklearn.cross_validation.cross_val_score( model, train_matrix , train_labels[:,1] , cv=10, scoring=sklearn.metrics.make_scorer( pearsonr ) )
+# log.write("Test with 10 fold CV : correlation for arousal: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2)+"\n") 
+# scores = sklearn.cross_validation.cross_val_score( model, train_matrix , train_labels[:,2] , cv=10, scoring=sklearn.metrics.make_scorer( pearsonr ) )
+# log.write("Test with 10 fold CV : correlation for dominance: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2)+"\n") 
+# model.fit( train_matrix , train_labels , size=3 )
+# log.write("\n")
+
+# with open("/ffs/tmp/samir/vade.pkl","w") as fd:
+#   cPickle.dump(model, fd, -1)
 
 log.write("Reading text data for classification and building representations...\n")
 # increase the number of features to 25000 (this corresponds to the number of words in the vocabulary... increase while you have enough memory, and its now set to 20 in order to debug the code faster)
@@ -86,31 +98,72 @@ imp = 0
 n_imp = 0
 split_trn = 1000
 split_tst = 133
-train_texts = []
-train_labels = []
-test_texts = []
-test_labels = []
-for row in unicodecsv.DictReader(open('../DATA/data_all.csv', 'rU') , encoding = 'utf-8', delimiter = '\t'):
+# for row in unicodecsv.DictReader(open('../DATA/data_all.csv', 'rU') , encoding = 'utf-8', delimiter = '\t'):
+#     if int(row[lbl_y])>=1 and imp < split_trn:
+#         #training set for imparity 1000 samples
+#         imp+=1
+#         train_texts.append(row['texto'].encode('utf-8').lower())
+#         train_labels.append(1)
+#     elif int(row[lbl_y])==0 and n_imp < split_trn:
+#         #training set for not imparity 1000 samples
+#         n_imp+=1
+#         train_texts.append(row['texto'].encode('utf-8').lower())
+#         train_labels.append(0)
+#     elif int(row[lbl_y])>=1 and imp >= split_trn  and imp < split_trn + split_tst:
+#         #test set for imparity 133 samples
+#         imp+=1
+#         test_texts.append(row['texto'].encode('utf-8').lower())
+#         test_labels.append(1)
+#     elif int(row[lbl_y])==0 and n_imp >= split_trn  and n_imp < split_trn + split_tst:
+#         #test set for not imparity 133 samples
+#         n_imp+=1
+#         test_texts.append(row['texto'].encode('utf-8').lower())
+#         test_labels.append(0)
+
+maxlen = 0
+train = []
+test = []
+#for row in unicodecsv.DictReader(open('../DATA/data_all.csv', 'rU') , encoding = 'utf-8', delimiter = '\t'):
+for row in csv.DictReader(open('../DATA/data_all.csv', 'rU') , delimiter = '\t'):
+    if len(row['texto'].split())>maxlen: maxlen = len(row['texto'].split())
     if int(row[lbl_y])>=1 and imp < split_trn:
         #training set for imparity 1000 samples
         imp+=1
-        train_texts.append(row['texto'].encode('utf-8').lower())
-        train_labels.append(1)
+        train.append((row['texto'].lower(),1))
+        #train_texts.append(row['texto'].encode('utf-8').lower())
+        #train_labels.append(1)
     elif int(row[lbl_y])==0 and n_imp < split_trn:
         #training set for not imparity 1000 samples
         n_imp+=1
-        train_texts.append(row['texto'].encode('utf-8').lower())
-        train_labels.append(0)
+        train.append((row['texto'].lower(),0))
+        #train_texts.append(row['texto'].encode('utf-8').lower())
+        #train_labels.append(0)
     elif int(row[lbl_y])>=1 and imp >= split_trn  and imp < split_trn + split_tst:
         #test set for imparity 133 samples
         imp+=1
-        test_texts.append(row['texto'].encode('utf-8').lower())
-        test_labels.append(1)
+        test.append((row['texto'].lower(),1))
+        #test_texts.append(row['texto'].encode('utf-8').lower())
+        #test_labels.append(1)
     elif int(row[lbl_y])==0 and n_imp >= split_trn  and n_imp < split_trn + split_tst:
         #test set for not imparity 133 samples
         n_imp+=1
-        test_texts.append(row['texto'].encode('utf-8').lower())
-        test_labels.append(0)
+        test.append((row['texto'].lower(),0))
+        #test_texts.append(row['texto'].encode('utf-8').lower())
+        #test_labels.append(0)
+print('data loaded')
+
+random.shuffle(train)
+random.shuffle(test)
+train_texts = [ txt for (txt,lbl) in train ]
+train_labels = [ lbl for (txt,lbl) in train ]
+test_texts = [ txt for (txt,lbl) in test ]
+test_labels = [ lbl for (txt, lbl) in test ]
+
+#SILVIO: data should be shuffled! - HUGO: agreed and shuffled
+#SILVIO: shouldn't we be using the same tokenizer from the other experiments?
+#compute the vocabulary
+cc = {w:None for t in train_texts+test_texts for w in t.split()}
+max_features = len(cc.keys())
 tokenizer = Tokenizer(nb_words=max_features, filters=keras.preprocessing.text.base_filter(), lower=True, split=" ")
 tokenizer.fit_on_texts(train_texts)
 train_sequences = sequence.pad_sequences( tokenizer.texts_to_sequences( train_texts ) , maxlen=maxlen )
@@ -121,7 +174,7 @@ embedding_weights = np.zeros( ( max_features , embeddings_dim ) )
 affective_weights = np.zeros( ( max_features , 3 ) )
 for word,index in tokenizer.word_index.items():
   try: 
-    if not affective.has_key(word) : affective[word] = np.array( model.predict( np.array( embedding[word] ).reshape(1, -1) )[0] )
+    if not affective.has_key(word) : affective[word] = np.array( model.predict( np.array( embeddings[word] ).reshape(1, -1) )[0] )
   except: affective[word] = np.array( [ 5.0 , 5.0 , 5.0 ] )
   if index < max_features:
     try: 
@@ -131,21 +184,21 @@ for word,index in tokenizer.word_index.items():
       embedding_weights[index,:] = np.random.rand( 1 , embeddings_dim )
       affective_weights[index,:] = [ 5.0 , 5.0 , 5.0 ]
 
-#log.write("Computing features based on semantic volume...\n")
-#train_features = np.zeros( ( train_matrix.shape[0] , 1 ) ) 
-#test_features = np.zeros( ( test_matrix.shape[0] , 1 ) )
-#for i in range( train_features.shape[0] ):
-#  aux = [ ]
-#  for word in train_texts[i].split(" "):
-#    try: aux.append( embeddings[word] )
-#    except: continue
-#  if len( aux ) > 0 : train_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
-#for i in range( test_features.shape[0] ):
-#  aux = [ ]  
-#  for word in test_texts[i].split(" "): 
-#    try: aux.append( embeddings[word] )
-#    except: continue 
-#  if len( aux ) > 0 : test_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
+log.write("Computing features based on semantic volume...\n")
+train_features = np.zeros( ( train_matrix.shape[0] , 1 ) ) 
+test_features = np.zeros( ( test_matrix.shape[0] , 1 ) )
+for i in range( train_features.shape[0] ):
+  aux = [ ]
+  for word in train_texts[i].split(" "):
+    try: aux.append( embeddings[word] )
+    except: continue
+  if len( aux ) > 0 : train_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
+for i in range( test_features.shape[0] ):
+  aux = [ ]  
+  for word in test_texts[i].split(" "): 
+    try: aux.append( embeddings[word] )
+    except: continue 
+  if len( aux ) > 0 : test_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
 
 log.write("Computing features based on affective scores...\n")
 train_features_avg = np.zeros( ( train_matrix.shape[0] , 3 ) ) 
@@ -301,10 +354,31 @@ model.add_node(Dense(1, input_dim=nb_filter * len([3, 5, 7])), name='dense', inp
 model.add_node(Activation('sigmoid'), name='sigmoid', input='dense')
 model.add_output(name='output', input='sigmoid')
 model.compile(loss={'output': 'binary_crossentropy'}, optimizer='rmsprop')
-model.fit({'input': train_sequences, 'output': train_labels}, batch_size=16, nb_epoch=5)
-results = model.predict_classes( test_sequences )
-log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-log.write(sklearn.metrics.classification_report( test_labels , results ))
+# model.fit({'input': train_sequences, 'output': train_labels}, batch_size=256, nb_epoch=1)
+original_weights = model.get_weights()
+kf = KFold(n=train_sequences.shape[0],n_folds=10)
+j=0
+acuracies = []
+train_labels = np.array(train_labels)
+for train, test in kf:
+  model.set_weights(original_weights)
+  j+=1
+  print ("\nfold: %d" % j)
+  # set_trace()
+  train_X_slice = train_sequences[train]
+  train_Y_slice = train_labels[train]
+  test_X_slice  = train_sequences[test]
+  test_Y_slice  = train_labels[test]
+  model.fit({'input': train_X_slice, 'output': train_Y_slice}, batch_size=16, nb_epoch=5)
+  results = model.predict({'input':test_X_slice })['output']
+  #binarize the outputsore
+  results = np.round(results)
+  acuracies.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
+  log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_Y_slice , results )  ))
+
+#print "Avg accuracy: %.2f" % np.mean(acuracies)
+# log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
+# log.write(sklearn.metrics.classification_report( test_labels , results ))
 
 log.write("Method = Bidirectional LSTM\n")
 #np.random.seed(0)
@@ -476,8 +550,10 @@ model.add_node(Dropout(0.1), name='dropout', inputs=['flat_' + str(n) for n in [
 model.add_node(Dense(1, input_dim=nb_filter * len([3, 5, 7])), name='dense', input='dropout')
 model.add_node(Activation('sigmoid'), name='sigmoid', input='dense')
 model.add_output(name='output', input='sigmoid')
-model.compile(loss={'output': 'binary_crossentropy'}, optimizer='rmsprop')
-model.fit({'input': train_sequences, 'output': train_labels}, batch_size=16, nb_epoch=5)
-results = model.predict_classes( test_sequences )
+set_trace()
+model.fit({'input': train_sequences, 'output': train_labels}, batch_size=16, nb_epoch=1)
+#model.fit({'input': train_sequences, 'output': train_labels}, batch_size=256, nb_epoch=1)
+#results = model.predict_classes( test_sequences )
+results = model.predict(test_sequences)
 log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
 log.write(sklearn.metrics.classification_report( test_labels , results ))
