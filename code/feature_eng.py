@@ -15,6 +15,9 @@ from sklearn import linear_model
 from gensim.models.word2vec import Word2Vec
 import codecs
 from sklearn.cross_validation import KFold
+import pickle
+import nltk
+import itertools
 
 
 def biggest(ns,s,n):
@@ -33,6 +36,51 @@ def biggest(ns,s,n):
             out = 'Sim'
     return out
 
+def pmi(a, b, co_occurs):
+    #This is overcounting the occurrences because if A co-occurs with B, then B also co-occurs with A 
+    # set_trace()
+    total_occurs = sum([x['total_occurences'] for x in co_occurs.values() if x is not None])
+    
+    try:
+        #P(a)
+        p_a = co_occurs[a]["total_occurences"]*1.0 / total_occurs
+        #P(b)
+        p_b = co_occurs[b]["total_occurences"]*1.0 / total_occurs
+        #Note: the co-occurrence data is indexed by the token found on text
+        #whereas the co-occurence data in verbetes is indexed by official_name    
+        b_official_name = co_occurs[b]["official_name"]
+        #P(a,b)
+        p_a_b = co_occurs[a]["verbetes"][b_official_name]*1.0 / total_occurs
+    except:
+        print('EXCEPT ' +a + ' ' + b +  ' no cooccurences ')
+        return -1
+    #PMI
+    if p_a_b ==0:
+        return -1
+    
+    if p_a == 0:
+        return -1
+    if p_b == 0:
+        return -1
+    
+    pmi = np.log(p_a_b/(p_a*p_b))
+    #Normalized PMI
+    npmi = pmi/-np.log(p_a_b)
+    
+    #print a + ',' + b + '\t' + str(npmi)
+    return npmi
+
+def getEntities(sent_dict, text):
+    entities_per_title = [s['entities'] for s in sent_dict.values()]
+    for ents in entities_per_title:
+        i = 0
+        for e in ents:
+            if e in text:
+                i+=1
+        if i>0 and len(ents) > 0 and i == len(ents):
+            return ents
+    return []
+
 try:
     log = codecs.open("_log_all_detection_test.txt","w","utf-8")
     log = sys.stdout
@@ -41,7 +89,7 @@ try:
     embeddings_dim = 800
     embeddings = dict( )
     embeddings = Word2Vec.load_word2vec_format( "DATA/publico_800.txt" , binary=False )
-       
+         
     log.write("Reading affective dictionary and training regression model for predicting valence, arousal and dominance...\n")
     affective = dict( )
     for row in csv.DictReader(open("Irony Text Classification/Ratings_Warriner_et_al_translated.csv")): affective[ row["Word"].lower() ] = np.array( [ float( row["V.Mean.Sum"] ) , float( row["A.Mean.Sum"] ) , float( row["D.Mean.Sum"] ) ] )
@@ -54,74 +102,35 @@ try:
             train_labels.append( scores )
         except: continue
         # remove line below (in order to debug the code faster, I'm limiting the number of words that are used in the regression models... remove when performing tests)
-        if len( train_matrix ) > 500 : break
+        #if len( train_matrix ) > 500 : break
     train_matrix = np.array( train_matrix )
     train_labels = np.array( train_labels )
 
     log.write("Reading text data for classification and building representations...\n")
     # increase the number of features to 25000 (this corresponds to the number of words in the vocabulary... increase while you have enough memory, and its now set to 20 in order to debug the code faster)
-    max_features = 20
+    #max_features = 25000
+    max_features = 25000
     maxlen = 50
     lbl_size = 0
+    data = []
     for row in csv.DictReader(open('DATA/data_all.csv', 'rU') , delimiter = '\t'):
-        if int(row['num_de_anotadores_total'])==5:
-            if biggest(int(row['naosei_ironico']),int(row['sim_ironico']),int(row['nao_ironico'])) == 'Sim':
-                lbl_size+=1
-            if biggest(int(row['naosei_ironico']),int(row['sim_ironico']),int(row['nao_ironico'])) == 'Não':
-                lbl_size+=1
-    lbl_trn = 0
-    lbl_tst = 0
-    split_trn = round(lbl_size*0.8)
-    split_tst = round(lbl_size*0.2)
-#     lbl_y_trn = 0
-#     lbl_n_trn = 0
-#     lbl_y_tst = 0
-#     lbl_n_tst = 0
-#     split_trn = 46
-#     split_tst = 20
-    maxlen = 0
-    train = []
-    test = []
-#     train_y = []
-#     train_n = []
-#     test_y = []
-#     test_n = []
-    for row in csv.DictReader(open('DATA/data_all.csv', 'rU') , delimiter = '\t'):
-        if int(row['num_de_anotadores_total'])==5:
-            if len(row['texto'].split())>maxlen: maxlen = len(row['texto'].split())
-            if biggest(int(row['naosei_ironico']),int(row['sim_ironico']),int(row['nao_ironico'])) == 'Sim' and lbl_trn < split_trn:  
-                lbl_trn+=1
-                train.append((row['texto'].lower(),1))
-#                 lbl_y_trn+=1
-#                 train_y.append((row['texto'].lower(),1))
-            elif biggest(int(row['naosei_ironico']),int(row['sim_ironico']),int(row['nao_ironico'])) == 'Não' and lbl_trn < split_trn:
-                lbl_trn+=1
-                train.append((row['texto'].lower(),0))
-#                 lbl_n_trn+=1
-#                 train_n.append((row['texto'].lower(),0))
-            elif biggest(int(row['naosei_ironico']),int(row['sim_ironico']),int(row['nao_ironico'])) == 'Sim' and lbl_trn >= split_trn  and lbl_tst < split_tst:
-                lbl_tst+=1
-                test.append((row['texto'].lower(),1))
-#                 lbl_y_tst+=1
-#                 test_y.append((row['texto'].lower(),1))
-            elif biggest(int(row['naosei_ironico']),int(row['sim_ironico']),int(row['nao_ironico'])) == 'Não' and lbl_trn >= split_trn  and lbl_tst < split_tst:
-                lbl_tst+=1
-                test.append((row['texto'].lower(),0))
-#                 lbl_n_tst+=1
-#                 test_n.append((row['texto'].lower(),0))
-    
-#     train = train_y + train_n
-#     test = test_y + test_n
-    random.shuffle(train)
-    random.shuffle(test)
-    train_texts = [ txt for (txt,lbl) in train ]
-    train_labels = [ lbl for (txt,lbl) in train ]
-    test_texts = [ txt for (txt,lbl) in test ]
-    test_labels = [ lbl for (txt, lbl) in test ]
+        if row['fonte'] == 'Público':
+            data.append((row['texto'].lower(),0))
+        elif row['fonte'] == 'Inimigo Público':
+            data.append((row['texto'].lower(),1))
+
+    data = data[0:2000]            
+    random.shuffle(data)
+    train_size = int(len(data) * 0.8)
+    train_texts = [ txt for ( txt, label ) in data[0:train_size] ]
+    test_texts = [ txt for ( txt, label ) in data[train_size:-1] ]
+    train_labels = [ label for ( txt , label ) in data[0:train_size] ]
+    test_labels = [ label for ( txt , label ) in data[train_size:-1] ]
+
     #log.write('TOTAL SPLIT: train ' + str(lbl_trn) + ' - test ' +str(lbl_tst)+'\n')
     log.write('TRAIN SIZE: ' + str(len(train_texts)) + '\tTEST SIZE: ' + str(len(test_texts)) + '\n')
-    log.write('TRAIN SPLIT: ironic ' + str(len([lbl for (txt,lbl) in train if lbl==1])) + ' - not ironic ' +str(len([lbl for (txt,lbl) in train if lbl==0]))+'\n')
-    log.write('TEST SPLIT : ironic ' + str(len([lbl for (txt,lbl) in test if lbl==1])) + ' - not ironic ' +str(len([lbl for (txt,lbl) in test if lbl==0]))+'\n')
+    log.write('TRAIN SPLIT: ironic ' + str(len([lbl for lbl in train_labels if lbl==1])) + ' - not ironic ' +str(len([lbl for lbl in train_labels if lbl==0]))+'\n')
+    log.write('TEST SPLIT : ironic ' + str(len([lbl for lbl in test_labels if lbl==1])) + ' - not ironic ' +str(len([lbl for lbl in test_labels if lbl==0]))+'\n')
 
     cc = {w:None for t in train_texts+test_texts for w in t.split()}
     max_features = len(cc.keys())
@@ -157,7 +166,7 @@ try:
             try: aux.append( embeddings[word] )
             except: continue 
         if len( aux ) > 0 : test_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
-    
+      
     log.write("Computing features based on affective scores...\n")
     train_features_avg = np.zeros( ( train_matrix.shape[0] , 3 ) ) 
     test_features_avg = np.zeros( ( test_matrix.shape[0] , 3 ) )
@@ -211,10 +220,133 @@ try:
                 if( prev != -1 and abs( prev - affective[word][0] ) > 3.0 ): test_features_seq[i][1] += 1.0 
                 prev = affective[word][0]
             except: prev = -1
-    train_features = np.hstack( ( train_features_avg , train_features_stdev , train_features_min , train_features_max , train_features_dif , train_features_seq ) )
-    test_features = np.hstack( ( test_features_avg , test_features_stdev, test_features_min, test_features_max, test_features_dif , test_features_seq ) )
     
-    kf = KFold(n=len(train_matrix),n_folds=10)
+    log.write("Computing Sentilex features...\n")
+    # total number of potentially positive words, negative words and dif.
+    with open('DATA/sentilex.pkl',"rb") as sentilex:
+        sent_dict = pickle.load(sentilex)
+    train_features_pos = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    train_features_neg = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    #train_features_sent_dif = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_pos = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    test_features_neg = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    #test_features_sent_dif = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    for i in range( train_matrix.shape[0] ):
+        neg = 0
+        pos = 0
+        for word in train_texts[i].split(" "):
+            if word in sent_dict.keys():
+                if sent_dict[word]=='NEG':
+                    neg+=1
+                if sent_dict[word]=='POS':
+                    pos+=1
+        if neg > 0 or pos > 0: 
+            train_features_pos[i,0] = pos
+            train_features_neg[i,0] = neg
+    for i in range( test_matrix.shape[0] ):
+        neg = 0
+        pos = 0
+        for word in test_texts[i].split(" "):
+            if word in sent_dict.keys():
+                if sent_dict[word]=='NEG':
+                    neg+=1
+                if sent_dict[word]=='POS':
+                    pos+=1
+        test_features_pos[i,0] = pos
+        test_features_neg[i,0] = neg
+
+    log.write("Computing Part-of-Speech Tagger...\n")
+    with open('Models/tagger.pkl',"rb") as tagger:
+        # num de adjectivos / num de palavras
+        # num de substantivos / num de palavras
+        # num de verbos / num de palavras
+        train_features_adj = np.zeros( ( train_matrix.shape[0] , 1 ) )
+        train_features_noun = np.zeros( ( train_matrix.shape[0] , 1 ) )
+        train_features_verb = np.zeros( ( train_matrix.shape[0] , 1 ) )
+        test_features_adj = np.zeros( ( test_matrix.shape[0] , 1 ) )
+        test_features_noun = np.zeros( ( test_matrix.shape[0] , 1 ) )
+        test_features_verb = np.zeros( ( test_matrix.shape[0] , 1 ) )
+        tagger_fast = pickle.load(tagger)
+        for i in range( train_matrix.shape[0] ):
+            sent_tagged = tagger_fast.tag(nltk.word_tokenize(train_texts[i]))
+            sent_tagged = [w for w in sent_tagged if w[0] not in nltk.corpus.stopwords.words('portuguese')] #unicode(nltk.corpus.stopwords.words('portuguese'))]
+            train_features_adj[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'ADJ']) / len(sent_tagged)
+            train_features_noun[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'NOUN']) / len(sent_tagged)
+            train_features_verb[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'VERB']) / len(sent_tagged)
+        for i in range( test_matrix.shape[0] ):
+            sent_tagged = tagger_fast.tag(nltk.word_tokenize(test_texts[i]))
+            sent_tagged = [w for w in sent_tagged if w[0] not in nltk.corpus.stopwords.words('portuguese')] #unicode(nltk.corpus.stopwords.words('portuguese'))]
+            test_features_adj[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'ADJ']) / len(sent_tagged)
+            test_features_noun[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'NOUN']) / len(sent_tagged)
+            test_features_verb[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'VERB']) / len(sent_tagged)
+    
+    log.write("Computing PMI features...\n")
+    # fazer pmi normalizado e pmi regular para titulo e body
+    # avg, min, max, std_dev e dif
+    #open co-occurrences dictionary
+    train_features_pmi_avg = np.zeros( ( train_matrix.shape[0] , 1 ) ) 
+    test_features_pmi_avg = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_pmi_stdev = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_pmi_stdev = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_pmi_min = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_pmi_min = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_pmi_max = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_pmi_max = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_pmi_dif = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_pmi_dif = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    
+    with open("DATA/_new_cooccurs_sapo_Title.pkl","rb") as fid:
+        u = pickle._Unpickler(fid)
+        u.encoding = 'utf-8'
+        co_occurs = u.load()
+    with open("DATA/_new_sentences_sapo_Title.pkl","rb") as fid:
+        u = pickle._Unpickler(fid)
+        u.encoding = 'utf-8'
+        sent_dict = u.load()        
+    for i in range( train_matrix.shape[0] ):
+        entities = getEntities(sent_dict,train_texts[i])
+        pairwise_pmis = []
+        entity_pairs = itertools.combinations(entities, 2)               
+        for e_a, e_b in entity_pairs:
+            pairwise_pmis.append(pmi(e_a, e_b, co_occurs))
+        if len(pairwise_pmis)>0:
+            train_features_pmi_avg[i,0] = np.average( pairwise_pmis )
+            train_features_pmi_stdev[i,0] = np.std( pairwise_pmis )
+            train_features_pmi_min[i,0] = np.min( pairwise_pmis )
+            train_features_pmi_max[i,0] = np.max( pairwise_pmis )
+    for i in range( test_matrix.shape[0] ):
+        entities = getEntities(sent_dict,test_texts[i])
+        pairwise_pmis = []
+        entity_pairs = itertools.combinations(entities, 2)               
+        for e_a, e_b in entity_pairs:
+            pairwise_pmis.append(pmi(e_a, e_b, co_occurs))
+        if len(pairwise_pmis)>0:    
+            test_features_pmi_avg[i,0] = np.average( pairwise_pmis )
+            test_features_pmi_stdev[i,0] = np.std( pairwise_pmis )
+            test_features_pmi_min[i,0] = np.min( pairwise_pmis )
+            test_features_pmi_max[i,0] = np.max( pairwise_pmis )
+            
+        
+    #janelas de tamanho variavel
+    # contraste de valence (0 a 9)
+    
+    # contraste na dimensão temporal
+    # relevância de um dado termo num dado momento em contraste, procurando noticias na mesma data
+    # excluir stopwords, usar só palavras de tf-idf mais alto
+    
+    
+    train_features = np.hstack( ( train_features_avg , train_features_stdev , train_features_min , 
+                                  train_features_max , train_features_dif , train_features_seq ,
+                                  train_features_pos, train_features_neg , train_features_adj ,
+                                  train_features_noun, train_features_verb, train_features_pmi_avg ,
+                                  train_features_pmi_stdev, train_features_pmi_min, train_features_pmi_max) )
+    test_features = np.hstack( ( test_features_avg , test_features_stdev, test_features_min,
+                                 test_features_max, test_features_dif , test_features_seq ,
+                                 test_features_pos, test_features_neg , test_features_adj ,
+                                 test_features_noun, test_features_verb, test_features_pmi_avg ,
+                                  test_features_pmi_stdev, test_features_pmi_min, test_features_pmi_max) )
+    
+    kf = KFold(n=len(train_matrix),n_folds=1)
     train_labels = np.array(train_labels)
     
     acc = []
