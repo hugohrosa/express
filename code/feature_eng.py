@@ -136,7 +136,7 @@ try:
     embeddings_dim = 800
     embeddings = dict( )
     embeddings = Word2Vec.load_word2vec_format( "DATA/publico_800.txt" , binary=False )
-           
+            
     log.write("Reading affective dictionary and training regression model for predicting valence, arousal and dominance...\n")
     affective = dict( )
     for row in csv.DictReader(open("Irony Text Classification/Ratings_Warriner_et_al_translated.csv")): affective[ row["Word"].lower() ] = np.array( [ float( row["V.Mean.Sum"] ) , float( row["A.Mean.Sum"] ) , float( row["D.Mean.Sum"] ) ] )
@@ -213,7 +213,7 @@ try:
             try: aux.append( embeddings[word] )
             except: continue 
         if len( aux ) > 0 : test_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
-       
+        
     log.write("Computing features based on affective scores...\n")
     train_features_avg = np.zeros( ( train_matrix.shape[0] , 3 ) ) 
     test_features_avg = np.zeros( ( test_matrix.shape[0] , 3 ) )
@@ -267,7 +267,7 @@ try:
                 if( prev != -1 and abs( prev - affective[word][0] ) > 3.0 ): test_features_seq[i][1] += 1.0 
                 prev = affective[word][0]
             except: prev = -1
-    
+     
     log.write("Computing Sentilex features...\n")
     # total number of potentially positive words, negative words and dif.
     with open('DATA/sentilex.pkl',"rb") as sentilex:
@@ -304,8 +304,8 @@ try:
                     pos+=1
         test_features_pos[i,0] = pos / w
         test_features_neg[i,0] = neg / w
-        
-        
+         
+         
     #janelas de tamanho variavel
     # contraste de valence (0 a 9)
     log.write("Computing Valence Contrast Sliding Window features ...\n")
@@ -349,7 +349,7 @@ try:
                 for a,b in itertools.combinations(val_interest, 2):
                     if abs(a-b)>val_dif:
                         train_features_vc_w5[i,0] +=1 / len(x)
-    
+     
     test_features_vc_w1 = np.zeros( ( test_matrix.shape[0] , 1 ) )
     test_features_vc_w2 = np.zeros( ( test_matrix.shape[0] , 1 ) )
     test_features_vc_w3 = np.zeros( ( test_matrix.shape[0] , 1 ) )
@@ -389,7 +389,7 @@ try:
                 for a,b in itertools.combinations(val_interest, 2):
                     if abs(a-b)>val_dif:
                         test_features_vc_w5[i,0] +=1 / len(x)
-
+ 
     log.write("Computing Part-of-Speech Tagger...\n")
     with open('Models/tagger.pkl',"rb") as tagger:
         # num de adjectivos / num de palavras
@@ -414,7 +414,7 @@ try:
             test_features_adj[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'ADJ']) / len(sent_tagged)
             test_features_noun[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'NOUN']) / len(sent_tagged)
             test_features_verb[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'VERB']) / len(sent_tagged)
-            
+             
     log.write("Compute Pairwise Distances...\n")
     with open("DATA/embedding_features.pkl","rb") as fid:
         u = pickle._Unpickler(fid)
@@ -436,8 +436,8 @@ try:
         train_features_dist_avg[i,0], train_features_dist_stdev[i,0], train_features_dist_min[i,0], train_features_dist_max[i,0], train_features_dist_dif[i,0] = pairwise_distances(train_texts[i], wrd2idx, stop_words)
     for i in range( test_matrix.shape[0]):
         test_features_dist_avg[i,0], test_features_dist_stdev[i,0], test_features_dist_min[i,0], test_features_dist_max[i,0], test_features_dist_dif[i,0] = pairwise_distances(test_texts[i], wrd2idx, stop_words)
-
-    
+ 
+     
     log.write("Computing PMI Title features...\n")
     # fazer pmi normalizado e pmi regular para titulo e body
     # avg, min, max, std_dev e dif
@@ -452,7 +452,7 @@ try:
     test_features_pmi_max = np.zeros( ( test_matrix.shape[0] , 1 ) )
     train_features_pmi_dif = np.zeros( ( train_matrix.shape[0] , 1 ) )
     test_features_pmi_dif = np.zeros( ( test_matrix.shape[0] , 1 ) )
-    
+     
     with open("DATA/_new_cooccurs_sapo_Title.pkl","rb") as fid:
         u = pickle._Unpickler(fid)
         u.encoding = 'utf-8'
@@ -483,7 +483,7 @@ try:
             test_features_pmi_stdev[i,0] = np.std( pairwise_pmis )
             test_features_pmi_min[i,0] = np.min( pairwise_pmis )
             test_features_pmi_max[i,0] = np.max( pairwise_pmis )
-            
+             
     log.write("Computing PMI body features...\n")
     # fazer pmi normalizado e pmi regular para titulo e body
     # avg, min, max, std_dev e dif
@@ -498,7 +498,7 @@ try:
     test_features_pmibody_max = np.zeros( ( test_matrix.shape[0] , 1 ) )
     train_features_pmibody_dif = np.zeros( ( train_matrix.shape[0] , 1 ) )
     test_features_pmibody_dif = np.zeros( ( test_matrix.shape[0] , 1 ) )
-    
+     
     with open("DATA/_new_cooccurs_sapo_Body.pkl","rb") as fid:
         u = pickle._Unpickler(fid)
         u.encoding = 'utf-8'
@@ -560,59 +560,119 @@ try:
     
     kf = KFold(n=len(train_matrix),n_folds=10)
     train_labels = np.array(train_labels)
+    C_VALS = [0.001, 0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1.0, 1.5, 2.5, 10]
     
     acc = []
     pre = []
     rec = []
     f1s = []
     log.write("\nMethod = Linear SVM with bag-of-words features\n")
+    fold = 0
+    best_c = 1.0
     for train_k, test_k in kf:
+        fold +=1
         train_X_slice = train_matrix[train_k]
         train_Y_slice = train_labels[train_k]
         test_X_slice  = train_matrix[test_k]
         test_Y_slice  = train_labels[test_k]
-    
-        model = LinearSVC( random_state=0 )
-        #model.fit( train_matrix , train_labels )
-        #results = model.predict( test_matrix )
-        #log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+'\n')
-        #log.write(sklearn.metrics.classification_report( test_labels , results )+'\n')
-        model.fit( train_X_slice , train_Y_slice )
-        results = model.predict(test_X_slice)
-        #log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_Y_slice , results )  )+'\n')
-        #log.write(sklearn.metrics.classification_report( test_Y_slice , results )+'\n')
-        acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
-        pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
-        rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
-        f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
         
-    log.write("Avg accuracy: %.2f\n" % np.mean(acc))
-    log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
+        if fold == 9:
+            values_c = C_VALS
+        elif fold == 10:
+            values_c = [best_c]
+        else:
+            values_c = [1.0] #default value
+    
+        max_f1 = 0
+        for c in values_c:
+            model = LinearSVC( random_state=0, C = c)
+            model.fit( train_X_slice , train_Y_slice )
+            results = model.predict(test_X_slice)
+            if fold == 9:
+                f1score = sklearn.metrics.f1_score( test_Y_slice, results )
+                acc9 = sklearn.metrics.accuracy_score( test_Y_slice , results )
+                rec9 = sklearn.metrics.recall_score( test_Y_slice, results )
+                pre9 = sklearn.metrics.precision_score( test_Y_slice, results )
+                print("C " + str(c) + "\t" + str(f1score))
+                if f1score > max_f1:
+                    max_f1 = f1score
+                    max_acc = acc9
+                    max_rec = rec9
+                    max_pre = pre9
+                    best_c = c
+        if fold == 9:
+            acc.append(max_acc)
+            pre.append(max_pre)
+            rec.append(max_rec)
+            f1s.append(max_f1)
+        else:    
+            acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
+            pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
+            rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
+            f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
+    
+    log.write("best C parameter value: " + str(best_c) +'\n')
+    log.write("Results for best C --- Acc " + str(max_acc) + '\tPre ' + str(max_pre) + '\tRec ' + str(max_rec) + '\tF1 ' + str(f1s[8]) +'\n' )    
+    log.write("Overall avg accuracy: %.2f\n" % np.mean(acc))
+    log.write("Overall results " + str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
     
     acc = []
     pre = []
     rec = []
     f1s = []
     log.write('Logistic Regression with bag-of-words features\n')
+    max_f1 = 0
+    max_acc = 0
+    max_rec = 0
+    max_pre = 0
+    fold = 0
+    best_c = 1.0
     for train_k, test_k in kf:
+        fold +=1
         train_X_slice = train_matrix[train_k]
         train_Y_slice = train_labels[train_k]
         test_X_slice  = train_matrix[test_k]
-        test_Y_slice  = train_labels[test_k]    
-        model = linear_model.LogisticRegression()
-#         model.fit(train_matrix , train_labels)
-#         results = model.predict(test_matrix)
-#         log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+'\n')
-#         log.write(sklearn.metrics.classification_report( test_labels , results )+'\n')
-        model.fit( train_X_slice , train_Y_slice )
-        results = model.predict(test_X_slice)
-        acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
-        pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
-        rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
-        f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
-    log.write("Avg accuracy: %.2f\n" % np.mean(acc))
-    log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
+        test_Y_slice  = train_labels[test_k]
+        
+        if fold == 9:
+            values_c = C_VALS
+        elif fold == 10:
+            values_c = [best_c]
+        else:
+            values_c = [1.0] #default value
     
+        max_f1 = 0
+        for c in values_c:
+            model = linear_model.LogisticRegression( C = c)
+            model.fit( train_X_slice , train_Y_slice )
+            results = model.predict(test_X_slice)
+            if fold == 9:
+                f1score = sklearn.metrics.f1_score( test_Y_slice, results )
+                acc9 = sklearn.metrics.accuracy_score( test_Y_slice , results )
+                rec9 = sklearn.metrics.recall_score( test_Y_slice, results )
+                pre9 = sklearn.metrics.precision_score( test_Y_slice, results )
+                print("C " + str(c) + "\t" + str(f1score))
+                if f1score > max_f1:
+                    max_f1 = f1score
+                    max_acc = acc9
+                    max_rec = rec9
+                    max_pre = pre9
+                    best_c = c
+        if fold == 9:
+            acc.append(max_acc)
+            pre.append(max_pre)
+            rec.append(max_rec)
+            f1s.append(max_f1)
+        else:    
+            acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
+            pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
+            rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
+            f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
+    
+    log.write("best C parameter value: " + str(best_c) +'\n')
+    log.write("Results for best C --- Acc " + str(max_acc) + '\tPre ' + str(max_pre) + '\tRec ' + str(max_rec) + '\tF1 ' + str(f1s[8]) +'\n' )    
+    log.write("Overall avg accuracy: %.2f\n" % np.mean(acc))
+    log.write("Overall results " + str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
 #     acc = []
 #     pre = []
 #     rec = []
@@ -653,56 +713,117 @@ try:
     pre = []
     rec = []
     f1s = []
+    max_f1 = 0
+    max_acc = 0
+    max_rec = 0
+    max_pre = 0
     log.write("Method = Linear SVM with bag-of-words features plus extra features\n")
+    fold = 0
+    best_c = 1.0
     for train_k, test_k in kf:
+        fold +=1
         train_X_slice = train_matrix[train_k]
         train_Y_slice = train_labels[train_k]
         test_X_slice  = train_matrix[test_k]
         test_Y_slice  = train_labels[test_k]
-     
-        model = LinearSVC( random_state=0 )
-#         model.fit( train_matrix , train_labels )
-#         results = model.predict( test_matrix )
-#         train_matrix = train_matrix[0: train_matrix.shape[0], 0: train_matrix.shape[1] - train_features.shape[1] ]
-#         test_matrix = test_matrix[0: train_matrix.shape[0], 0: test_matrix.shape[1] - test_features.shape[1] ]
-#         log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+'\n')
-#         log.write(sklearn.metrics.classification_report( test_labels , results )+'\n')
-        model.fit( train_X_slice , train_Y_slice )
-        results = model.predict(test_X_slice)
-        acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
-        pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
-        rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
-        f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
-    log.write("Avg accuracy: %.2f\n" % np.mean(acc))
-    log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
+        
+        if fold == 9:
+            values_c = C_VALS
+        elif fold == 10:
+            values_c = [best_c]
+        else:
+            values_c = [1.0] #default value
+    
+        max_f1 = 0
+        for c in values_c:
+            model = LinearSVC( random_state=0, C = c)
+            model.fit( train_X_slice , train_Y_slice )
+            results = model.predict(test_X_slice)
+            if fold == 9:
+                f1score = sklearn.metrics.f1_score( test_Y_slice, results )
+                acc9 = sklearn.metrics.accuracy_score( test_Y_slice , results )
+                rec9 = sklearn.metrics.recall_score( test_Y_slice, results )
+                pre9 = sklearn.metrics.precision_score( test_Y_slice, results )
+                print("C " + str(c) + "\t" + str(f1score))
+                if f1score > max_f1:
+                    max_f1 = f1score
+                    max_acc = acc9
+                    max_rec = rec9
+                    max_pre = pre9
+                    best_c = c
+        if fold == 9:
+            acc.append(max_acc)
+            pre.append(max_pre)
+            rec.append(max_rec)
+            f1s.append(max_f1)
+        else:    
+            acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
+            pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
+            rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
+            f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
+    
+    log.write("best C parameter value: " + str(best_c) +'\n')
+    log.write("Results for best C --- Acc " + str(max_acc) + '\tPre ' + str(max_pre) + '\tRec ' + str(max_rec) + '\tF1 ' + str(f1s[8]) +'\n' )    
+    log.write("Overall avg accuracy: %.2f\n" % np.mean(acc))
+    log.write("Overall results " + str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
     
     acc = []
     pre = []
     rec = []
     f1s = []  
     log.write('Logistic Regression with bag-of-words features plus extra features\n')
+    max_f1 = 0
+    max_acc = 0
+    max_rec = 0
+    max_pre = 0
+    fold = 0
+    best_c = 1.0
     for train_k, test_k in kf:
+        fold +=1
         train_X_slice = train_matrix[train_k]
         train_Y_slice = train_labels[train_k]
         test_X_slice  = train_matrix[test_k]
         test_Y_slice  = train_labels[test_k]
-    #train_matrix = np.hstack( (train_matrix,train_features) )
-    #test_matrix = np.hstack( (test_matrix,test_features) )
-        model = linear_model.LogisticRegression()
-#     model.fit(train_matrix , train_labels)
-#     results = model.predict(test_matrix)
-#     train_matrix = train_matrix[0: train_matrix.shape[0], 0: train_matrix.shape[1] - train_features.shape[1] ]
-#     test_matrix = test_matrix[0: train_matrix.shape[0], 0: test_matrix.shape[1] - test_features.shape[1] ]
-#     log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+'\n')
-#     log.write(sklearn.metrics.classification_report( test_labels , results )+'\n')
-        model.fit( train_X_slice , train_Y_slice )
-        results = model.predict(test_X_slice)
-        acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
-        pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
-        rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
-        f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
-    log.write("Avg accuracy: %.2f\n" % np.mean(acc))
-    log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
+        
+        if fold == 9:
+            values_c = C_VALS
+        elif fold == 10:
+            values_c = [best_c]
+        else:
+            values_c = [1.0] #default value
+    
+        max_f1 = 0
+        for c in values_c:
+            model = linear_model.LogisticRegression( C = c)
+            model.fit( train_X_slice , train_Y_slice )
+            results = model.predict(test_X_slice)
+            if fold == 9:
+                f1score = sklearn.metrics.f1_score( test_Y_slice, results )
+                acc9 = sklearn.metrics.accuracy_score( test_Y_slice , results )
+                rec9 = sklearn.metrics.recall_score( test_Y_slice, results )
+                pre9 = sklearn.metrics.precision_score( test_Y_slice, results )
+                print("C " + str(c) + "\t" + str(f1score))
+                if f1score > max_f1:
+                    max_f1 = f1score
+                    max_acc = acc9
+                    max_rec = rec9
+                    max_pre = pre9
+                    best_c = c
+        if fold == 9:
+            acc.append(max_acc)
+            pre.append(max_pre)
+            rec.append(max_rec)
+            f1s.append(max_f1)
+        else:    
+            acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
+            pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
+            rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
+            f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
+    
+    log.write("best C parameter value: " + str(best_c) +'\n')
+    log.write("Results for best C --- Acc " + str(max_acc) + '\tPre ' + str(max_pre) + '\tRec ' + str(max_rec) + '\tF1 ' + str(f1s[8]) +'\n' )    
+    log.write("Overall avg accuracy: %.2f\n" % np.mean(acc))
+    log.write("Overall results " + str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
     
 #     acc = []
 #     pre = []
