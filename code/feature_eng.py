@@ -18,7 +18,8 @@ from sklearn.cross_validation import KFold
 import pickle
 import nltk
 import itertools
-
+from scipy.spatial.distance import cosine
+from scipy.spatial.distance import euclidean
 
 def biggest(ns,s,n):
     ''' determinar o maior de 3 valores: ns - num anotadores 'não sei', s - num anotadores 'sim', n - num anotadores 'não'
@@ -81,6 +82,52 @@ def getEntities(sent_dict, text):
             return ents
     return []
 
+ALLOWED_CHARS=[' ','-','/']
+EMBEDDINGS_PATH = "DATA/embedding_features.pkl"
+def clean_word(word):
+    return ''.join([c for c in word if (c in ALLOWED_CHARS or c.isalpha())])   
+
+def pairwise_distances(title, wrd2idx, stop_words, distance="cosine"):    
+    """
+        Compute the pairwise distances of words in literal titles
+    """
+    #remove special chars
+    clean_title = clean_word(title)                       
+    #remove stop words            
+    clean_title = [w.strip() for w in clean_title.split() if w not in stop_words]                        
+    #compute pairwise distances
+    word_pairs = list(itertools.combinations(clean_title,2))    
+    distances = []
+    avg = 0
+    std_dev = 0
+    min = 0
+    max = 0
+    dif = 0
+    for p in word_pairs:
+        w1, w2 = p                                
+        #if the words exist in the vocabulary
+        if w1 in wrd2idx and w2 in wrd2idx:                    
+            w1_emb = E[:,wrd2idx[w1]]
+            w2_emb = E[:,wrd2idx[w2]]        
+            #distance to the zero vector is not defined                        
+            if np.all(w1_emb==0) or np.all(w2_emb==0):
+                continue
+            else:                        
+                if distance=="cosine":
+                    d = cosine(w1_emb,w2_emb)                
+                elif distance=="euclid":
+                    d = euclidean(w1_emb,w2_emb)
+                else:                            
+                    raise NotImplementedError
+                distances.append(d)
+            if len(distances) > 0: 
+                avg = np.mean(distances)
+                std_dev = np.std(distances)
+                min = np.min(distances)
+                max = np.max(distances)
+                dif = max - min
+    return avg, std_dev, min, max, dif
+
 try:
     log = codecs.open("_log_all_detection_test.txt","w","utf-8")
     log = sys.stdout
@@ -89,7 +136,7 @@ try:
     embeddings_dim = 800
     embeddings = dict( )
     embeddings = Word2Vec.load_word2vec_format( "DATA/publico_800.txt" , binary=False )
-         
+           
     log.write("Reading affective dictionary and training regression model for predicting valence, arousal and dominance...\n")
     affective = dict( )
     for row in csv.DictReader(open("Irony Text Classification/Ratings_Warriner_et_al_translated.csv")): affective[ row["Word"].lower() ] = np.array( [ float( row["V.Mean.Sum"] ) , float( row["A.Mean.Sum"] ) , float( row["D.Mean.Sum"] ) ] )
@@ -166,7 +213,7 @@ try:
             try: aux.append( embeddings[word] )
             except: continue 
         if len( aux ) > 0 : test_features[i,0] = miniball.Miniball( np.array( aux ) ).squared_radius()
-      
+       
     log.write("Computing features based on affective scores...\n")
     train_features_avg = np.zeros( ( train_matrix.shape[0] , 3 ) ) 
     test_features_avg = np.zeros( ( test_matrix.shape[0] , 3 ) )
@@ -234,26 +281,114 @@ try:
     for i in range( train_matrix.shape[0] ):
         neg = 0
         pos = 0
+        w = 0
         for word in train_texts[i].split(" "):
+            w+=1
             if word in sent_dict.keys():
                 if sent_dict[word]=='NEG':
                     neg+=1
                 if sent_dict[word]=='POS':
                     pos+=1
-        if neg > 0 or pos > 0: 
-            train_features_pos[i,0] = pos
-            train_features_neg[i,0] = neg
+        train_features_pos[i,0] = pos / w
+        train_features_neg[i,0] = neg / w
     for i in range( test_matrix.shape[0] ):
         neg = 0
         pos = 0
+        w = 0
         for word in test_texts[i].split(" "):
+            w+=1
             if word in sent_dict.keys():
                 if sent_dict[word]=='NEG':
                     neg+=1
                 if sent_dict[word]=='POS':
                     pos+=1
-        test_features_pos[i,0] = pos
-        test_features_neg[i,0] = neg
+        test_features_pos[i,0] = pos / w
+        test_features_neg[i,0] = neg / w
+        
+        
+    #janelas de tamanho variavel
+    # contraste de valence (0 a 9)
+    log.write("Computing Valence Contrast Sliding Window features ...\n")
+    val_dif = 4
+    train_features_vc_w1 = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    train_features_vc_w2 = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    train_features_vc_w3 = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    train_features_vc_w4 = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    train_features_vc_w5 = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    for i in range( train_matrix.shape[0] ):
+        valences = []
+        for word in train_texts[i].split(" "):
+            if word in affective:
+                valences.append(affective[word][0])
+            else:
+                valences.append(0)
+        for x in [valences[i:i+2] for i in range(len(valences)-1)]: 
+            if x[0] > 0 and x[1] > 0 and abs(x[0]-x[1]) > val_dif:
+                train_features_vc_w1[i,0] +=1
+        for x in [valences[i:i+3] for i in range(len(valences)-1)]: 
+            val_interest = [i for i in x if i>0]
+            if len(val_interest)>=2:
+                for a,b in itertools.combinations(val_interest, 2):
+                    if abs(a-b)>val_dif:
+                        train_features_vc_w2[i,0] +=1 /len(x)
+        for x in [valences[i:i+4] for i in range(len(valences)-1)]: 
+            val_interest = [i for i in x if i>0]
+            if len(val_interest)>=2:
+                for a,b in itertools.combinations(val_interest, 2):
+                    if abs(a-b)>val_dif:
+                        train_features_vc_w3[i,0] +=1 / len(x)
+        for x in [valences[i:i+5] for i in range(len(valences)-1)]: 
+            val_interest = [i for i in x if i>0]
+            if len(val_interest)>=2:
+                for a,b in itertools.combinations(val_interest, 2):
+                    if abs(a-b)>val_dif:
+                        train_features_vc_w4[i,0] +=1 / len(x)
+        for x in [valences[i:i+6] for i in range(len(valences)-1)]: 
+            val_interest = [i for i in x if i>0]
+            if len(val_interest)>=2:
+                for a,b in itertools.combinations(val_interest, 2):
+                    if abs(a-b)>val_dif:
+                        train_features_vc_w5[i,0] +=1 / len(x)
+    
+    test_features_vc_w1 = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    test_features_vc_w2 = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    test_features_vc_w3 = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    test_features_vc_w4 = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    test_features_vc_w5 = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    for i in range( test_matrix.shape[0] ):
+        valences = []
+        for word in test_texts[i].split(" "):
+            if word in affective:
+                valences.append(affective[word][0])
+            else:
+                valences.append(0)
+        for x in [valences[i:i+2] for i in range(len(valences)-1)]: 
+            if x[0] > 0 and x[1] > 0 and abs(x[0]-x[1]) > val_dif:
+                test_features_vc_w1[i,0] +=1
+        for x in [valences[i:i+3] for i in range(len(valences)-1)]: 
+            val_interest = [i for i in x if i>0]
+            if len(val_interest)>=2:
+                for a,b in itertools.combinations(val_interest, 2):
+                    if abs(a-b)>val_dif:
+                        test_features_vc_w2[i,0] +=1 /len(x)
+        for x in [valences[i:i+4] for i in range(len(valences)-1)]: 
+            val_interest = [i for i in x if i>0]
+            if len(val_interest)>=2:
+                for a,b in itertools.combinations(val_interest, 2):
+                    if abs(a-b)>val_dif:
+                        test_features_vc_w3[i,0] +=1 / len(x)
+        for x in [valences[i:i+5] for i in range(len(valences)-1)]: 
+            val_interest = [i for i in x if i>0]
+            if len(val_interest)>=2:
+                for a,b in itertools.combinations(val_interest, 2):
+                    if abs(a-b)>val_dif:
+                        test_features_vc_w4[i,0] +=1 / len(x)
+        for x in [valences[i:i+6] for i in range(len(valences)-1)]: 
+            val_interest = [i for i in x if i>0]
+            if len(val_interest)>=2:
+                for a,b in itertools.combinations(val_interest, 2):
+                    if abs(a-b)>val_dif:
+                        test_features_vc_w5[i,0] +=1 / len(x)
 
     log.write("Computing Part-of-Speech Tagger...\n")
     with open('Models/tagger.pkl',"rb") as tagger:
@@ -279,8 +414,31 @@ try:
             test_features_adj[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'ADJ']) / len(sent_tagged)
             test_features_noun[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'NOUN']) / len(sent_tagged)
             test_features_verb[i,0] = len([tag for (word,tag) in sent_tagged if tag == 'VERB']) / len(sent_tagged)
+            
+    log.write("Compute Pairwise Distances...\n")
+    with open("DATA/embedding_features.pkl","rb") as fid:
+        u = pickle._Unpickler(fid)
+        u.encoding = 'ISO-8859-1'
+        wrd2idx, E = u.load()
+    with open("DATA/StopWords_Ironia.txt","rb") as fid:
+        stop_words = fid.read().split()
+    train_features_dist_avg = np.zeros( ( train_matrix.shape[0] , 1 ) ) 
+    test_features_dist_avg = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_dist_stdev = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_dist_stdev = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_dist_min = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_dist_min = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_dist_max = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_dist_max = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_dist_dif = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_dist_dif = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    for i in range( train_matrix.shape[0]):
+        train_features_dist_avg[i,0], train_features_dist_stdev[i,0], train_features_dist_min[i,0], train_features_dist_max[i,0], train_features_dist_dif[i,0] = pairwise_distances(train_texts[i], wrd2idx, stop_words)
+    for i in range( test_matrix.shape[0]):
+        test_features_dist_avg[i,0], test_features_dist_stdev[i,0], test_features_dist_min[i,0], test_features_dist_max[i,0], test_features_dist_dif[i,0] = pairwise_distances(test_texts[i], wrd2idx, stop_words)
+
     
-    log.write("Computing PMI features...\n")
+    log.write("Computing PMI Title features...\n")
     # fazer pmi normalizado e pmi regular para titulo e body
     # avg, min, max, std_dev e dif
     #open co-occurrences dictionary
@@ -326,27 +484,81 @@ try:
             test_features_pmi_min[i,0] = np.min( pairwise_pmis )
             test_features_pmi_max[i,0] = np.max( pairwise_pmis )
             
-        
-    #janelas de tamanho variavel
-    # contraste de valence (0 a 9)
+    log.write("Computing PMI body features...\n")
+    # fazer pmi normalizado e pmi regular para titulo e body
+    # avg, min, max, std_dev e dif
+    #open co-occurrences dictionary
+    train_features_pmibody_avg = np.zeros( ( train_matrix.shape[0] , 1 ) ) 
+    test_features_pmibody_avg = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_pmibody_stdev = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_pmibody_stdev = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_pmibody_min = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_pmibody_min = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_pmibody_max = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_pmibody_max = np.zeros( ( test_matrix.shape[0] , 1 ) )
+    train_features_pmibody_dif = np.zeros( ( train_matrix.shape[0] , 1 ) )
+    test_features_pmibody_dif = np.zeros( ( test_matrix.shape[0] , 1 ) )
     
+    with open("DATA/_new_cooccurs_sapo_Body.pkl","rb") as fid:
+        u = pickle._Unpickler(fid)
+        u.encoding = 'utf-8'
+        co_occurs = u.load()
+    with open("DATA/_new_sentences_sapo_Body.pkl","rb") as fid:
+        u = pickle._Unpickler(fid)
+        u.encoding = 'utf-8'
+        sent_dict = u.load()        
+    for i in range( train_matrix.shape[0] ):
+        entities = getEntities(sent_dict,train_texts[i])
+        pairwise_pmis = []
+        entity_pairs = itertools.combinations(entities, 2)               
+        for e_a, e_b in entity_pairs:
+            pairwise_pmis.append(pmi(e_a, e_b, co_occurs))
+        if len(pairwise_pmis)>0:
+            train_features_pmibody_avg[i,0] = np.average( pairwise_pmis )
+            train_features_pmibody_stdev[i,0] = np.std( pairwise_pmis )
+            train_features_pmibody_min[i,0] = np.min( pairwise_pmis )
+            train_features_pmibody_max[i,0] = np.max( pairwise_pmis )
+    for i in range( test_matrix.shape[0] ):
+        entities = getEntities(sent_dict,test_texts[i])
+        pairwise_pmis = []
+        entity_pairs = itertools.combinations(entities, 2)               
+        for e_a, e_b in entity_pairs:
+            pairwise_pmis.append(pmi(e_a, e_b, co_occurs))
+        if len(pairwise_pmis)>0:    
+            test_features_pmibody_avg[i,0] = np.average( pairwise_pmis )
+            test_features_pmibody_stdev[i,0] = np.std( pairwise_pmis )
+            test_features_pmibody_min[i,0] = np.min( pairwise_pmis )
+            test_features_pmibody_max[i,0] = np.max( pairwise_pmis )            
+        
+
     # contraste na dimensão temporal
     # relevância de um dado termo num dado momento em contraste, procurando noticias na mesma data
     # excluir stopwords, usar só palavras de tf-idf mais alto
     
+    # features de PMI só de substantivos
     
     train_features = np.hstack( ( train_features_avg , train_features_stdev , train_features_min , 
                                   train_features_max , train_features_dif , train_features_seq ,
                                   train_features_pos, train_features_neg , train_features_adj ,
                                   train_features_noun, train_features_verb, train_features_pmi_avg ,
-                                  train_features_pmi_stdev, train_features_pmi_min, train_features_pmi_max) )
+                                  train_features_pmi_stdev, train_features_pmi_min, train_features_pmi_max , 
+                                  train_features_pmibody_avg , train_features_pmibody_stdev, train_features_pmibody_min, 
+                                  train_features_pmibody_max, train_features_dist_avg, train_features_dist_stdev, 
+                                  train_features_dist_min, train_features_dist_max, train_features_dist_dif, 
+                                  train_features_vc_w1, train_features_vc_w2, train_features_vc_w3, 
+                                  train_features_vc_w4, train_features_vc_w5) )
     test_features = np.hstack( ( test_features_avg , test_features_stdev, test_features_min,
                                  test_features_max, test_features_dif , test_features_seq ,
                                  test_features_pos, test_features_neg , test_features_adj ,
                                  test_features_noun, test_features_verb, test_features_pmi_avg ,
-                                  test_features_pmi_stdev, test_features_pmi_min, test_features_pmi_max) )
+                                  test_features_pmi_stdev, test_features_pmi_min, test_features_pmi_max, 
+                                  test_features_pmibody_avg , test_features_pmibody_stdev, test_features_pmibody_min, 
+                                  test_features_pmibody_max, test_features_dist_avg, test_features_dist_stdev, 
+                                  test_features_dist_min, test_features_dist_max, test_features_dist_dif, 
+                                  test_features_vc_w1, test_features_vc_w2, test_features_vc_w3,
+                                  test_features_vc_w4, test_features_vc_w5) ) 
     
-    kf = KFold(n=len(train_matrix),n_folds=1)
+    kf = KFold(n=len(train_matrix),n_folds=10)
     train_labels = np.array(train_labels)
     
     acc = []
@@ -373,6 +585,7 @@ try:
         pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
         rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
         f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
+        
     log.write("Avg accuracy: %.2f\n" % np.mean(acc))
     log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
     
@@ -400,38 +613,38 @@ try:
     log.write("Avg accuracy: %.2f\n" % np.mean(acc))
     log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
     
-    acc = []
-    pre = []
-    rec = []
-    f1s = []
-    log.write("Method = NB-SVM with bag-of-words features\n")
-    for train_k, test_k in kf:
-        train_X_slice = train_matrix[train_k]
-        train_Y_slice = train_labels[train_k]
-        test_X_slice  = train_matrix[test_k]
-        test_Y_slice  = train_labels[test_k]    
-        model = MultinomialNB( fit_prior=False )
-        #model.fit( train_matrix , train_labels )
-        #train_matrix = np.hstack( (train_matrix, model.predict_proba( train_matrix ) ) )
-        #test_matrix = np.hstack( (test_matrix, model.predict_proba( test_matrix ) ) )
-        model.fit( train_X_slice , train_Y_slice )
-        train_X_slice = np.hstack( (train_X_slice, model.predict_proba( train_X_slice ) ) )
-        test_X_slice = np.hstack( (test_X_slice, model.predict_proba( test_X_slice ) ) )
-        model = LinearSVC( random_state=0 )
-        #model.fit( train_matrix , train_labels )
-        #results = model.predict( test_matrix )
-        model.fit( train_X_slice, train_Y_slice)
-        results = model.predict(test_X_slice)
-        acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
-        pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
-        rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
-        f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
-        #train_matrix = train_matrix[0: train_matrix.shape[0], 0: train_matrix.shape[1] - model.intercept_.shape[0] ]
-        #test_matrix = test_matrix[0: train_matrix.shape[0], 0: test_matrix.shape[1] - model.intercept_.shape[0] ]
-        #log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+'\n')
-        #log.write(sklearn.metrics.classification_report( test_labels , results )+'\n')
-    log.write("Avg accuracy: %.2f\n" % np.mean(acc))
-    log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
+#     acc = []
+#     pre = []
+#     rec = []
+#     f1s = []
+#     log.write("Method = NB-SVM with bag-of-words features\n")
+#     for train_k, test_k in kf:
+#         train_X_slice = train_matrix[train_k]
+#         train_Y_slice = train_labels[train_k]
+#         test_X_slice  = train_matrix[test_k]
+#         test_Y_slice  = train_labels[test_k]    
+#         model = MultinomialNB( fit_prior=False )
+#         #model.fit( train_matrix , train_labels )
+#         #train_matrix = np.hstack( (train_matrix, model.predict_proba( train_matrix ) ) )
+#         #test_matrix = np.hstack( (test_matrix, model.predict_proba( test_matrix ) ) )
+#         model.fit( train_X_slice , train_Y_slice )
+#         train_X_slice = np.hstack( (train_X_slice, model.predict_proba( train_X_slice ) ) )
+#         test_X_slice = np.hstack( (test_X_slice, model.predict_proba( test_X_slice ) ) )
+#         model = LinearSVC( random_state=0 )
+#         #model.fit( train_matrix , train_labels )
+#         #results = model.predict( test_matrix )
+#         model.fit( train_X_slice, train_Y_slice)
+#         results = model.predict(test_X_slice)
+#         acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
+#         pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
+#         rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
+#         f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
+#         #train_matrix = train_matrix[0: train_matrix.shape[0], 0: train_matrix.shape[1] - model.intercept_.shape[0] ]
+#         #test_matrix = test_matrix[0: train_matrix.shape[0], 0: test_matrix.shape[1] - model.intercept_.shape[0] ]
+#         #log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+'\n')
+#         #log.write(sklearn.metrics.classification_report( test_labels , results )+'\n')
+#     log.write("Avg accuracy: %.2f\n" % np.mean(acc))
+#     log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
     
     
     train_matrix = np.hstack( (train_matrix,train_features) )
@@ -491,40 +704,40 @@ try:
     log.write("Avg accuracy: %.2f\n" % np.mean(acc))
     log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
     
-    acc = []
-    pre = []
-    rec = []
-    f1s = []  
-    log.write("Method = NB-SVM with bag-of-words features plus extra features\n")
-    for train_k, test_k in kf:
-        train_X_slice = train_matrix[train_k]
-        train_Y_slice = train_labels[train_k]
-        test_X_slice  = train_matrix[test_k]
-        test_Y_slice  = train_labels[test_k]
-#     train_matrix = np.hstack( (train_matrix,train_features) )
-#     test_matrix = np.hstack( (test_matrix,test_features) )
-        model = MultinomialNB( fit_prior=False )
-#     model.fit( train_matrix , train_labels )
-#     train_matrix = np.hstack( (train_matrix, model.predict_proba( train_matrix ) ) )
-#     test_matrix = np.hstack( (test_matrix, model.predict_proba( test_matrix ) ) )
-        model.fit( train_X_slice , train_Y_slice )
-        train_X_slice = np.hstack( (train_X_slice, model.predict_proba( train_X_slice ) ) )
-        test_X_slice = np.hstack( (test_X_slice, model.predict_proba( test_X_slice ) ) )
-        model = LinearSVC( random_state=0 )
-#         model.fit( train_matrix , train_labels )
-#         results = model.predict( test_matrix )
-#         train_matrix = train_matrix[0: train_matrix.shape[0], 0: train_matrix.shape[1] - train_features.shape[1] - model.intercept_.shape[0] ]
-#         test_matrix = test_matrix[0: train_matrix.shape[0], 0: test_matrix.shape[1] - test_features.shape[1] - model.intercept_.shape[0] ]
-#         log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+'\n')
-#         log.write(sklearn.metrics.classification_report( test_labels , results )+'\n')
-        model.fit( train_X_slice, train_Y_slice)
-        results = model.predict(test_X_slice)
-        acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
-        pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
-        rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
-        f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
-    log.write("Avg accuracy: %.2f\n" % np.mean(acc))
-    log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
+#     acc = []
+#     pre = []
+#     rec = []
+#     f1s = []  
+#     log.write("Method = NB-SVM with bag-of-words features plus extra features\n")
+#     for train_k, test_k in kf:
+#         train_X_slice = train_matrix[train_k]
+#         train_Y_slice = train_labels[train_k]
+#         test_X_slice  = train_matrix[test_k]
+#         test_Y_slice  = train_labels[test_k]
+# #     train_matrix = np.hstack( (train_matrix,train_features) )
+# #     test_matrix = np.hstack( (test_matrix,test_features) )
+#         model = MultinomialNB( fit_prior=False )
+# #     model.fit( train_matrix , train_labels )
+# #     train_matrix = np.hstack( (train_matrix, model.predict_proba( train_matrix ) ) )
+# #     test_matrix = np.hstack( (test_matrix, model.predict_proba( test_matrix ) ) )
+#         model.fit( train_X_slice , train_Y_slice )
+#         train_X_slice = np.hstack( (train_X_slice, model.predict_proba( train_X_slice ) ) )
+#         test_X_slice = np.hstack( (test_X_slice, model.predict_proba( test_X_slice ) ) )
+#         model = LinearSVC( random_state=0 )
+# #         model.fit( train_matrix , train_labels )
+# #         results = model.predict( test_matrix )
+# #         train_matrix = train_matrix[0: train_matrix.shape[0], 0: train_matrix.shape[1] - train_features.shape[1] - model.intercept_.shape[0] ]
+# #         test_matrix = test_matrix[0: train_matrix.shape[0], 0: test_matrix.shape[1] - test_features.shape[1] - model.intercept_.shape[0] ]
+# #         log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  )+'\n')
+# #         log.write(sklearn.metrics.classification_report( test_labels , results )+'\n')
+#         model.fit( train_X_slice, train_Y_slice)
+#         results = model.predict(test_X_slice)
+#         acc.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
+#         pre.append(sklearn.metrics.precision_score( test_Y_slice, results ))
+#         rec.append(sklearn.metrics.recall_score( test_Y_slice, results ))
+#         f1s.append(sklearn.metrics.f1_score( test_Y_slice, results ))
+#     log.write("Avg accuracy: %.2f\n" % np.mean(acc))
+#     log.write(str(np.mean(pre))+'\t'+str(np.mean(rec))+'\t'+str(np.mean(f1s))+'\n\n')
     
 
 except Exception as e:
