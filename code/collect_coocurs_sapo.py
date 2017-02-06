@@ -18,7 +18,7 @@ import codecs
 import string
 
 
-log = codecs.open('_new_log_coocurs_sapo_title.txt','w','utf-8')
+log = codecs.open('_new_log_coocurs_sapo_entities_Title.txt','w','utf-8')
 
 def getSearchNumHitsVoxx(url):
     try:
@@ -153,9 +153,11 @@ for row in reader:
                         #print entity
                         skip_next=True
                         token = entity
+                        if token.lower() not in entities:
+                            entities.append(token.lower())
             #print '\tadded: ' + token
-            if token.lower() not in entities:
-                entities.append(token.lower())
+#             if token.lower() not in entities:
+#                 entities.append(token.lower())
                 
         #avoid sending the same requests    
         if token in prev_requests or token in co_occurs or pos not in [u'NOUN',u'N']: 
@@ -172,7 +174,7 @@ for row in reader:
         total_occurences_a=0
         total_occurences_b=0
         #url_sapo_co_ab = 'http://www.sapo.pt/pesquisa?q="'+urllib.quote(e_a)+'" + "'+urllib.quote(e_b)+'"'##gsc.tab=0&gsc.q="'+e_a+'" + "'+e_b+'"&gsc.page=1'
-        url_sapo_co_ab = 'http://services.sapo.pt/InformationRetrieval/News/Search?q=Body:('+urllib.quote(e_a)+' AND '+urllib.quote(e_b)+')&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json&qt=standard0'
+        url_sapo_co_ab = 'http://services.sapo.pt/InformationRetrieval/News/Search?q=Title:('+urllib.quote(e_a)+' AND '+urllib.quote(e_b)+')&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json&qt=standard0'
         #co_hits_ab = getSearchNumHits(url_sapo_co_ab)
         co_hits_ab=None
         while co_hits_ab is None:
@@ -181,7 +183,7 @@ for row in reader:
                 print str(url_sapo_co_ab) + ' is None'
         if e_a not in skipURL:
             #url_sapo_a = 'http://www.sapo.pt/pesquisa?q="'+urllib.quote(e_a)+'"'##gsc.tab=0&gsc.q="'+e_a+'"&gsc.page=1'
-            url_sapo_a = 'http://services.sapo.pt/InformationRetrieval/News/Search?q=Body:('+urllib.quote(e_a)+')&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json&qt=standard0'
+            url_sapo_a = 'http://services.sapo.pt/InformationRetrieval/News/Search?q=Title:('+urllib.quote(e_a)+')&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json&qt=standard0'
             total_occurences_a = None
             while total_occurences_a is None:
                 total_occurences_a = getSearchNumHitsVoxx(url_sapo_a)
@@ -189,7 +191,7 @@ for row in reader:
                     print str(url_sapo_a) + ' is None'
         if e_b not in skipURL:
             #url_sapo_b = 'http://www.sapo.pt/pesquisa?q="'+urllib.quote(e_b)+'"'##gsc.tab=0&gsc.q="'+e_b+'"&gsc.page=1'
-            url_sapo_b = 'http://services.sapo.pt/InformationRetrieval/News/Search?q=Body:('+urllib.quote(e_b)+')&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json&qt=standard0'
+            url_sapo_b = 'http://services.sapo.pt/InformationRetrieval/News/Search?q=Title:('+urllib.quote(e_b)+')&ESBUsername=popstar@users.sdb.sapo.pt&ESBPassword=DsEsfkesd6n2fwWds02&wt=json&qt=standard0'
             total_occurences_b = None
             while total_occurences_b is None:
                 total_occurences_b = getSearchNumHitsVoxx(url_sapo_b)
@@ -220,9 +222,9 @@ for row in reader:
         if e_b not in skipURL:
             skipURL.append(e_b)
     #print co_occurs
-    with open("DATA/_new_sentences_sapo_Body.pkl","wb") as fid:
+    with open("DATA/_new_sentences_sapo_entities_Title.pkl","wb") as fid:
         cPickle.dump(ent_dict, fid)
-    with open("DATA/_new_cooccurs_sapo_Body.pkl","wb") as fid:
+    with open("DATA/_new_cooccurs_sapo_entities_Title.pkl","wb") as fid:
         cPickle.dump(co_occurs, fid)
     print "Sentence "+ str(sent_id) + " done at " + time.strftime('%X %x %Z') + " after %d minutes running" % ((time.time()-t0 )/60)
 

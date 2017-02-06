@@ -39,7 +39,7 @@ def new_counts_dict():
 		vocabulary		
 	"""
 
-	IN_FILES = ["_semtag_dataset_webanno_tfidf_inimigo.txt","_semtag_dataset_webanno_tfidf_publico.txt" ]
+	IN_FILES = ["../_semtag_dataset_webanno_tfidf_inimigo.txt","../_semtag_dataset_webanno_tfidf_publico.txt" ]
 
 	txt = []
 	for in_file in IN_FILES:

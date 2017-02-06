@@ -258,11 +258,11 @@ test_features = np.hstack( ( test_features_avg , test_features_stdev, test_featu
 
 log.write("\n")
 log.write("Method = Linear SVM with bag-of-words features\n")
-#model = LinearSVC( random_state=0 )
-#model.fit( train_matrix , train_labels )
-#results = model.predict( test_matrix )
-#log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-#log.write(sklearn.metrics.classification_report( test_labels , results ))
+model = LinearSVC( random_state=0 )
+model.fit( train_matrix , train_labels )
+results = model.predict( test_matrix )
+log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
+log.write(sklearn.metrics.classification_report( test_labels , results ))
 
 log.write("Method = NB-SVM with bag-of-words features\n")
 #model = MultinomialNB( fit_prior=False )
@@ -339,42 +339,43 @@ log.write("Method = Stack of two LSTMs\n")
 #log.write(sklearn.metrics.classification_report( test_labels , results ))
 
 log.write("Method = CNN from the paper 'Convolutional Neural Networks for Sentence Classification'\n")
-np.random.seed(0)
-nb_filter = 1200
-model = Graph()
-model.add_input(name='input', input_shape=(maxlen,), dtype=int)
-model.add_node(Embedding(max_features, embeddings_dim, input_length=maxlen, mask_zero=False, weights=[embedding_weights] ), name='embedding', input='input')
-model.add_node(Dropout(0.), name='dropout_embedding', input='embedding')
-for n_gram in [3, 5, 7]:
-    model.add_node(Convolution1D(nb_filter=nb_filter, filter_length=n_gram, border_mode='valid', activation='relu', subsample_length=1, input_dim=embeddings_dim, input_length=maxlen), name='conv_' + str(n_gram), input='dropout_embedding')
-    model.add_node(MaxPooling1D(pool_length=maxlen - n_gram + 1), name='maxpool_' + str(n_gram), input='conv_' + str(n_gram))
-    model.add_node(Flatten(), name='flat_' + str(n_gram), input='maxpool_' + str(n_gram))
-model.add_node(Dropout(0.), name='dropout', inputs=['flat_' + str(n) for n in [3, 5, 7]])
-model.add_node(Dense(1, input_dim=nb_filter * len([3, 5, 7])), name='dense', input='dropout')
-model.add_node(Activation('sigmoid'), name='sigmoid', input='dense')
-model.add_output(name='output', input='sigmoid')
-model.compile(loss={'output': 'binary_crossentropy'}, optimizer='rmsprop')
-# model.fit({'input': train_sequences, 'output': train_labels}, batch_size=256, nb_epoch=1)
-original_weights = model.get_weights()
-kf = KFold(n=train_sequences.shape[0],n_folds=10)
-j=0
-acuracies = []
-train_labels = np.array(train_labels)
-for train, test in kf:
-  model.set_weights(original_weights)
-  j+=1
-  print ("\nfold: %d" % j)
-  # set_trace()
-  train_X_slice = train_sequences[train]
-  train_Y_slice = train_labels[train]
-  test_X_slice  = train_sequences[test]
-  test_Y_slice  = train_labels[test]
-  model.fit({'input': train_X_slice, 'output': train_Y_slice}, batch_size=16, nb_epoch=5)
-  results = model.predict({'input':test_X_slice })['output']
-  #binarize the outputsore
-  results = np.round(results)
-  acuracies.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
-  log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_Y_slice , results )  ))
+# np.random.seed(0)
+# nb_filter = 1200
+# model = Graph()
+# model.add_input(name='input', input_shape=(maxlen,), dtype=int)
+# model.add_node(Embedding(max_features, embeddings_dim, input_length=maxlen, mask_zero=False, weights=[embedding_weights] ), name='embedding', input='input')
+# model.add_node(Dropout(0.), name='dropout_embedding', input='embedding')
+# for n_gram in [3, 5, 7]:
+#     model.add_node(Convolution1D(nb_filter=nb_filter, filter_length=n_gram, border_mode='valid', activation='relu', subsample_length=1, input_dim=embeddings_dim, input_length=maxlen), name='conv_' + str(n_gram), input='dropout_embedding')
+#     model.add_node(MaxPooling1D(pool_length=maxlen - n_gram + 1), name='maxpool_' + str(n_gram), input='conv_' + str(n_gram))
+#     model.add_node(Flatten(), name='flat_' + str(n_gram), input='maxpool_' + str(n_gram))
+# model.add_node(Dropout(0.), name='dropout', inputs=['flat_' + str(n) for n in [3, 5, 7]])
+# model.add_node(Dense(1, input_dim=nb_filter * len([3, 5, 7])), name='dense', input='dropout')
+# model.add_node(Activation('sigmoid'), name='sigmoid', input='dense')
+# model.add_output(name='output', input='sigmoid')
+# model.compile(loss={'output': 'binary_crossentropy'}, optimizer='rmsprop')
+# # model.fit({'input': train_sequences, 'output': train_labels}, batch_size=256, nb_epoch=1)
+# original_weights = model.get_weights()
+# kf = KFold(n=train_sequences.shape[0],n_folds=10)
+# j=0
+# acuracies = []
+# train_labels = np.array(train_labels)
+# for train, test in kf:
+#   model.set_weights(original_weights)
+#   j+=1
+#   print ("\nfold: %d" % j)
+#   # set_trace()
+#   train_X_slice = train_sequences[train]
+#   train_Y_slice = train_labels[train]
+#   test_X_slice  = train_sequences[test]
+#   test_Y_slice  = train_labels[test]
+#   model.fit({'input': train_X_slice, 'output': train_Y_slice}, batch_size=16, nb_epoch=5)
+#   results = model.predict({'input':test_X_slice })['output']
+#   #binarize the outputsore
+#   results = np.round(results)
+#   acuracies.append(sklearn.metrics.accuracy_score( test_Y_slice , results ))
+#   log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_Y_slice , results )  ))
+#   log.write(sklearn.metrics.classification_report( test_Y_slice , results ))
 
 #print "Avg accuracy: %.2f" % np.mean(acuracies)
 # log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
@@ -533,27 +534,27 @@ log.write("Method = LSTM with embeddings complemented with affective scores\n")
 #log.write(sklearn.metrics.classification_report( test_labels , results ))
 
 log.write("Method = CNN from the paper 'Convolutional Neural Networks for Sentence Classification' with embeddings complemented with affective scores\n")
-np.random.seed(0)
-nb_filter = 1200
-embedding_weights2 = np.zeros( ( max_features , embeddings_dim + 3 ) )
-for index in range( embedding_weights.shape[0] ):
-  if index < max_features: embedding_weights2[index,:] = np.hstack( ( embedding_weights[index,:] , affective_weights[index,:] ))
-model = Graph()
-model.add_input(name='input', input_shape=(maxlen,), dtype=int)
-model.add_node(Embedding(max_features, embeddings_dim + 3, input_length=maxlen, mask_zero=False, weights=[embedding_weights2]), name='embedding', input='input')
-model.add_node(Dropout(0.1), name='dropout_embedding', input='embedding')
-for n_gram in [3, 5, 7]:
-    model.add_node(Convolution1D(nb_filter=nb_filter, filter_length=n_gram, border_mode='valid', activation='relu', subsample_length=1, input_dim=embeddings_dim + 3, input_length=maxlen), name='conv_' + str(n_gram), input='dropout_embedding')
-    model.add_node(MaxPooling1D(pool_length=maxlen - n_gram + 1), name='maxpool_' + str(n_gram), input='conv_' + str(n_gram))
-    model.add_node(Flatten(), name='flat_' + str(n_gram), input='maxpool_' + str(n_gram))
-model.add_node(Dropout(0.1), name='dropout', inputs=['flat_' + str(n) for n in [3, 5, 7]])
-model.add_node(Dense(1, input_dim=nb_filter * len([3, 5, 7])), name='dense', input='dropout')
-model.add_node(Activation('sigmoid'), name='sigmoid', input='dense')
-model.add_output(name='output', input='sigmoid')
-set_trace()
-model.fit({'input': train_sequences, 'output': train_labels}, batch_size=16, nb_epoch=1)
-#model.fit({'input': train_sequences, 'output': train_labels}, batch_size=256, nb_epoch=1)
-#results = model.predict_classes( test_sequences )
-results = model.predict(test_sequences)
-log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
-log.write(sklearn.metrics.classification_report( test_labels , results ))
+# np.random.seed(0)
+# nb_filter = 1200
+# embedding_weights2 = np.zeros( ( max_features , embeddings_dim + 3 ) )
+# for index in range( embedding_weights.shape[0] ):
+#   if index < max_features: embedding_weights2[index,:] = np.hstack( ( embedding_weights[index,:] , affective_weights[index,:] ))
+# model = Graph()
+# model.add_input(name='input', input_shape=(maxlen,), dtype=int)
+# model.add_node(Embedding(max_features, embeddings_dim + 3, input_length=maxlen, mask_zero=False, weights=[embedding_weights2]), name='embedding', input='input')
+# model.add_node(Dropout(0.1), name='dropout_embedding', input='embedding')
+# for n_gram in [3, 5, 7]:
+#     model.add_node(Convolution1D(nb_filter=nb_filter, filter_length=n_gram, border_mode='valid', activation='relu', subsample_length=1, input_dim=embeddings_dim + 3, input_length=maxlen), name='conv_' + str(n_gram), input='dropout_embedding')
+#     model.add_node(MaxPooling1D(pool_length=maxlen - n_gram + 1), name='maxpool_' + str(n_gram), input='conv_' + str(n_gram))
+#     model.add_node(Flatten(), name='flat_' + str(n_gram), input='maxpool_' + str(n_gram))
+# model.add_node(Dropout(0.1), name='dropout', inputs=['flat_' + str(n) for n in [3, 5, 7]])
+# model.add_node(Dense(1, input_dim=nb_filter * len([3, 5, 7])), name='dense', input='dropout')
+# model.add_node(Activation('sigmoid'), name='sigmoid', input='dense')
+# model.add_output(name='output', input='sigmoid')
+# set_trace()
+# model.fit({'input': train_sequences, 'output': train_labels}, batch_size=16, nb_epoch=1)
+# #model.fit({'input': train_sequences, 'output': train_labels}, batch_size=256, nb_epoch=1)
+# #results = model.predict_classes( test_sequences )
+# results = model.predict(test_sequences)
+# log.write("Accuracy = " + repr( sklearn.metrics.accuracy_score( test_labels , results )  ))
+# log.write(sklearn.metrics.classification_report( test_labels , results ))
